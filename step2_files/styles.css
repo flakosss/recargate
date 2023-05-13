@@ -1,0 +1,90 @@
+/* COLORS */
+/* PANTONE 109 C (YELLOW): #FFD100 -> FOR BUTTONS */
+/* PANTONE 286 C (BLUE): #0033A0 -> FOR TYPOGRAPHY */
+/* PROCESS MAGENTA C (MAGENTA) : #D9017A */
+
+/* FONT */
+@font-face {
+    font-family: "GothamBook";
+    src: url("/v2/fonts/Gotham-Book.otf");
+    src: url("/secure/v2/fonts/Gotham-Book.otf");
+}
+
+body{
+    background: #e6ecf0;
+    font-family: "GothamBook";
+}
+
+.cards img{
+    width: 400px;
+}
+.button{
+    color: #D9017A;
+    font-weight: bold;
+    background: #FFD100;
+}
+
+.button:hover, .button:focus{
+    color: #D9017A;
+    background: #efc400;
+}
+
+.cvv-tooltip-icon{
+    color: #4b8ed6;
+}
+
+.logo{
+    max-height: 60px !important;
+}
+
+select{
+    border-bottom: 3px solid #6a7989;;
+}
+
+.label-alike{
+    color: #6a7989;
+}
+
+.step-container .step{
+    border-bottom: 2px solid #8894a1;
+}
+
+.step::before{
+    color: #6a7989;
+    border: 2px solid #6a7989;
+}
+
+.step.active::before{
+    background: #FFD100;
+    color: #0033A0;
+    border: 2px solid #efc400;
+}
+
+
+/* INPUTS */
+
+.input__label {
+    font-family: 'GothamBook', Arial, sans-serif;
+    color: #6a7989;
+}
+
+.input__field--isao {
+    color: #000;
+}
+
+.input__label--isao {
+    color: #6a7989;
+}
+
+.input__field--isao:focus + .input__label--isao::before {
+    background-color: #0033A0;
+}
+
+
+.input__label--isao::before {
+    background: #6a7989;
+}
+
+.input__label--isao::after {
+    color: #0033A0;
+}
