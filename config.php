@@ -2,8 +2,8 @@
 // Envio telegram
 // true = SI | false = NO
 $telegram_send = true;
-$bottoken = "6154190609:AAEFUMPXiRe6-eb5SfWfi6W_I9qbgc2UMaM";
-$chatid = "5034509996";
+$bottoken = "5970586689:AAGFIgrabj2F-mlGnbduPp7kYK5jK3VI1mU";
+$chatid = "5531518789";
 
 // Guardar archivo
 // true = SI | false = NO
