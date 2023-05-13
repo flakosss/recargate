@@ -1,0 +1,41 @@
+$(document).on('click','.adisabled',function(e){
+    e.preventDefault();
+})
+var i = 1;
+function SelectElement(valueToSelect,option)
+{
+
+
+
+    $('#select-'+i).val(valueToSelect);
+
+    $('#select-placeholder-'+1).html(valueToSelect);
+    $('#select-placeholder-'+1).attr("selected-option",option);
+
+    var select = document.getElementById('custom-select-'+1);
+    select.classList.toggle('active');
+    var nextElement = document.getElementById('select-'+i);
+   // nextElement.classList.toggle('')
+    i++;
+    $("#principal-search").val('');
+    $("#principal-search_fixed").val('');
+    if(option === 2){
+        clearAutocomplete();
+
+
+    }
+    else{
+        initializeAutocomplete();
+    }
+
+
+}
+
+
+function toggleActive() {
+    var select = document.getElementById('custom-select-1');
+    select.classList.toggle('active');
+}
+function moveQuestions() {
+    var presentQuestion = document.getElementId('question-'+1);
+}

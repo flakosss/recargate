@@ -1,0 +1,5718 @@
+@media screen and (max-width: 2560px){
+  .right .bg-empresa{
+    width: 1280px;
+  }
+/*   #beneficios-novedades .right .bg-foto-3{
+    width: 982px;
+  } */
+
+}
+
+@media screen and (max-width: 1900px){
+  .right .bg-empresa{
+    width: 950px;
+  }
+
+/*   #beneficios-novedades .right .bg-foto-3{
+    width: 649px;
+  } */
+  figure.snip1283 img{
+    min-height: 99%;
+    height: 558px;
+    max-height: 81%;
+  }
+}
+@media screen and (max-width: 1600px){
+  #beneficios-novedades .caja-novedades .novedades a{
+    width: 212px
+  }
+}
+
+@media screen and (max-width: 1440px){
+  #barra-top #linea-telefonica a{
+    display: block;
+  }
+
+/************************************************************************************/
+/***************************INDEX ROTADOR PRINCIPAL**********************************/
+/***********************************************************************************/
+  .carousel-indicators{
+    display: block;
+  } 
+/************************************************************************************/
+/***************************SECCION ENVIO DE DINERO*********************************/
+/***********************************************************************************/   
+  #envio-dinero .slogan-envio {
+    width: 100%;
+    float: left;
+    height: 330px;
+    padding-left: 19px;
+  }
+  #envio-dinero .img-envio {
+    float: left;
+    width: 47%;
+    position: relative;
+    top: 45px;
+  }
+  #envio-dinero .slogan-envio .envios-nacionales .btn-large {
+    font-size: 11px;
+  }
+  #envio-dinero .slogan-envio .envio-exterior .btn-large{
+    font-size: 11px;
+  }    
+  .img-envio{
+    top: 50px;
+  }  
+  .imagen-destacada .img-1 {
+    height: 100%;
+    width: inherit;
+    max-width: 800px;
+    width: 100%;
+  }
+/*   #beneficios-novedades .right .bg-foto-3{
+    width: 57vh;
+  } */
+    /*#beneficios-novedades .right .bg-foto-3{
+    width: 29.5vw;
+  }*/
+
+/************************************************************************************/
+/***************************INDEX LOCALES Y EMPRESA**********************************/
+/***********************************************************************************/
+  .right .bg-empresa{
+    width: 50vw;
+  }
+
+/************************************************************************************/
+/**************************INDEX DESCARGA LA APP**************************************/
+/***********************************************************************************/
+  .btn-descarga-app{
+    text-align: center;
+  }
+  /*.mobile-imagen{
+    margin:auto;
+    bottom: -68px
+  } */
+
+/************************************************************************************/
+/***************************SECCION ENVIO DE DINERO**********************************/
+/***********************************************************************************/
+  /* #publicidad-envia-recibi img {
+    position: relative;
+    right: -33px;
+    top: 45px;
+  } */
+  .contenedor-buscador-interno {
+    width: 95%;
+    height: 72px;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+  }  
+    
+   figure.snip1283 img{
+/*     min-width: 59%; */
+    width: 100%;
+  }   
+}
+
+@media screen and (max-width: 1366px){
+  #wrapPagar.show {
+    max-height: 610px;
+ 
+  }
+}
+@media screen and (max-width: 1280px){
+  #wrapPagar.show {
+    max-height: 590px;
+ 
+  }
+}
+@media screen and (max-width: 1365px){
+  #contenido_a_mostrar .mapa-busqueda-sucursales {
+    width: 793px;
+  }
+}
+
+@media screen and (max-width: 1199px){
+  #wrapPagar.show {
+    max-height: 540px;
+ 
+  }
+  #barra-top #linea-telefonica a{
+    display: block;
+  }
+  img.mobile-imagen{
+    margin:0 auto;
+    display:block;
+  }
+/************************************************************************************/
+/***************************INDEX ENVIA DINERO **********************************/
+/***********************************************************************************/
+  .carousel-indicators{
+    display: block;
+  }  
+  #envio-dinero .slogan-envio {
+    width: 100%;
+    float: left;
+    /* border-left: 1px solid #b1b1b1; */
+    height: 330px;
+    /* padding-left: 19px; */
+  }
+  #envio-dinero .img-envio {
+    float: left;
+    width: 47%;
+    position: relative;
+    top: 45px;
+  }
+  #envio-dinero .slogan-envio .envios-nacionales .btn-large {
+    font-size: 11px;
+  }
+  #envio-dinero .slogan-envio .envio-exterior .btn-large{
+    font-size: 11px;
+  }    
+  .img-envio{
+    top: 110px;
+  }  
+  .imagen-destacada .img-1 {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  #beneficios-novedades .caja-novedades-2 .beneficios-2 a {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 150px;
+    font-size: 21px;
+    font-weight: bold;
+
+    left: 16px;
+  }  
+/*   #beneficios-novedades .right .bg-foto-3{
+    width: 264px;
+  } */
+
+/************************************************************************************/
+/**************************INDEX ICONOS DE SERVICISO DONDE PAGAR*********************/
+/***********************************************************************************/
+  #iconos-servicios .carousel .carousel-inner img{
+  width: 24%;
+  } 
+
+/************************************************************************************/
+/***************************INDEX DESCARGAR LA APP**********************************/
+/***********************************************************************************/
+  .btn-descarga-app{
+    text-align: center;
+  }
+  /*.mobile-imagen{
+    margin:auto;
+    bottom: -60px
+  } */
+
+/************************************************************************************/
+/***************************SECCION ENVIO DE DINERO**********************************/
+/***********************************************************************************/
+  #publicidad-envia-recibi img {
+    position: relative;
+    right: -33px;
+    top: 45px;
+  }
+  .contenedor-buscador-interno {
+    width: 98%;
+    height: 72px;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    padding: 38px 194px;
+  } 
+/************************************************************************************/
+/***************************SECCION GENERICA***************************************/
+/***********************************************************************************/
+  .que-es{
+    padding-right: 15px;
+    border-right: none; 
+  }   
+  #beneficios-novedades .caja-novedades .novedades a{
+    font-size: 18px;
+    width: 217px;
+  }
+
+  figure.snip1283 img{
+    min-width: 59%;
+    max-width: 167%;
+  }       
+}
+
+@media screen and (max-width: 1200px){
+  #wrapPagar.show {
+    max-height: 520px;
+ 
+  }
+  .select-element{
+    max-width: 220px;
+  }
+  #entidades .ver_mas_rubros,
+  #entidades .ver_mas_rubros_2,
+  #entidades .ver_destacados_2,
+  #entidades .ver_destacados{
+    right: -15px;
+    z-index: 30
+  } 
+
+
+
+
+  .menu-fixed .menu-scroll ul li a{
+    font-size: 12px;
+  }
+  .right .bg-empresa{
+    width: 50vw;
+  }
+
+/************************************************************************************/
+/***************************SECCION LOCALES****************************************/
+/***********************************************************************************/
+  .barra-top{
+    padding: 30px;
+  }
+  #nuestra-red #titulos-redes h2{
+    font-size: 24px;
+    margin-top: 0px;
+  }
+  #nuestra-red #titulos-redes h3{
+    font-size: 24px;
+  }
+  .dropp-header__btn{
+    padding: 15px 12px 0px 0px;
+  }
+  .select-element:after {
+    width: 58px;
+    right: -56px;
+  } 
+  .toggle-fixed p{
+    margin-top: 18px;
+  }
+  .toggle-fixed{
+    margin-left: 0px;
+    width: 100%;
+  }  
+  #tus-datos{
+    padding: 15px 0 20px 0;
+  }
+  .pad-left{
+    padding-left:0px!important;
+  }
+  .pad-right{
+    padding-right:0px!important 
+  }
+
+/************************************************************************************/
+/***************************INDEX BUSQUEDA DE SUCURSALES EN EL MAPA****************/
+/***********************************************************************************/
+  #contenido_a_mostrar .mapa-busqueda-sucursales{
+    width: 593px;
+  }
+  #btn-abierto span{
+    padding: 1px 15px;
+    font-size: 11px;
+  }
+  #btn-cerrado span{
+    padding: 1px 12px;
+    font-size: 11px;    
+  }
+/*   #beneficios-novedades .right .bg-foto-3{
+    width: 46vh;
+  } */
+  #impulsar-negocio{
+    margin-right: inherit;
+    border:none;
+    padding: 0px 0px 40px 0px;
+  }
+
+/************************************************************************************/
+/***************************SECCION LOCALES****************************************/
+/***********************************************************************************/
+  label{
+    margin-top: 7px;
+  }
+  .setup-content .prevBtn{
+    width: 100%;
+    text-align: center;
+  }
+  .setup-content .nextBtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 24px!important;
+  }  
+  #legales-btn{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .caja-parrafo{
+    width: 100%;
+  }
+  /* #impulsar-negocio .caja-parrafo p{
+    font-size: 23px;
+  } */
+  .sin-padding-mobile{
+    padding: 0;
+  }  
+  .col-comunicate.columna-izq::before{
+    width: 51vw;
+    right: 3%;
+  }
+  .col-comunicate .title-izq{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq .btn-aviso{
+    margin-top: 12px;
+  }  
+  .col-comunicate .title-der{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq h3{
+    line-height: 25px;
+  }
+  .col-comunicate .title-der h3{
+    line-height: 24px;
+    font-size: 16px;    
+  }
+  .contenedor{
+    width: 100%;
+  }
+  .servicios-clientes{
+    height: 100%;
+  }
+  .servicios-clientes .col {
+      width: 30%;
+      margin: 0 15px;
+      margin-bottom: 15px;
+  }
+  .servicios-clientes .caja-servicios h4{
+    font-size: 21px;
+  }
+  .servicios-clientes .caja-servicios p{
+    font-size: 17px;
+  }
+  #padding-yt{
+    padding: 44px 0px 70px 0;
+  }
+  #canal-yt{
+    height: 100%;
+  }
+  #canal-yt #mas-informacion .btn-you-tube{
+    margin-top: 10px;
+    margin-bottom: 40px;    
+    float: left;
+  } 
+
+/************************************************************************************/
+/***************************SECCION ENVIA DINERO ***********************************/
+/***********************************************************************************/
+  #publicidad-envia-recibi img {
+    position: relative;
+    right: -33px;
+    top: 44px;
+  } 
+/************************************************************************************/
+/***************************SECCION ENTIDADES***************************************/
+/***********************************************************************************/
+  .contenido-entidades .clases-entidades{
+    padding: 161px 39px;
+  }
+  .scheduler-col .titulos{
+    padding: 0;
+  }
+  .contenido-entidades .clases-entidades-2 h4{
+    margin-bottom: 37px;
+  }
+  .contenido-entidades .clases-entidades{
+    padding: 161px 39px;
+  }  
+
+/************************************************************************************/
+/***************************SECCION NOVEDADES*************************************/
+/***********************************************************************************/
+  #rotador-imagen-video .carousel-control.left{
+    top: 0px;
+  } 
+  #rotador-imagen-video .carousel-control.right{
+    top: 0px;
+  } 
+  .btn-novedades{
+    font-size: 14px;
+  } 
+  footer .footer span{
+    font-size: 15px;
+  }   
+/************************************************************************************/
+/***************************SECCION GENERICA****************************************/
+/***********************************************************************************/
+  .que-es{
+    padding-right: 15px;
+    border-right: none; 
+  } 
+
+/************************************************************************************/
+/***************************SECCION CONTACTO**************************************/
+/***********************************************************************************/
+  #otro-motivos-consultas .caja-motivos{
+    padding-right: 0;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+  }  
+  #beneficios-novedades .caja-novedades .novedades a {
+        width: 180px;
+  }
+  #beneficios-novedades .caja-novedades .clientes a{
+    width: 180px
+  }
+  #impulsar-negocio .para-clientes ul li, #impulsar-negocio .para-empresas ul li {
+    font-size: 15px;
+  }
+}
+/*.tooltip.tooltip.fade.bs-tooltip-top.show{
+    display:none;
+}*/
+
+@media screen and (max-width: 1024px){
+  #wrapPagar.show {
+    max-height: 455px;
+  }
+}  
+@media (min-width: 1024px) and (max-width: 1199px) {
+  
+  #publicidad-envia-recibi img {
+    position: relative;
+    right: -33px;
+    top: 44px;
+  }  
+  .resultados .compartir {
+    margin-top: 12px!important;
+  }  
+  #barra-top #preguntas-frecuentes .btn-registro, 
+  #barra-top #preguntas-frecuentes .btn-cuenta{
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+  #barra-top #preguntas-frecuentes ul{
+    margin-left: 0!important
+  }
+  #barra-top #linea-telefonica .display{
+    display: none
+  }
+  .mas-novedades .amarillo{
+    margin-right: 15px;
+  }  
+  .rotador-generico .rotador-pago-facil img{
+    height: auto;
+    width: 50%
+  }
+  .rotador-generico .rotador-pago-facil{
+    height: 150px
+  }   
+  #proceso-pago .caja-proceso{
+    height: 345px;
+  }
+  #box-padding-resultados h3{
+    text-align: center
+  }
+  .titulos-de-las-busquedas h4{
+    margin-top: 50px
+  }
+  .btn-icono-no-fav .fa-star{
+    bottom: -10px;
+  }  
+  #btn-resultados-busqueda .btn-imprimir-factura {
+    font-size: 12px !important;
+    padding: 7px 5px !important;
+    width: 130px !important;
+    margin-right: 4px !important;
+  }  
+  #btn-resultados-busqueda .btn-donde-pagar {
+    font-size: 12px;
+    padding: 8px 9px;
+    width: 130px;
+  }    
+  .formulario-suma .pad-right{
+    padding-left: 0
+  }
+  #rotador-imagen-video .carousel-control.left {
+    top: 31px;
+  }
+  #rotador-imagen-video .carousel-control.right {
+    top: 31px;
+  }    
+  .carousel .carousel-inner .row-fluid a{
+    height: 56px
+  }  
+  #tarifas .pad-left{
+    padding-right: 15px
+  }
+  .navbar-default .menu-principal > li > a > span{
+    display: none
+  }
+  .menu-fixed .menu-scroll ul li a span{
+    display: none
+  }
+  .main-text{
+    top: 0px;
+  }
+  .contenedor-buscador{
+    top: 300px
+  }
+  .select-element {
+    max-width: 209px;
+  }
+  /*.alto-fijo-rotador {
+    height: 125px;
+  }*/
+  .video-iframe iframe{
+    width: 100%!important
+  } 
+  footer .footer {
+    padding: 20px 20px 20px 20px;
+    /*height: 320px;*/
+  }
+  .btn-app{
+    width: 190px;
+  }
+  #beneficios-novedades .caja-beneficios .beneficios{
+    margin-left: 15px
+  }
+  
+  .col-comunicate.columna-der::before {
+    left: 8px;
+    background: #ffd100;
+  }
+  .col-comunicate.columna-izq::before {
+    width: 51vw;
+    right: -2%;
+  }
+  .pad-left {
+    padding-left: 0px!important;
+    padding-right: 0
+  }
+  .localidad-padding {
+    padding-left: 0!important
+  }
+  /*-----------*/
+  .servicios-clientes .col{
+    height: 453px;
+  }
+  #barra-top #linea-telefonica a{
+    margin-top: 5px;
+  }
+  .login-de-cuenta {
+      padding: 0;
+      width: 50%;
+      margin: auto;
+  }
+  #beneficios-novedades .caja-novedades .novedades a {
+    font-size: 18px;
+    width: 187px;
+  }
+  #entidades .ver_mas_rubros,
+  #entidades .ver_mas_rubros_2,
+  #entidades .ver_destacados_2,
+  #entidades .ver_destacados{
+    right: -15px;
+    z-index: 30
+  }
+  #tarifas .btn-consulta{
+    padding: 8px 0
+  } 
+  .contenedor-buscador-interno{
+    padding: 18px 194px;
+  }
+  #beneficios-novedades .caja-novedades .clientes a{
+    font-size: 18px
+  }
+  #contenido_a_mostrar2{
+    /* height: 220px; */
+  }
+  #box-padding-resultados{
+    height: 220px
+  }
+  /*.tooltip.tooltip.fade.bs-tooltip-top.show{
+    display:block;
+  }*/
+  #btn-resultados-busqueda{
+    margin-top: 50px
+  }
+  button.close{
+    font-size: 23px
+  }
+  #btn-abierto span{
+    padding: 2px 0!important;
+  }
+  #tus-datos #formulario-contacto .pad-right{
+    padding-left: 0!important
+  }
+}
+
+@media (max-width: 1199px) {
+
+  .main-text {
+    margin-bottom: 5%;
+  }
+  .main-text h2 {
+    font-size: 2.5rem;
+  }
+  .main-text h5 {
+    font-size: 1.6rem;
+    margin-top: 0rem;
+  }
+  .main-text .btn-rosa{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px){
+  #beneficios-novedades .caja-beneficios .beneficios a{
+    left: 14%;
+  }
+  #beneficios-novedades .caja-beneficios .beneficios span{
+    margin-left: 10%;
+  }
+  .resultados .compartir {
+      margin-top: 12px!important;
+  }  
+  .mas-novedades .amarillo{
+    margin-right: 15px;
+  }
+  #wu-envios-nacionales h4 {
+      font-size: 23px;
+      line-height: 30px;
+  }  
+  /*AGREGADOS*/
+  #proceso-pago .caja-proceso{
+    height: 344px;
+  }
+  .titulos-de-las-busquedas h4 {
+    margin-top: 50px;
+  }
+  .btn-icono-no-fav .fa-star{
+    bottom: -9px;
+  }  
+  #btn-resultados-busqueda .btn-imprimir-factura {
+    font-size: 12px !important;
+    padding: 7px 5px !important;
+    width: 130px !important;
+  }  
+  #btn-resultados-busqueda .btn-donde-pagar {
+    font-size: 12px;
+    padding: 8px 9px;
+    width: 130px;
+  }  
+  .resultados{
+    height: 200px
+  }
+    .resultados .compartir{
+    margin-top: 7px!important;
+  }
+  #tarifas .btn-consulta{
+    padding: 8px 0
+  }
+  #tarifas .pad-left{
+    padding-right: 0
+  }
+  .costo_envio{
+    width: 50%;
+    margin-top: 20px
+  }
+  .error_calculo{
+    width: 50%;
+    margin-top: 20px    
+  }
+  #form_suma_tu_empresa .pad-left{
+    padding-right: 0!important;
+        padding-left: 0!important;
+  }
+  .video-iframe iframe{
+    width: 100%!important
+  }    
+  #rotador-imagen-video .carousel{
+    margin-bottom: 0
+  }  
+  .navbar-default .menu-principal > li > a > span{
+    display: none
+  }
+  .menu-fixed .menu-scroll ul li a span{
+    display: none
+  }  
+  #descarga-app h2{
+    margin-top: 0
+  }
+  #iconos-servicios{
+    padding: 15px 20px
+  }
+  footer .footer {
+    padding: 20px 20px 20px 20px;
+    /*height: 320px;*/
+  }  
+  #beneficios-novedades .caja-novedades-2 .posicion-caja a, 
+  #beneficios-novedades .caja-novedades .clientes a{
+    font-size: 18px;
+    line-height: 20px
+  }
+/************************************************************************************/
+/***************************BARRA DE PREGUNTAS**************************************/
+/***********************************************************************************/
+  #barra-top #linea-telefonica .display{
+    display: none;
+  }
+  #barra-top #preguntas-frecuentes ul{
+    margin-left: 0!important
+  }
+  #barra-top #preguntas-frecuentes .btn-registro,
+  #barra-top #preguntas-frecuentes .btn-cuenta{
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+/************************************************************************************/
+/***************************HEADER**************************************************/
+/***********************************************************************************/
+  #menu{
+    position: fixed;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-radius: inherit;
+  }
+  .menu-principal{
+    margin-top: 14px;
+  }
+  .logo-header{
+    width: 120px !important;
+  }
+  .logo-mobile{
+    background-color: #000;
+    margin-bottom: -1px;
+  }
+  .menu-fixed .menu-scroll ul li a {
+      padding: 0px 3px;
+  }  
+  .navbar-default .menu-principal a{
+    padding: 15px 12px;
+    font-size: 13px;
+  }
+  .navbar-brand{
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: none;
+  }
+  .navbar-toggle{
+    padding: 0;
+    position: relative;
+    top: 55px;
+  }
+  .nav > li > a{
+    padding: 8px 18px;
+    color: #fff;
+    font-family: 'Univers';
+    font-weight: bold;
+    text-shadow: inherit;
+    font-size:14px;
+  }
+  .nav > li > a:hover{
+    background-color: transparent;
+    color: #e7c73a;
+  }
+  .navbar-ex1-collapse > .menu-mobile .active a{
+    color: #e7c73a;
+  }
+  .navbar-ex1-collapse >.menu-mobile  li{
+    padding: 1px 5px;
+  }
+  .navbar-ex1-collapse{
+    position: relative;
+    z-index: 11;
+    background-color: #000
+  }
+  .navbar-brand > img{
+    z-index: 12;
+  }
+  .menu-fixed ul li a{
+    padding: 0px 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;    
+  }
+
+/************************************************************************************/
+/***************************INDEX BUSQUEDA DE RESULTADO EN EL MAPA*****************/
+/***********************************************************************************/
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura a{
+    padding: 6px 11px !important;
+    font-size: 11px !important;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-donde-pagar a {
+    padding: 6px 22px;
+  }  
+  /*AGREGADOS */
+  #box-padding-resultados{
+    height: 200px;
+  }
+  #box-padding-resultados .razon_social_empresa{
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+  }  
+  #box-padding-resultados h3{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  #box-padding-resultados #btn-resultados-busqueda {
+      margin-left: 0;
+      margin-top: 52px;
+  }  
+  .select-element:after {
+    width: 58px;
+    right: -56px;
+  } 
+  button.close {
+  font-size: 23px;
+    position: absolute;
+    padding: 2px;
+    right: 23px;
+    line-height: 22px;
+  }   
+  .main-text{
+    margin-top: 0px;
+  }
+  .main-text h2{
+    font-size: 38px;
+  }
+  .main-text h1{
+    font-size: 40px;
+  }  
+  .carousel-indicators{
+    display: none;
+  }
+  .contenedor-buscador{
+    top: 260px;
+  }
+  /*.select-element{
+    max-width: 211px;
+  }*/
+
+/************************************************************************************/
+/***************************SECCION ENVIO DE DINERO**********************************/
+/***********************************************************************************/
+  #box-padding{
+    padding: 0px 20px 0px 20px;
+  }
+  #envio-dinero .slogan-envio h2{
+    margin-top: 37px;
+  }
+  #envio-dinero .slogan-envio{
+    width: 100%;
+    float: left;
+    border-left: none;
+    height: 330px;
+    padding-left: 0px;
+  }
+  #envio-dinero .img-envio {
+    float: left;
+    width: 47%;
+    position: relative;
+    top: 34px;
+    left: 37px;
+  } 
+  .titulo-mobile{
+    color: #333;
+    font-family: 'Univers';
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0px;   
+  } 
+  #envio-dinero .slogan-envio .envios-nacionales .btn-large {
+    font-size: 11px;
+  }
+  #envio-dinero .slogan-envio .envio-exterior .btn-large{
+	font-size: 11px;
+    padding: 10px 9px;
+    margin-top: 0px;
+  } 
+  .img-envio{
+    top: 89px;
+  } 
+
+/************************************************************************************/
+/***************************INDEX SERVICIOS DE PAGOS********************************/
+/***********************************************************************************/
+  #iconos-servicios .carousel .carousel-inner img{
+    width: 29%;
+    height: 150px;
+  }
+/************************************************************************************/
+/***************************INDEX LOCALES Y EMPRESA**********************************/
+/***********************************************************************************/
+  .left .bg-locales{
+    width: 87vw;
+  }
+/************************************************************************************/
+/***************************INDEX DESCARGA LA APP*********************************/
+/***********************************************************************************/
+  .btn-descarga-app{
+    text-align: center;
+  } 
+
+/************************************************************************************/
+/***************************SECCION LOCALES****************************************/
+/***********************************************************************************/
+  .barra-top{
+    padding: 30px;
+  }
+  #nuestra-red #titulos-redes h2{
+    font-size: 24px;
+    margin-top: 0px;
+  }
+  #nuestra-red #titulos-redes h3{
+    font-size: 24px;
+  }
+  .dropp-header__btn{
+    padding: 15px 12px 0px 0px;
+  }
+  .toggle-fixed p{
+    margin-top: 18px;
+  }
+  .toggle-fixed{
+    margin-left: 0px;
+    width: 100%;
+  }  
+  #tus-datos{
+    padding: 50px 0px;
+  }
+  .pad-left{
+    padding-left:15px!important;
+  }
+  .pad-right{
+   /*  padding-right:15px!important  */
+  }
+  #impulsar-negocio{
+    margin-right: inherit;
+    border:none;
+    padding: 0px 0px 40px 0px;
+  }
+/************************************************************************************/
+/***************************FOOTER*************************************************/
+/***********************************************************************************/  
+  footer .footer .links {
+    text-align: left;
+  }
+/************************************************************************************/
+/***************************SECCION LOCALES****************************************/
+/***********************************************************************************/  
+  label{
+    margin-top: 7px;
+  }
+  .setup-content .prevBtn{
+    width: 100%;
+    text-align: center;
+  }
+  .setup-content .nextBtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 24px!important;
+  }  
+  #legales-btn{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .caja-parrafo{
+    width: 100%;
+  }
+  #impulsar-negocio .caja-parrafo p{
+    font-size: 23px;
+  }
+  .sin-padding-mobile{
+    padding: 0;
+  }  
+  .col-comunicate.columna-izq::before{
+    width: 51vw;
+    right: 3%;
+  }
+  .col-comunicate .title-izq{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq .btn-aviso{
+    margin-top: 12px;
+  }  
+  .col-comunicate .title-der{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq h3{
+    line-height: 25px;
+  }
+  .col-comunicate .title-der h3{
+    line-height: 24px;
+    font-size: 16px;    
+  }
+  .contenedor{
+    width: 100%;
+  }
+  .servicios-clientes{
+    height: 100%;
+  }
+  .servicios-clientes .col{
+    width: 30%;
+    margin: 0;
+    margin-bottom: 15px;
+    margin-right: 30px;
+    height: 478px;
+  }
+  .servicios-clientes .caja-servicios h4{
+    font-size: 21px;
+  }
+  .servicios-clientes .caja-servicios p{
+    font-size: 17px;
+  }
+  #padding-yt{
+    padding: 44px 0px 70px 0;
+  }
+  #canal-yt{
+    height: 100%;
+  }
+  #canal-yt #mas-informacion .btn-you-tube{
+    margin-top: 10px;
+    margin-bottom: 40px;    
+    float: left;
+  }
+
+/************************************************************************************/
+/***************************SECCION ENVIA DINERO*************************************/
+/***********************************************************************************/
+  .contenedor-buscador-interno {
+    width: 95%;
+    height: 72px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    padding: 25px 14px;
+  }  
+  #publicidad-envia-recibi img {
+    position: relative;
+    right: -14px;
+    top: 45px;
+  } 
+  #paso-paso-envio {
+    padding: 50px 15px;
+  }  
+  #western-union .img-western {
+    position: absolute;
+    top: 176px;
+    right: 26px;
+  }
+
+/************************************************************************************/
+/***************************SECCION ENTIDADES****************************************/
+/***********************************************************************************/
+  .scheduler-col .titulos{
+    padding: 0;
+  }
+  .contenido-entidades .clases-entidades-2 h4{
+    margin-bottom: 22px;
+  }
+  .contenido-entidades .clases-entidades {
+      padding: 22px 0px;
+  } 
+  .contenido-entidades .iconos img{
+    float: initial;
+    margin-bottom: 15px;
+  } 
+
+/************************************************************************************/
+/***************************SECCION NOVEDADES**************************************/
+/***********************************************************************************/
+  #rotador-imagen-video .carousel-control.left{
+    top: -32px;
+  } 
+  #rotador-imagen-video .carousel-control.right{
+    top: -32px;
+  }
+
+/************************************************************************************/
+/***************************SECCION GENERICA**************************************/
+/***********************************************************************************/
+  .que-es{
+    padding-right: 15px;
+    border-right: none; 
+  } 
+
+/************************************************************************************/
+/***************************SECCION CONTACTO**************************************/
+/***********************************************************************************/
+  #otro-motivos-consultas .caja-motivos{
+    padding-right: 0;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+  } 
+
+  .login-de-cuenta {
+      padding: 0;
+      width: 50%;
+      margin: auto;
+  }      
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #btn-resultados-busqueda .jssocials {
+      bottom: 0!important;
+      right: 0;
+      border: 1px solid grey;
+      left: 80px;
+      padding-right: 8px;
+  }  
+  .main-text{
+    margin-bottom: 5%;
+  }
+  .main-text h2{
+    font-size: 35px;
+    line-height: 30px;   
+  }
+  .botones-centrado-resultado-donde,
+  .caja-compartir-resultado{
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px!important;
+  }   
+  .menu-top-desktop ul{
+    margin-right: 0!important
+  }
+  #barra-top #preguntas-frecuentes .btn-top{
+    float: right;
+    clear: both;
+    margin-top: 10px;    
+  }
+  #login-usuario #titulos-redes h1{
+    font-size: 28px;
+    line-height: 37px;    
+  }
+  #suma_tu_empresa #titulos-redes h1{
+    font-size: 28px;
+    line-height: 37px;
+  }
+	#envio-dinero .slogan-envio .envio-exterior .btn-large{
+		/* font-size: 10px;
+    padding: 10px 7px;
+    margin-top: 0px; */
+	}
+  #wu-envios-nacionales h4 {
+      color: #333;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 25px;
+  }
+  .star-yellow > i, .btn-icono-fav > i{
+    bottom: -5px;
+  }
+    #wu-envios-nacionales .parrafo-envios p{
+      margin-top: 20px
+    }    
+  .rotador-generico {
+    margin-bottom: 90px
+  }
+  .rotador-generico .rotador-pago-facil img{
+    /* height: auto;
+    width: 50% */
+  }
+  .rotador-generico .rotador-pago-facil{
+    /*height: 275px*/
+    height: 265px
+  }   
+  #box-padding-resultados #btn-resultados-busqueda .btn-icono-compartir,
+  #box-padding-resultados #btn-resultados-busqueda .btn-icono-no-fav{
+    float: initial;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .comparte-resultado{
+    text-align: center
+  }
+  #box-padding-resultados .botonera-de-home{
+    margin: auto;
+    text-align: center;
+    display: table;    
+  }  
+  #box-padding-resultados #btn-resultados-busqueda .btn-icono-compartir i{
+    bottom: -4px
+  }
+  .btn-icono-no-fav .fa-star{
+    bottom: -5px
+  }
+  #btn-resultados-busqueda .btn-imprimir-factura{
+    padding: 6px 6px !important;
+  }
+  .titulos-de-las-busquedas h4{
+    text-align: center
+  }
+  #box-padding-resultados{
+    height: 380px
+  }
+  .titulos-de-las-busquedas{
+    padding-left: 15px!important
+  }
+  #box-padding-resultados #btn-resultados-busqueda {
+    margin: auto;
+    text-align: center;
+    display: table;
+    margin-top: 15px;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-icono-compartir i {
+      margin-top: 2px;
+  }   
+  .resultados .compartir{
+    margin-top: 20px!important;
+  }
+  .resultados .compartir .fa-share-alt{
+    clear: initial;
+    font-size: 17px;
+    margin-bottom: 8px;
+    float: left;    
+  }
+  .resultados .compartir .fa-commenting{
+    font-size: 15px;
+    float: left;    
+  }
+  .resultados .btn-como-llegar{
+    padding: 5px 13px;
+  }
+  .resultados .btn-como-llegar a {
+    color: #333;
+    font-size: 10px;
+  }
+  .costo_envio{
+    width: 60%;
+    margin-top: 10px
+  }
+  .modal-body .form-horizontal input{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .para-clientes h4,
+  #impulsar-negocio .para-empresas h4{
+    font-size: 18px
+  }
+  #rotador-imagen-video .carousel{
+    margin-bottom: 0
+  }
+  .navbar-default .menu-principal > li > a > span{
+    display: none
+  }
+  .menu-fixed .menu-scroll ul li a span{
+    display: none
+  }  
+  .select-element {
+    /*max-width: 206px;*/
+    max-width: 216px;
+  }
+  .contenedor-buscador {
+      top: 215px;
+  }  
+  #barra-top #preguntas-frecuentes ul {
+    margin-left: 128px;
+  }
+  #impulsar-negocio .para-empresas .check-2 {
+    height: 36px!important; 
+  }
+  #impulsar-negocio .iconos-redes{
+    margin-top: 0
+  }
+  .video-iframe iframe{
+    width: 100%!important
+  }    
+  .main-text h1{
+    font-size: 25px;
+  } 
+    
+  /*AGREGADOS*/
+  .imagen-destacada .beneficios-mobile figcaption span,
+  .imagen-destacada-medio .beneficios-mobile figcaption span{
+    margin-left: 15px
+  }
+  .imagen-destacada .beneficios-mobile figcaption a,
+  .imagen-destacada-medio .beneficios-mobile figcaption a{
+    left: 13px
+  }
+  /* .toggle {
+    position: absolute;
+    right: 26px;
+    top: 55px;
+  }
+  .toggle p{
+    margin-top: 18px
+  } */
+  #beneficios-todos{
+    padding: 30px 0px;
+  }
+  /*-------------*/
+  #generica #titulos-redes h1 {
+    color: #fff;
+    font-size: 28px;
+    line-height: 37px;
+}
+  #cabecera-preguntas-frecuentes{
+    height: 309px;
+    padding: 80px 20px 0px 20px;
+  }
+  #cabecera-preguntas-frecuentes h1 {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  #cabecera-preguntas-frecuentes h1 span{
+    font-size: 28px;
+    line-height: 37px;
+  }
+  #envia-recibi #titulos-redes h1{
+    font-size: 28px;
+    line-height: 37px;    
+  }  
+  #envia-recibi #titulos-redes h1 span{
+    font-size: 28px;
+    line-height: 37px;    
+  }
+  #envia-recibi{
+    height: 309px!important;
+    padding: 80px 20px 0px 20px
+  }
+  .contenedor-buscador-interno {
+    padding: 0 144px;
+    width: 96%;
+    margin-top: 20px
+  }
+  /*-------------*/
+  .col-comunicate.columna-der::before{
+    left: 0
+  }
+  .pad-right {
+    padding-right: 15px!important;
+    padding-left: 0
+  }
+  #canal-yt img{
+    margin: 0;
+  }
+  /*-----------*/
+  .registro-de-cuenta{
+    padding: 0 
+  } 
+  #registro-usuario{
+    height: 230px
+  }
+  #busca-factura{
+    height: 309px;
+    padding: 80px 20px 0px 20px;
+  }
+  #busca-factura #titulos-redes h1 {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  #busca-factura #titulos-redes h1 span{
+    font-size: 28px;
+    line-height: 37px;
+  }
+  .busqueda-icono i {
+    top: 10px;
+    font-size: 31px;
+  }
+  .slimScrollDiv{
+    height: 554px;
+  }
+  #entidades .ver_mas_rubros,
+  #entidades .ver_mas_rubros_2,
+  #entidades .ver_destacados_2,
+  #entidades .ver_destacados{
+    right: -15px;
+    z-index: 30
+  }   
+  #tarifas .btn-consulta {
+    margin-top: 33px;
+    margin-bottom: 23px;
+  }
+  #tarifas{
+    padding: 20px 0px 25px;
+  }
+  .error_calculo{
+    margin-top: 20px
+  }
+  /*------------------*/
+  #novedades{
+    background-position: 52%;
+    height: 309px
+  }
+  #novedades #titulos-redes h1{
+    font-size: 28px;
+    line-height: 37px;
+  }
+  #novedades #titulos-redes h1 span{
+    font-size: 25px;
+    line-height: 37px;
+  }
+  #novedades #titulos-redes h2{
+    font-size: 28px;
+    line-height: 32px;
+  }
+  #novedades #titulos-redes h2 span{
+    font-size: 28px;
+    line-height: 30px;
+  }  
+  #rotador-imagen-video{
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .padding{
+    padding: 0 10px
+  }
+  .carousel .item2{
+    height: 200px!important
+  }
+  .carousel .item2 img{
+    object-fit: cover;
+    object-position: 80% 0;
+    width: 100%;
+    min-width: 100%;
+    min-height: 221px;    
+  }
+  /*--------------*/
+
+  #contacto #titulos-redes h1{
+    font-size: 28px;
+    line-height: 37px;
+  }
+  #contacto #titulos-redes h1 span{
+    font-size: 28px;
+    line-height: 37px;
+  }
+  .ultimas-novedades{
+    padding: 25px 0
+  }
+  #buscador-redondeado input{
+    height: 48px;
+  }
+  #buscador-redondeado{
+    height: 51px;
+    margin-bottom: 15px
+  }
+  #barra-top #linea-telefonica a{
+    display: none;
+  } 
+
+/************************************************************************************/
+/***************************HEADER****************************************/
+/***********************************************************************************/
+  .menu-principal{
+    float: right;
+
+  }
+
+  .navbar-default .menu-principal a {
+    padding: 7px 7px;
+    font-size: 12px;
+    margin-top: 9px;
+  } 
+
+/************************************************************************************/
+/***************************BUSCADOR***************************************/
+/***********************************************************************************/
+  .geo-icono i {
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    font-size: 30px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333333;
+  }
+  .select-element:after{
+    right: -50px;
+  }
+
+
+  .right .bg-search{
+    opacity: 1;
+  }
+/************************************************************************************/
+/***************************INDEX ROTADOR PEQUEÑO************************************/
+/***********************************************************************************/
+  #quote-carousel .carousel-indicators {
+    bottom: -20px !important;  
+  }
+  #quote-carousel .carousel-indicators li {
+    display: inline-block;
+    margin: 0px 5px;
+    width: 15px;
+    height: 15px;
+  }
+  #quote-carousel .carousel-indicators li.active {
+    margin: 0px 5px;
+    width: 15px;
+    height: 15px;
+  }  
+
+/************************************************************************************/
+/***************************INDEX ENVIO DE DINERO*************************************/
+/***********************************************************************************/
+  #box-padding{
+    padding: 0px 20px 30px 20px
+  }
+  .img-envio {
+    top: 30px;
+  }
+  #envio-dinero .slogan-envio h2{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 13px;
+    line-height: 22px;    
+  }
+  #envio-dinero .slogan-envio{
+    /*width: 95%;*/
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    height: 100%;
+  }
+
+  .titulo-mobile{
+    color: #333;
+    font-family: 'Univers';
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 50px;   
+  }
+  .mas-servicios{
+    margin-top: 60px;
+  }  
+/************************************************************************************/
+/***************************INDEX BUSQUEDA DE DONDE PAGAR****************************/
+/***********************************************************************************/
+  button.close {
+    background-color: #000;
+    opacity: 1;
+    font-size: 22px;
+    border-radius: 24px;
+    position: absolute;
+    top: 16px;
+    padding: 2px;
+    right: 23px;
+  }
+  #contenido_a_mostrar .mapa-busqueda-sucursales {
+    width: 100%;
+  }
+  .resultados{
+    height: auto!important; 
+    display: inline-table;
+    width: 100%;
+  }
+  .resultados h3{
+    margin-top: 0;
+    font-size: 19px;
+  }
+  .resultados h4{
+    margin-top: 2px;
+    font-size: 12px;
+  }
+/************************************************************************************/
+/***************************FOOTER***************************************/
+/***********************************************************************************/
+  footer .footer .links{
+    text-align: left;
+  } 
+
+  #btn-abierto span{
+    font-size: 11px;
+  } 
+
+/************************************************************************************/
+/***************************SECCION LOCALES****************************************/
+/***********************************************************************************/
+  .barra-top{
+    padding: 30px;
+  }
+  #nuestra-red #titulos-redes h2{
+    font-size: 24px;
+    margin-top: 0px;
+  }
+  #nuestra-red #titulos-redes h3{
+    font-size: 24px;
+  }
+  .dropp-header__btn{
+    padding: 15px 12px 0px 0px;
+  }
+  .toggle-fixed p{
+    margin-top: 21px;
+    display: none;
+  }
+  .toggle-fixed{
+    margin-left: 0px;
+    width: 100%;
+  }  
+  #tus-datos{
+    padding: 25px 0px;
+  }
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption a{
+    width: 300px;
+  }
+  #otro-motivos-consultas{
+    padding: 0
+  }
+  #formulario-contacto .pad-left{
+    padding-right:15px!important;
+  }
+  .pad-left{
+    padding-left:0px!important;
+  }
+  .pad-right{
+    padding-right:15px!important 
+  }
+  .imagen-destacada .img-1{
+    width: inherit;
+  }
+  #impulsar-negocio{
+    margin-right: inherit;
+    border:none;
+    padding: 0px 0px 40px 0px;
+  }
+  label{
+    margin-top: 7px;
+  }
+  .setup-content .prevBtn{
+    width: 100%;
+    text-align: center;
+  }
+  .setup-content .nextBtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px!important;
+    padding: 5px 18px!important
+  }  
+  #legales-btn{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .caja-parrafo{
+    width: 100%;
+  }
+  #impulsar-negocio .caja-parrafo p{
+    font-size: 23px;
+  }
+  .sin-padding-mobile{
+    padding: 0;
+  }  
+  .col-comunicate.columna-izq::before {
+    width: 104%;
+    right: 0px;
+  }
+  .col-comunicate .title-izq{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq .btn-aviso{
+    margin-top: 12px;
+  }  
+  .col-comunicate .title-der{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq h3{
+    line-height: 25px;
+  }
+  .col-comunicate .title-der h3{
+    line-height: 24px;
+    font-size: 16px;    
+  }
+  .contenedor{
+    width: 100%;
+  }
+  .servicios-clientes{
+    height: 100%;
+    padding: 20px;
+  }
+  .servicios-clientes .col{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    height: 311px;
+  }
+  .servicios-clientes .caja-servicios h4{
+    font-size: 21px;
+  }
+  .servicios-clientes .caja-servicios p{
+    font-size: 17px;
+  }
+  #padding-yt{
+  padding: 44px 0px 70px 0;
+  }
+  #canal-yt{
+    height: 100%!important;
+  }
+  #canal-yt #mas-informacion .btn-you-tube{
+    margin-top: 10px;
+    margin-bottom: 40px;    
+    float: left;
+  }
+  #western-union .img-western {
+    position: initial!important;
+    top: 0!important;
+    right: 0!important;
+    margin-top: 35px!important;
+  }  
+  #paso-paso-envio {
+    padding: 50px 30px;
+  }  
+/************************************************************************************/
+/***************************SECCION GENERICA***************************************/
+/***********************************************************************************/
+  .que-es{
+    padding: 0;
+    border-right: none; 
+  } 
+  .blockquote{
+    padding: 0
+  }
+  .scheduler-col-2.is-right::before {
+      height: 900px;
+  }
+  .scheduler-col .titulos{
+    padding: 0;
+  }
+  .contenido-entidades .clases-entidades-2 h4{
+    margin-bottom: 22px;
+  }
+  .contenido-entidades .clases-entidades-2{
+    padding: 20px 20px;
+  } 
+/************************************************************************************/
+/***************************SECCION NOVEDADES***************************************/
+/***********************************************************************************/
+  #rotador-imagen-video .carousel-control.left{
+    top: -32px;
+  } 
+  #rotador-imagen-video .carousel-control.right{
+    top: -32px;
+  }   
+
+/************************************************************************************/
+/***************************SECCION CONTACTO***************************************/
+/***********************************************************************************/
+  #otro-motivos-consultas .caja-motivos{
+    padding-right: 0;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+  }
+  #registro-usuario #titulos-redes h1{
+    /*padding-top: 70px;*/
+    padding-top:0;
+  }
+  .login-de-cuenta{
+    padding: 0;
+    width: 80%;
+  }  
+
+
+
+  #wrapPagar.show {
+    max-height: 350px;
+    height: 700px;
+    padding-top: 2%;
+  }
+  #wrapPagar h3 {
+    font-size:1.5rem ;
+  }
+  #wrapPagar #resultado{
+    height: 18vh;
+  }
+
+  #tus-datos img.first-icon{
+    margin-left: 0 !important;
+  }
+
+
+}
+
+@media screen and (max-width: 767px){
+  #tus-datos img.first-icon{
+    margin-right: 0 !important;
+  }
+.formulario-suma.reorder-xs {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 100%;
+  direction: rtl;
+}
+
+.rotador-generico #mini-rotador {
+  height: 320px;
+}
+
+.formulario-suma.reorder-xs > [class*="col-"] {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+      padding: 0;
+  direction: ltr;
+}  
+.contacto-form-pad .formulario-suma.reorder-xs {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 100%;
+  display: inline-block;
+  direction: rtl;
+  padding: 0 15px;
+}
+
+.contacto-form-pad .formulario-suma.reorder-xs > [class*="col-"] {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  direction: ltr;
+  padding: 0;
+}
+.tus-datos-de-empresa .formulario-suma.reorder-xs {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 100%;
+  display: inline-block;
+  direction: rtl;
+}
+
+.tus-datos-de-empresa .formulario-suma.reorder-xs > [class*="col-"] {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  direction: ltr;
+}
+#barra-top #linea-telefonica a{
+  display: none;
+}
+/************************************************************************************/
+/**************************************HEADER***************************************/
+/***********************************************************************************/
+  .menu-principal{
+    float: left;
+  }
+  .navbar-nav{
+    margin: 0
+  }
+  .navbar-default .menu-principal a {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+  button.close {
+    background-color: #000;
+    opacity: 1;
+    font-size: 22px;
+    border-radius: 24px;
+    position: absolute;
+    padding: 2px;
+    right: 23px;
+  }
+/************************************************************************************/
+/***************************INDEX ROTADOR PRINCIPAL**********************************/
+/***********************************************************************************/
+  
+  .main-text h2{
+    font-size: 32px;
+    margin-top: 35px;
+  }
+  .main-text h1{
+    font-size: 32px;
+  } 
+/************************************************************************************/
+/***************************INDEX BUSCADOR******************************************/
+/***********************************************************************************/
+  .geo-icono{
+    border-right: none;
+  }
+  .geo-icono i{
+    right: 20px;
+  } 
+  .input-group .form-control{
+    width: 89%;
+  } 
+  #contenido_a_mostrar .mapa-busqueda-sucursales {
+      width: 100%;
+  } 
+/************************************************************************************/
+/***************************SECCION ENVIO DINERO**************************************/
+/***********************************************************************************/
+
+  #box-padding{
+    padding: 40px 20px 50px 20px;
+  }
+  #envio-dinero .slogan-envio h2{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 13px;
+    line-height: 22px;    
+  }
+  #envio-dinero .slogan-envio{
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    height: 100%;
+  }
+  .titulo-mobile{
+    color: #333;
+    font-family: 'Univers';
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0px;   
+  }   
+  .mas-servicios .btn-servicios a.btn-2, .btn-2{
+    margin-right: 0px;
+  } 
+/************************************************************************************/
+/***************************INDEX CLIENTES BENEFICIOS Y NOVEDADES*******************/
+/***********************************************************************************/
+  figure.snip1281{
+    height: 100%;
+  }
+  figure.snip1284 img{
+    width: 100%;
+  }
+  .imagen-destacada .img-1{
+    width: 100%;
+  }
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption a{
+    width: 300px;
+  }
+/************************************************************************************/
+/***************************INDEX DESCARGA LA APP***********************************/
+/***********************************************************************************/
+  .btn--ios{
+    margin-left: 0px;
+  }
+/************************************************************************************/
+/***************************FOOTER****************************************/
+/***********************************************************************************/
+  footer .footer .links{
+    text-align: left;
+  }  
+  footer .legales .qk-studio a{
+    float: left;
+  }
+
+/************************************************************************************/
+/***************************SECCION LOCALES****************************************/
+/***********************************************************************************/
+  .barra-top{
+    padding: 0;
+  }
+  #nuestra-red #titulos-redes h2{
+    font-size: 24px;
+    margin-top: 0px;
+  }
+  #nuestra-red #titulos-redes h3{
+    font-size: 24px;
+  }
+  .dropp-header__btn{
+    padding: 15px 12px 0px 0px;
+  }
+  #btn-search button{
+    margin-bottom: 0
+  }
+  .toggle-fixed p{
+    margin-top: 19px;
+    display: block;
+    font-size: 18px;
+  }
+  .toggle-fixed{
+    margin-left: 0px;
+    width: 100%;
+  }
+  #tus-datos{
+    padding: 50px 0px 0 0;
+  }
+  .scroll-me {
+    padding: 0px 25px 0px 20px;
+  }
+  .pad-left{
+    padding-left:0px!important;
+  }
+  #impulsar-negocio{
+    margin-right: inherit;
+    border:none;
+    padding: 0px 0px 40px 0px;
+    margin-top: 30px
+  }
+  label{
+    margin-top: 7px;
+  }
+  .setup-content .prevBtn{
+    width: 100%;
+    text-align: center;
+  }
+  .setup-content .nextBtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px!important;
+  }  
+  #legales-btn{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .caja-parrafo{
+    width: 100%;
+  }
+  #impulsar-negocio .caja-parrafo p{
+    font-size: 23px;
+  }
+  .sin-padding-mobile{
+    padding: 0;
+  }  
+  .col-comunicate.columna-izq::before{
+    width: 100%;
+    right: initial;
+  }
+  .col-comunicate .title-izq{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq .btn-aviso{
+    margin-top: 12px;
+  }  
+  .col-comunicate .title-der{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq h3{
+    line-height: 25px;
+  }
+  .col-comunicate .title-der h3{
+    line-height: 24px;
+    font-size: 16px;    
+  }
+  .contenedor{
+    width: 100%;
+  }
+  .servicios-clientes{
+    height: 100%;
+  }
+  .servicios-clientes .col{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    height: 390px
+  }
+/************************************************************************************/
+/***************************SECCION ENVIA DINERO************************************/
+/***********************************************************************************/  
+  #padding-yt{
+    padding: 0px 0px 30px 0;
+  }
+  #canal-yt{
+    height: 100%;
+  }
+  #canal-yt #mas-informacion .btn-you-tube{
+    margin-top: 10px;
+    margin-bottom: 40px;    
+  } 
+  .scheduler-col-2.is-right::before{
+    height: 100%;
+  }
+  #publicidad-envia-recibi img {
+    position: relative;
+    top: 45px;
+    right: 0;
+  }
+  #western-union .img-western {
+    position: initial!important;
+    top: 0!important;
+    right: 0!important;
+    margin-top: 35px!important;
+  }  
+  #paso-paso-envio {
+    padding: 50px 30px;
+  }  
+/************************************************************************************/
+/***************************SECCION NOVEDADES****************************************/
+/***********************************************************************************/
+  #rotador-imagen-video .carousel-control.left{
+    top: -32px;
+  } 
+  #rotador-imagen-video .carousel-control.right{
+    top: -32px;
+  } 
+
+/************************************************************************************/
+/***************************SECCION GENERICA****************************************/
+/***********************************************************************************/
+  .que-es{
+    padding-right: 15px;
+    border-right: none; 
+  }
+  #proceso-pago .caja-proceso i{
+    position: absolute;
+    right: 219px;
+    color: #ffd100;
+    border-radius: 50px;
+    background-color: #333;
+    width: 40px;
+    height: 40px;
+    bottom: -16px;
+  }
+  #proceso-pago .caja-proceso .fa-angle-down:before {
+    content: "\f107";
+    font-size: 25px;
+    left: 11px;
+    position: relative;
+    top: 9px;
+  }
+  .slogan h2 {
+    color: #9a9a9a;
+    line-height: 27px;
+    letter-spacing: -1px;
+    margin: 0;
+    padding-top: 18px;
+    font-size: 21px;
+  }  
+/************************************************************************************/
+/***************************SECCION CONTACTOS****************************************/
+/***********************************************************************************/
+  #otro-motivos-consultas .caja-motivos{
+    padding-right: 0;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+  }
+
+/************************************************************************************/
+/***************************SECCION DONDE PAGAR SERVICIOS****************************/
+/***********************************************************************************/    
+  #box-padding-resultados{
+    height: 350px;
+  }  
+  .contenido-entidades .clases-entidades-2 .thumbnail{
+    height: 200px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .col-comunicate{
+    padding: 30px 0px;
+    height: 295px;
+  }
+  .contenedor-buscador-interno .input-group{
+    display: flex;
+    width: 100%;   
+  }
+  #buscador-redondeado button{
+    width: 67px;
+    height: 50px;
+  }
+  #buscador-redondeado input{
+    margin-left:0px;
+    width: 70%;
+  }
+  .socialfav .socialcustom {
+    position: absolute!important;
+    bottom: 41px!important;
+    right: 0px;
+    left: 185px!important;
+  }     
+  .dropp-header__btn{
+    padding: 15px 0!important
+  }
+  .botones-centrado-resultado-donde,
+  .caja-compartir-resultado{
+    margin: auto;
+    text-align: center;
+    display: table;
+    margin-bottom: 10px
+  }  
+  #btn-resultados-busqueda .jssocials {
+    bottom: 0px!important;
+    right: 0!important;
+    left: 250px!important;
+    padding-right: 8px;
+  }    
+  .que-es-pago iframe{
+    width: 100%!important;
+  }
+  .que-es-pago img{
+    margin-right: 0!important;
+    width: 100%!important;
+    height: 100%!important
+   }  
+  #impulsar-negocio .para-clientes ul li, #impulsar-negocio .para-empresas ul li{
+    clear: both
+  }  
+  #wrapper .col-comunicate.columna-izq::before{
+    width: 130vw!important;
+  }   
+  .col-comunicate.columna-izq::before{
+    width: 120vw!important;
+    right: initial;
+  }  
+  #wu-envios-nacionales h4 {
+    color: #333;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+  #wu-envios-nacionales .parrafo-envios p{
+      margin-top: 20px
+    }   
+  .rotador-generico {
+    margin-bottom: 50px
+  }
+  .rotador-generico .rotador-pago-facil img{
+    height: auto;
+    width: 50%
+  }
+  .rotador-generico .rotador-pago-facil{
+    height: 235px
+  } 
+  #box-padding-resultados .botonera-de-home{
+    margin-top: 30px;
+  }
+  #box-padding-resultados{
+    height: 400px
+  }
+  .star-yellow > i, .btn-icono-fav > i{
+    bottom: -7px;
+    left: 2px;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-icono-compartir i{
+    bottom: 5px;
+    left: -5px;
+  } 
+  .btn-icono-no-fav .fa-star{
+    bottom: -7px;
+    left: 2px;
+  } 
+  .costo_envio{
+    width: 85%;
+    margin-top: 10px;
+  }  
+  .modal-body .form-horizontal input{
+    margin-top: 15px;
+  }
+  .formulario-suma .pad-left{
+    padding-right: 0
+  }  
+  .carousel .carousel-inner .row-fluid a{
+    height: initial
+  }    
+  #impulsar-negocio .para-empresas h4{
+    margin-top: 10px;
+  }
+  #tus-datos {
+    padding: 20px 0px 0 0;
+  }
+  .setup-content h3{
+    margin-top: 0
+  }
+  #menu-mobile-margin{
+    margin-top: 30px
+  }
+  .video-iframe iframe{
+    width: 100%!important
+  }  
+  .resultados{
+    padding: 30px 15px 20px 15px;
+  }
+  .loader {
+    width: 640px!important;
+  }
+  .loader::after {
+    left: 296px;
+  }
+  #loading_results{
+    width: 100%!important;
+  }
+  #envio-dinero .slogan-envio .envio-exterior .btn-large {
+    font-size: 11px;
+    padding: 10px 9px;
+    margin-top: 1px;
+  }
+  .imagen-destacada .beneficios-mobile figcaption span,
+  .imagen-destacada-medio .beneficios-mobile figcaption span,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption span{
+    margin-left: 6px
+  }
+  .imagen-destacada-medio .beneficios-mobile figcaption a,
+  .imagen-destacada .beneficios-mobile figcaption a,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption a{
+    left: 5px
+  }
+  #envio-dinero .slogan-envio .envios-nacionales a.btn, .btn{
+    margin-bottom: 0;
+  }
+  #iconos-servicios{
+    padding: 30px 20px
+  }
+  .caja-local .btn-locales{
+    margin-top: 30px
+  }
+  .caja-local,
+  .caja-empresa{
+    height: initial
+  }
+  footer .footer .img-footer{
+    margin-top: 0
+  }
+  footer .footer{
+    padding: 40px 0px 60px 0px
+  }
+  .caja-local, .caja-empresa{
+    padding: 70px 20px!important;
+    width: 100%; 
+  }
+  .btn-app{
+    width: 190px;
+    margin: 0 25px;
+  }
+  .caja-empresa p{
+    clear: both
+  }
+  figure.snip1282 img{
+    height: 600px
+  }
+  .imagen-destacada .img-1{
+    width: inherit;
+    height: 300px;
+  }
+  figure.snip1282 img{
+    height: 300px;
+    object-fit: cover;
+  }
+  figure.snip1284{
+    height: initial
+  }
+  figure.snip1284 img{
+    height: 300px;
+    object-fit: cover;
+  }
+  figure.snip1281{
+    height: 100%;
+  }  
+  /*---------------*/
+  #nuestra-red {
+    height: 230px;
+  }
+  #nuestra-red #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px;
+    padding-top: 90px;
+    margin-bottom: 30px  
+  }    
+  #generica{
+    height: 230px!important;
+    padding: 120px 20px 6px 20px!important;
+  }
+  #cabecera-preguntas-frecuentes{
+    height: 230px!important;
+    padding: 80px 20px 6px 20px!important;
+  }
+  #cabecera-preguntas-frecuentes h1{
+    font-size: 28px;
+    padding-top: 0;
+    line-height: 30px
+  }
+  #cabecera-preguntas-frecuentes h1 span{
+    font-size: 28px;
+    line-height: 30px
+  }
+  #generica #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px
+  }
+  #generica #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .que-es{
+    border-right:none;
+    padding: 0
+  }  
+  .blockquote{
+    padding: 0
+  }
+  .rotador-generico #quote-carousel .carousel-control.left{
+    left: 0
+  }
+  .rotador-generico #quote-carousel .carousel-control.right{
+    right: 0
+  }
+  #beneficios-todos{
+    padding: 20px 0
+  }
+  #proceso-pago .caja-proceso i{
+    right: 287px
+  }
+  /*---------------*/
+  .col-comunicate.columna-der::before{
+    left: 0
+  }
+  #suma_tu_empresa{
+    height: 230px!important;
+    padding: 120px 20px 6px 20px!important;
+  }
+  #suma_tu_empresa #titulos-redes h1{
+    font-size: 28px
+  }
+  .pad-right {
+    padding-left: 0;
+  }
+  .servicios-clientes{
+    height: 100%;
+    padding: 20px;
+  } 
+  .registro-de-cuenta{
+    padding: 0 
+  } 
+  #registro-usuario{
+    height: 230px
+  }
+  #registro-usuario #titulos-redes h1 {
+    font-size: 28px;
+    line-height: 30px;
+    padding-top: 46px;
+    margin-bottom: 30px;
+  }
+  #login-usuario {
+    height: 230px!important;
+    padding: 120px 20px 6px 20px!important;
+    background-position: -62px 0;
+  } 
+  .login-de-cuenta{
+    width: 70%;
+  }
+  #login-usuario #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  /*-------------*/
+  #busca-factura{
+    background-position: 23%;
+    height: 230px;
+    padding: 80px 20px 0 35px;
+  }
+  #busca-factura #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px;  
+  }
+  #busca-factura #titulos-redes h1 span{
+    font-size: 28px;
+    line-height: 30px;    
+  } 
+  #envia-recibi{
+    background-position: 15%;
+    height: 300px!important;
+    padding: 40px 20px 6px 20px!important
+  }
+  #envia-recibi #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px;
+  }  
+  #envia-recibi #titulos-redes h1 span{
+    font-size: 28px;
+    line-height: 30px;
+  } 
+  .contenedor-buscador-interno{
+    padding: 50px 60px;
+  }
+  #buscador-redondeado {
+    position: absolute;
+    top: -29px;
+    width: 100%;
+  }
+
+  .busqueda-icono.right{
+
+    top: -25px;
+   
+  
+  }
+  .busqueda-icono i{
+    top: -18px
+  }
+  .contenedor-buscador-interno{
+    width: 96%;
+  }
+  .toggle {
+    position: static;
+    right: 0;
+    top: 30px;
+  }
+  #entidades .ver_mas_rubros,
+  #entidades .ver_mas_rubros_2,
+  #entidades .ver_destacados_2,
+  #entidades .ver_destacados{
+    right: -15px;
+    z-index: 30
+  } 
+  .contenido-entidades .clases-entidades-2 figure{
+    height: 100%;
+  }  
+  .contenido-entidades .clases-entidades-2 .thumbnail img{
+    height: 100%;
+    object-fit: scale-down;
+  }
+  .scroll-me{
+    padding: 0;
+  }
+  .contenido-entidades .clases-entidades-2{
+    padding: 20px 0
+  }
+  #tarifas .btn-consulta {
+    margin-top: 33px;
+    margin-bottom: 23px;
+  }
+  #tarifas{
+    padding: 20px 0px 25px;
+  }
+  .error_calculo{
+    margin-top: 20px
+  }
+  /*------------------*/
+  #novedades{
+    background-position: 52%;
+    height: 230px;
+    padding: 120px 20px 6px 20px!important;
+  }
+  #novedades #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  #novedades #titulos-redes h1 span{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  #novedades #titulos-redes h2{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  #novedades #titulos-redes h2 span{
+    font-size: 28px;
+    line-height: 30px;
+  }  
+  #rotador-imagen-video{
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .padding{
+    padding: 0
+  }
+  /*-----------------*/
+  .ultimas-novedades{
+    padding: 25px 0
+  }
+  .ultimas-novedades .padding-mobile{
+    padding: 0
+  }
+  .ultimas-novedades .content-nov{
+    padding: 0 15px
+  }
+  .ultimas-novedades h1{
+    margin: 0;
+    font-size: 28px;
+    padding-bottom: 10px
+  } 
+  .ultimas-novedades p{
+    font-size: 16px;
+  } 
+
+  /*--------------*/
+  #contacto{
+    height: 230px;
+    padding: 120px 20px 6px 20px!important;
+  }
+  #contacto #titulos-redes h1{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  #contacto #titulos-redes h1 span{
+    font-size: 28px;
+    line-height: 30px;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+  #formulario-contacto .padding-mobile{
+    padding: 0
+  }
+  .que-es-pago h2{
+    font-size: 21px;
+    font-weight: bold
+  } 
+  .que-es-pago h1{
+    font-size: 30px;
+    margin-bottom: 10px
+  }  
+  .main-text h2 {
+    font-size: 32px;
+    margin-top: 0px;
+    line-height: 1;
+  } 
+  .titulos-de-las-busquedas {
+      padding-left: 15px!important;
+  }
+  #box-padding-resultados #btn-resultados-busqueda {
+    padding-left: 0;
+    /* margin-top: 30px; */
+    margin-left: 0;
+    margin-top: 10px
+  } 
+  .btn-icono-compartir{
+    margin-top: 12px;
+    display: block;
+  } 
+  .titulos-de-las-busquedas h4 {
+    font-size: 18px;
+    text-align: center
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 0px !important;
+    padding: 6px 4px !important;
+  }
+   .menu-mobile i{
+    display: none
+  } 
+  #form_suma_tu_negocio .form-group{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 25px
+  }
+  #impulsar-negocio .iconos-redes{
+    margin-top: 0
+  }   
+
+  #wrapPagar p{
+    font-size: 0.9rem;
+   }
+  #wrapPagar.show {
+    max-height: 33vh;
+    height: 700px;
+    padding-top: 0;
+  }
+  #wrapPagar h3 {
+    font-size:1.5rem ;
+  }    
+  #wrapPagar #cerrarSearch {
+
+    top: 10px;
+}
+}
+
+@media (min-width: 425px) and (max-width: 639px) {
+  .rotador-generico #quote-carousel h3 {
+    font-size: 14px;
+  }
+  .resultados .compartir{
+    margin-top: 0!important
+  }
+  .socialfav .socialcustom {
+    position: absolute!important;
+    bottom: 41px!important;
+    right: 0px;
+    left: 65px!important;
+  }    
+  #btn-resultados-busqueda .jssocials {
+    bottom: -4px!important;
+    right: 0;
+    left: 0;
+  }    
+  #descarga-app h2{
+    margin-top: 20px;
+  }
+  .que-es-pago iframe{
+    width: 100%!important;
+  }
+  .que-es-pago img{
+    margin-right: 0!important;
+    width: 100%!important;
+    height: 100%!important
+   }  
+
+   .rotador-generico .rotador-pago-facil img {
+     width: 30% !important;
+   }
+  .navbar-ex1-collapse >.menu-mobile .btn-cuenta-mobile{
+    margin-bottom: 10px
+  }
+  .navbar-ex1-collapse >.menu-mobile .btn-cuenta-mobile a{
+    color: #fff!important;
+    padding: 8px 18px;
+  }  
+  #wu-envios-nacionales .transferencia{
+    width: 100%;
+  }  
+  #wu-envios-nacionales h4 {
+      color: #333;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 25px;
+  }
+  #wu-envios-nacionales .parrafo-envios p{
+      margin-top: 20px
+  }   
+  .rotador-generico {
+    margin-bottom: 50px
+  }
+  .rotador-generico .rotador-pago-facil img{
+    height: auto;
+    width: 100%
+  }
+  .rotador-generico .rotador-pago-facil{
+    height: 285px
+  }  
+  .star-yellow > i, .btn-icono-fav > i{
+    bottom: -21px;
+  } 
+  .btn-icono-no-fav .fa-star{
+    bottom: -21px;
+  }
+  .error_calculo{
+    width: 100%;
+    line-height: 27px;
+    margin-top: 10px    
+  }
+  .costo_envio{
+    width: 100%;
+    line-height: 27px;
+    margin-top: 10px
+  } 
+  .modal-body .form-horizontal input{
+    margin-top: 15px;
+  }
+  .carousel .carousel-inner .row-fluid a{
+    height: initial
+  }    
+  #impulsar-negocio .para-empresas .check-2{
+    height: 38px!important;
+  }    
+
+  .setup-content h3{
+    margin-top: 0
+  }
+  #impulsar-negocio .iconos-redes{
+    margin-top: 0
+  } 
+  #menu-mobile-margin{
+    margin-top: 30px
+  } 
+  .video-iframe iframe{
+    width: 100%!important
+  }  
+  .resultados{
+    padding: 30px 15px 20px 15px;
+  }  
+  /*-------------------------*/
+  .loader {
+    width: 425px!important;
+  }
+  .loader::after {
+    left: 185px;
+  }
+  #loading_results{
+    width: 100%!important;
+  }
+  /*---------------------*/    
+  .contenedor-buscador-interno{
+    /* display: none */
+  }
+  /*AGREGADOS*/
+  #envio-dinero .slogan-envio .envio-exterior .btn-large {
+    font-size: 11px;
+    padding: 10px 9px;
+    margin-top: 1px;
+  }
+  .imagen-destacada .beneficios-mobile figcaption span,
+  .imagen-destacada-medio .beneficios-mobile figcaption span,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption span{
+    margin-left: 6px
+  }
+  .imagen-destacada-medio .beneficios-mobile figcaption a,
+  .imagen-destacada .beneficios-mobile figcaption a,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption a{
+    left: 5px
+  }
+  #envio-dinero .slogan-envio .envios-nacionales a.btn, .btn{
+    margin-bottom: 0;
+  }
+  #iconos-servicios{
+    padding: 30px 20px
+  }
+  .caja-local .btn-locales{
+    margin-top: 30px
+  }
+  .caja-local,
+  .caja-empresa{
+    height: initial
+  }
+  footer .footer .img-footer{
+    margin-top: 0
+  }
+  footer .footer{
+    padding: 40px 0px 60px 0px;
+  }
+  .caja-local, .caja-empresa{
+    padding: 50px 15px!important;
+    width: 100%; 
+  }
+  .btn-app{
+    width: 190px;
+  }
+  #bg-color{
+    padding: 0px 20px 60px 20px 
+  }
+  /*---------------*/
+  #nuestra-red{
+    height: 207px;
+    padding: 35px 0px 0 80px;
+  }
+  #nuestra-red #titulos-redes h1{
+    font-size: 23px;
+    line-height: 23px;
+    padding-top: 50px;
+    margin-bottom: 30px  
+  }    
+  #cabecera-preguntas-frecuentes{
+    height: 207px;
+    padding:70px 20px 0 35px;
+  }
+  #cabecera-preguntas-frecuentes h1,
+  #cabecera-preguntas-frecuentes h1 span{
+    font-size: 23px;
+    line-height: 25px;
+    margin-bottom: 30px    
+  }   
+    /*----------------*/
+  .consulta-no-aparece{
+    padding: 0
+  }
+  .main-preguntas{
+    padding: 0
+  }
+  .main-preguntas .consulta-no-aparece .thumbnail{
+    margin-bottom: 0;
+  }
+  /*------------*/
+  #suma_tu_empresa{
+    height: 207px!important;
+    padding: 90px 20px 6px 20px!important;
+    background-position: -250px!important;
+  }
+  #suma_tu_empresa #titulos-redes h1{
+    font-size: 23px!important;
+    padding-top: 0px!important;
+  }
+  #tus-datos{
+    padding: 25px 0px;
+  }
+  #formulario-suma-tu-empresa{
+    padding: 0
+  }
+  .col-comunicate{
+    height: 330px;
+  }
+  /*---------------*/
+  #generica{
+    height: 207px!important;
+    padding: 90px 20px 6px 20px!important;
+  }
+  #generica #titulos-redes h1{
+    font-size: 23px;
+    line-height: 25px;
+    margin-bottom: 30px
+  }
+  .que-es{
+    border-right:none;
+    /*padding: 0*/
+  }  
+  .blockquote{
+    /*padding: 0*/
+  }
+  .rotador-generico #quote-carousel .carousel-control.left{
+    left: 0;
+    bottom: 0
+  }
+  .rotador-generico #quote-carousel .carousel-control.right{
+    right: 0;
+    bottom: 0
+  }
+  #beneficios-todos{
+    padding: 20px 0
+  }
+  .rotador-generico #quote-carousel .height-alto{
+    height: 66px;
+  }
+  /*---------------
+  .col-comunicate.columna-der::before{
+    left: 0
+  }*/
+    /*-------------*/
+  #canal-yt #mas-informacion h3{
+    margin-top: 0
+  }
+  /*---------------*/
+  .registro-de-cuenta{
+    padding: 0 
+  }
+  #registro-usuario{
+    height: 207px;
+    padding: 35px 20px;
+  }
+  #registro-usuario #titulos-redes h1{
+    font-size: 23px;
+    line-height: 26px;
+    padding-top: 40px;
+    margin-bottom: 15px    
+  }
+  #login-usuario {
+    height: 207px!important;
+    padding: 90px 20px 6px 20px!important;
+    background-position: -62px 0;
+  } 
+  #login-usuario #titulos-redes h1{
+    font-size: 23px;
+    line-height: 25px;  
+  }
+  /*-------------*/
+  #busca-factura{
+    /* background-position: 23%;
+    height: 207px; */
+    padding: 70px 20px 0 35px;
+    height: 300px;
+    /* padding: 40px 20px 0 35px;     */
+  }
+  #busca-factura #titulos-redes h1{
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 35px     
+  }
+  #busca-factura #titulos-redes h1 span{
+    font-size: 18px;
+    line-height: 25px;    
+  }
+  #entidades .ver_mas_rubros,
+  #entidades .ver_mas_rubros_2,
+  #entidades .ver_destacados_2,
+  #entidades .ver_destacados{
+    right: -15px;
+    z-index: 20
+  }
+
+  #tarifas .btn-consulta {
+    margin-top: 33px;
+    margin-bottom: 23px;
+  }
+  #tarifas{
+    padding: 20px 0px 25px;
+  }
+
+  .error_calculo{
+    margin-top: 20px
+  }
+  /*------------------*/
+  #novedades{
+    background-position: 24%;
+    height: 207px;
+    padding: 90px 20px 6px 20px!important;
+  }
+  #novedades #titulos-redes h1{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  #novedades #titulos-redes h1 span{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  #novedades #titulos-redes h2{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  #novedades #titulos-redes h2 span{
+    font-size: 23px;
+    line-height: 25px;
+  }  
+  #rotador-imagen-video{
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .padding{
+    padding: 0
+  }
+  /*-----------------*/
+  .ultimas-novedades{
+    padding: 25px 0
+  }
+  .ultimas-novedades .padding-mobile{
+    padding: 0
+  }
+  .ultimas-novedades .content-nov{
+    padding: 0 15px
+  }
+  .ultimas-novedades h1{
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 25px;
+  }
+  .ultimas-novedades p{
+    font-size: 16px;
+  }
+  /*--------------*/
+  #contacto{
+    height: 207px;
+    padding: 90px 20px 0px 20px!important;
+  }
+  #contacto #titulos-redes h1{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  #contacto #titulos-redes h1 span{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+    padding-top: 0
+  }
+  #formulario-contacto .padding-mobile{
+    padding: 0
+  }
+  .que-es-pago h2{
+    font-size: 21px;
+    font-weight: bold
+  }
+  .que-es-pago h1{
+    font-size: 30px;
+    margin-bottom: 10px
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail figure {
+      height: 254px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail{
+    height: 264px;
+  } 
+  .titulos-de-las-busquedas {
+      padding-left: 15px!important;
+  }
+  #box-padding-resultados #btn-resultados-busqueda {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 10px
+  } 
+  .btn-icono-compartir{
+    margin-top: 12px;
+    display: block;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 5px !important;
+    padding: 7px 5px !important;
+  } 
+  #barra-top #linea-telefonica a{
+    display: none;
+  }
+  .menu-mobile i{
+    display: none
+  }
+/************************************************************************************/
+/********************************HEADER**********************************************/
+/***********************************************************************************/  
+  .menu-principal{
+    float: left;
+    margin-top: 25px;
+  }
+
+  .navbar-default .menu-principal a {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+  .main-text {
+    /* margin-top: -161px; */
+    width: 100%;
+  }
+  .main-text h2{
+    font-size: 30px;
+    margin-top: 35px;
+    line-height: 1;
+  }
+
+  .main-text .btn-rosa {
+    width: 40%;
+  }
+  .main-text h1{
+    font-size: 23px;
+  } 
+  .geo-icono{
+    border-right: none;
+  }
+  .geo-icono i {
+    position: absolute;
+    top: 17px;
+    /*right: 16px;*/
+    right: 30px;
+    font-size: 24px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333333;
+  }
+  .input-group .form-control{
+    width: 60%;
+  }
+
+/************************************************************************************/
+/***************************INDEX BUSQUEDAS DE SUCURSALES PARA PAGAR******************/
+/***********************************************************************************/  
+  #contenido_a_mostrar .mapa-busqueda-sucursales {
+      width: 100%;
+  }  
+  #contenido_a_mostrar{
+    height: 100%;
+  }
+  .resultados .btn-como-llegar{
+    font-size: 11px;
+  }
+  .resultados .metros{
+    margin-left: 4px;
+    font-size: 12px;    
+  }
+
+/************************************************************************************/
+/***************************SECCION ENVIA Y RECIBIR DINERO***************************/
+/***********************************************************************************/  
+
+  #envia-recibi #titulos-redes h1{
+    font-size: 23px;
+    line-height: 25px;
+  }  
+  #envia-recibi #titulos-redes h1 span{
+    font-size: 23px;
+    line-height: 25px;
+  } 
+
+  #envia-recibi{
+    background-position: 15%;
+    height: 300px!important;
+    padding: 70px 16px 0 16px;
+  }  
+   #envia-recibi #titulos-redes h2{
+    font-size: 30px;
+  }
+  #envia-recibi #titulos-redes h3{
+    font-size: 30px;
+  }
+  #tarifas .btn-consulta{
+    margin-top: 15px;
+  }
+  #box-padding{
+    padding: 40px 20px 50px 20px;
+  }
+
+  #envio-dinero .slogan-envio h2{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 0px;
+    line-height: 22px;    
+  }
+  #envio-dinero .slogan-envio{
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    height: 100%;
+    margin-top: 10px
+  }
+  .titulo-mobile{
+    color: #333;
+    font-family: 'Univers';
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0px;   
+  } 
+  .mas-servicios .btn-servicios a.btn-2, .btn-2{
+    margin-right: 0px;
+  }
+
+/************************************************************************************/
+/***************************INDEX NOVEDADES Y CLIENTES ****************************/
+/***********************************************************************************/  
+  .imagen-destacada .img-1{
+    width: inherit;
+    height: 300px;
+  }
+  figure.snip1282 img{
+    height: 300px;
+    object-fit: cover;
+  }
+  figure.snip1284{
+    height: initial
+  }
+  figure.snip1284 img{
+    height: 300px;
+    object-fit: cover;
+  }
+  figure.snip1281{
+    height: 100%;
+  }
+
+/************************************************************************************/
+/***************************INDEX EMPRESAS LOCALES ****************************/
+/***********************************************************************************/  
+
+  .caja-local p{
+    width: 100%;
+  }
+  .caja-empresa p{
+    width: 100%;
+  } 
+
+/************************************************************************************/
+/***************************INDEX DESCARGA LA APP****************************/
+/***********************************************************************************/  
+  #descarga-app{
+    padding: 0;
+  }
+  #descarga-app p{
+    width: 100%;
+  }  
+  .btn--ios{
+    margin-left: 0px;
+    margin-top: 15px;
+  } 
+
+/************************************************************************************/
+/***************************INDEX ROTADOR DE SERVICIOS DE PAGOS**********************/
+/***********************************************************************************/    
+  #iconos-servicios .carousel .carousel-inner img {
+    width: 52%;
+    height: 150px;
+  }
+
+/************************************************************************************/
+/***************************FOOTER**************************************************/
+/***********************************************************************************/  
+  footer .footer .links{
+    text-align: left;
+  }
+  footer .legales .qk-studio a{
+    float: left;
+  }
+  .qk-studio{
+    float: left;
+  }  
+
+/************************************************************************************/
+/***************************INDEX RESULTADO DE BUSQUEDA MAPA*************************/
+/***********************************************************************************/  
+  .scroll-me {
+      padding: 0px ;
+  }
+  #box-padding-resultados{
+    height:415px;
+  }
+  button.close {
+    background-color: #000;
+    opacity: 1;
+    font-size: 22px;
+    border-radius: 24px;
+    position: absolute;
+    /* top: 16px; */
+    padding: 2px;
+    right: 23px;
+  } 
+  #box-padding-resultados h3{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: left;
+  }
+  #box-padding-resultados h4{
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 15px !important;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-donde-pagar{
+    margin-top: 17px;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-donde-pagar a{
+    padding: 8px 28px; 
+  }
+
+/************************************************************************************/
+/***************************SECCION LOCALES****************************************/
+/***********************************************************************************/  
+  .barra-top{
+    padding: 0;
+  }
+  #nuestra-red{
+    background-position: 31%;
+  }
+  #nuestra-red #titulos-redes h2{
+    font-size: 24px;
+ 
+  }
+  #nuestra-red #titulos-redes h3{
+    font-size: 24px;
+  }
+  .dropp-header__btn {
+      padding: 15px 0!important;
+  }
+  .toggle-fixed p{
+    margin-top: 21px;
+    font-size: 15px;
+  }
+  .toggle-fixed{
+    margin-left: 0px;
+    width: 100%;
+  }  
+  #tus-datos{
+    padding: 25px 0px;
+  }
+  .pad-left{
+    padding-left:0px!important;
+    padding-right: 0
+  }
+  #form_suma_tu_negocio .form-group{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 25px
+  }
+  .pad-right{
+    padding-right:0px!important ;
+    padding-left: 0
+  }
+  #impulsar-negocio{
+    margin-right: inherit;
+    border:none;
+    padding: 0px 0px 0px 0px;
+    margin-top: 30px
+  }
+  label{
+    margin-top: 7px;
+  }
+  .setup-content .prevBtn{
+    width: 100%;
+    text-align: center;
+  }
+  .setup-content .nextBtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px!important;
+  }  
+  #legales-btn{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .caja-parrafo{
+    width: 100%;
+  }
+  #impulsar-negocio .caja-parrafo p{
+    font-size: 23px;
+  }
+  .sin-padding-mobile{
+    padding: 0;
+  }  
+  .col-comunicate.columna-izq::before{
+    width: 140vw!important;
+    right: initial;
+  }
+  .col-comunicate .title-izq{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq .btn-aviso{
+    margin-top: 12px;
+  }  
+  .col-comunicate .title-der{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq h3{
+    line-height: 25px;
+  }
+  .col-comunicate .title-der h3{
+    line-height: 24px;
+    font-size: 16px;    
+  }
+  .contenedor{
+    width: 100%;
+  }
+  .servicios-clientes{
+    height: 100%;
+    padding: 20px;
+  }
+  .servicios-clientes .col{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    height: 100%;
+  }
+  #padding-yt{
+    padding: 44px 0px 70px 0;
+  }
+  #canal-yt{
+    height: 100%;
+  }
+  #canal-yt #mas-informacion .btn-you-tube{
+    margin-top: 10px;
+    margin-bottom: 40px;    
+  }
+  #publicidad-envia-recibi h3{
+    width: 100%;
+  }  
+  #publicidad-envia-recibi img {
+    position: relative;
+    top: 45px;
+    right: 0;
+  } 
+  #western-union .img-western {
+    position: initial!important;
+    top: 0!important;
+    right: 0!important;
+    margin-top: 35px!important;
+  } 
+  #paso-paso-envio {
+    padding: 50px 30px;
+  }  
+/************************************************************************************/
+/***************************SECCION ENTIDADES***************************************/
+/***********************************************************************************/  
+  .scheduler-col-2.is-right::before{
+    height: 100%;
+  }
+  .contenido-entidades .clases-entidades-2 {
+    padding: 20px 0px;
+  } 
+  .contenido-entidades h3{
+    font-size: 20px;
+  } 
+  .contenido-entidades p{
+    font-size: 14px;
+  }
+
+/************************************************************************************/
+/***************************SECCION ENTIDADES***************************************/
+/***********************************************************************************/  
+  #busca-factura{
+    background-position: 70%;
+  }
+  #busca-factura #titulos-redes h2{
+    font-size: 30px;
+  }
+  #busca-factura #titulos-redes h3{
+    font-size: 30px;
+  }
+  .contenido-entidades .clases-entidades-2 .modal-dialog input{
+    width: 100%;
+  }   
+
+/************************************************************************************/
+/***************************SECCION NOVEDADES***************************************/
+/***********************************************************************************/  
+  #novedades{
+    background-position: 24%;
+  }
+  #novedades #titulos-redes h3{
+    font-size: 30px
+  }
+  #rotador-imagen-video .carousel{
+    margin-bottom: 0;
+  }
+  .carousel .carousel-inner .row-fluid h4{
+    margin-bottom: 18px;
+  }
+  .ver-mas .btn-new{
+    padding: 10px 74px;
+  }  
+/************************************************************************************/
+/***************************SECCION GENERICA*****************************************/
+/***********************************************************************************/
+  .que-es{
+    border-right:none;
+    padding-right:15px;
+  }
+  .slogan h2{
+    font-size: 18px;
+    line-height: 23px;
+  }
+  #proceso-pago h2{
+    margin:0;
+    font-size: 22px;
+  }
+  #proceso-pago .caja-proceso i{
+    position: absolute;
+    right: 172px;
+    color: #ffd100;
+    border-radius: 50px;
+    background-color: #333;
+    width: 40px;
+    height: 40px;
+    bottom: -16px;
+  }
+  #proceso-pago .caja-proceso .fa-angle-down:before {
+    content: "\f107";
+    font-size: 25px;
+    left: 11px;
+    position: relative;
+    top: 9px;
+  } 
+  #generica{
+    background-position: 27%;
+  }
+  #generica #titulos-redes h2{
+    font-size: 29px;
+    padding-top: 100px;
+  }
+  #generica #titulos-redes h3{
+    font-size: 29px;
+  }  
+
+/************************************************************************************/
+/**********************************SECCION CONTACTO*********************************/
+/***********************************************************************************/
+  #contacto{
+    background-position: 62%;
+  }
+  #contacto #titulos-redes h2{
+    font-size: 29px;
+    padding-top: 80px;
+  }
+  #contacto #titulos-redes h3{
+    font-size: 29px;
+  }
+  #otro-motivos-consultas .caja-motivos{
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+    padding-bottom: 0;
+  }
+  #formulario-contacto .boton-envio-formulario{
+    margin-top: 25px;
+  }
+  #formulario-contacto .boton-envio-formulario .btn-envio-contacto{
+    float: initial;
+    margin: auto;
+    display: block;
+    text-align: center;
+  }    
+  .likeFloating{
+    width: 100%;
+  }
+ 
+  .login-de-cuenta{
+    padding: 0;
+    width: 100%;
+  } 
+  #nuestra-red #titulos-redes h1{
+    padding-top: 50px;
+  }
+    #nuestra-red #titulos-redes h2{
+    font-size: 30px;
+  }  
+  #wrapper .col-comunicate.columna-izq::before{
+    width: 130vw!important;
+  }  
+
+  #wrapPagar{
+    box-shadow: none;
+  }
+  #wrapPagar p, #wrapPagar select, #wrapPagar input{
+   font-size: 0.9rem;
+  }
+  
+  #wrapPagar.show {
+    max-height: 600px;
+    height: 700px;
+    padding-top: 0;
+  }
+  #wrapPagar h3 {
+    font-size:1.5rem ;
+  }    
+  #wrapPagar #cerrarSearch {
+
+    top: 10px;
+  }
+
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+  .main-text.main-text-mob {
+    top: 150px;
+  }
+  .main-text h5 {
+    font-size: 1.4rem;
+  }
+  .rotador-generico #quote-carousel h3 {
+    font-size: 14px;
+  }
+  
+  .resultados .compartir{
+    margin-top: 0px!important;
+  }  
+  .socialfav .socialcustom {
+    position: absolute!important;
+    bottom: 41px!important;
+    right: 0px;
+    left: 45px;
+  }    
+  #btn-resultados-busqueda .jssocials {
+    bottom: -4px!important;
+    right: 0;
+    left: 0;
+  }    
+  #descarga-app h2{
+    margin-top: 20px;
+  }
+  .que-es-pago iframe{
+    width: 100%!important;
+  }
+  .que-es-pago img{
+    margin-right: 0!important;
+    width: 40% !important;
+    height: 80% !important;
+   }  
+  .navbar-ex1-collapse >.menu-mobile .btn-cuenta-mobile{
+    margin-bottom: 10px
+  }
+  .navbar-ex1-collapse >.menu-mobile .btn-cuenta-mobile a{
+    color: #fff!important;
+    padding: 8px 18px;
+  }  
+  .error_calculo{
+    width: 100%;
+    margin-top: 10px;
+    line-height: 27px;    
+  }
+  .costo_envio{
+    width: 100%;
+    margin-top: 10px;
+    line-height: 27px;
+  }
+  .modal-body .form-horizontal input{
+    margin-top: 15px;
+  }
+  .carousel .carousel-inner .row-fluid a{
+    height: initial
+  }    
+  #cargo-envio_2,
+  #cargo-envio_1{
+    height: 53px
+  }
+  #cargo-envio_1 input, #cargo-envio_2 input{
+    height: 49px;
+    width: 75%;
+    text-align: right;
+    font-size: 16px;
+  }
+  #western-union #envios-exterior p{
+    width: 100%
+  }  
+  #impulsar-negocio .para-empresas .check-2{
+    height: 59px!important
+  }  
+  .setup-content h3{
+    margin-top: 0
+  }
+  #impulsar-negocio .iconos-redes{
+    margin-top: 0
+  } 
+  #menu-mobile-margin{
+    margin-top: 30px
+  }
+  .menu-mobile i{
+    display: none
+  }
+  .video-iframe iframe{
+    width: 100%!important
+  }
+  .resultados{
+    padding: 30px 15px 20px 15px;
+  }
+  /*-------------------------*/
+  .loader {
+    width: 375px!important;
+  }
+  .loader::after {
+    left: 160px;
+  }
+  #loading_results{
+    width: 100%!important;
+  }
+  /*---------------------*/  
+  .menu-mobile{
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  /* .contenedor-buscador-interno{
+    display: none
+  } */
+  /*AGREGADOS*/
+  .imagen-destacada .beneficios-mobile figcaption span,
+  .imagen-destacada-medio .beneficios-mobile figcaption span,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption span{
+    margin-left: 6px
+  }
+  .imagen-destacada-medio .beneficios-mobile figcaption a,
+  .imagen-destacada .beneficios-mobile figcaption a,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption a{
+    left: 5px
+  }
+  #envio-dinero .slogan-envio .envios-nacionales a.btn, .btn{
+    margin-bottom: 0;
+  }
+  #iconos-servicios{
+    padding: 30px 20px
+  }
+  .caja-local .btn-locales{
+    margin-top: 30px
+  }
+  .caja-local,
+  .caja-empresa{
+    height: initial
+  }
+  footer .footer .img-footer{
+    margin-top: 0
+  }
+  footer .footer{
+    padding: 40px 0px 60px 0px
+  }
+  .caja-local, .caja-empresa{
+    padding: 93px 30px!important;
+    width: 100%; 
+  }
+  #bg-color{
+    padding: 0px 20px 60px 20px 
+  }
+  /*---------------*/
+  #cabecera-preguntas-frecuentes{
+    height: 207px;
+    padding: 70px 20px 0 20px;
+  }
+  #cabecera-preguntas-frecuentes h1,
+  #cabecera-preguntas-frecuentes h1 span{
+    font-size: 23px;
+    line-height: 25px;
+    margin-bottom: 30px    
+  }  
+  #nuestra-red{
+    height: 207px;
+    padding: 35px 0 0 20px;
+  }
+  #nuestra-red #titulos-redes h1{
+    font-size: 23px;
+    line-height: 23px;
+    padding-top: 50px;
+    margin-bottom: 30px  
+  }  
+  #impulsar-negocio h4{
+    padding-bottom: 0;
+    margin-bottom: 15px
+  }
+  #impulsar-negocio .para-clientes h4{
+    margin-bottom: 15px
+  }
+    #impulsar-negocio .para-empresas h4{
+    margin-bottom: 15px
+  }
+  /*------------*/
+  #suma_tu_empresa{
+    height: 207px!important;
+    padding: 80px 20px 6px 20px!important;
+  }
+  #suma_tu_empresa #titulos-redes h1{
+    font-size: 23px!important;
+    padding-top: 0px!important;
+  }
+  #tus-datos{
+    padding: 25px 0px;
+  }
+  /*-----------PAGINA GENERICA----------*/  
+  #generica{
+    height: 207px!important;
+    padding: 80px 20px 6px 20px!important;
+  }
+  #generica #titulos-redes h1{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  .que-es{
+    border-right:none;
+    /*padding: 0*/
+  }  
+  .que-es p{
+    margin-top: 0
+  }
+  .blockquote{
+    /*padding: 0*/
+  }
+  .rotador-generico #quote-carousel .carousel-control.left{
+    left: 0
+  }
+  .rotador-generico #quote-carousel .carousel-control.right{
+    right: 0
+  }
+  #beneficios-todos{
+    padding: 20px 0
+  }
+  .rotador-generico #quote-carousel .height-alto{
+    height: initial
+  }
+  /*----------------*/
+  .consulta-no-aparece{
+    padding: 0
+  }
+  .main-preguntas{
+    padding: 0
+  }
+  .main-preguntas .consulta-no-aparece .thumbnail{
+    margin-bottom: 0;
+  }
+  /*---------------*/
+  .pad-left{
+    padding-left:0px!important;
+    padding-right: 0
+  }
+  .formulario-negocio-suma{
+    padding: 0
+  }
+  #form_suma_tu_negocio .form-group{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 25px
+  }
+  .pad-right{
+    padding-right:0px!important ;
+    padding-left: 0
+  }
+  .col-comunicate.columna-der::before{
+    left: 0
+  }
+  /*-------------*/
+  #canal-yt #mas-informacion h3{
+    margin-top: 0
+  }
+  /*---------------*/
+  .registro-de-cuenta{
+    padding: 0 
+  }
+  #registro-usuario{
+    height: 207px;
+    padding: 35px 0;
+    background-position: 32%;
+  }
+  #registro-usuario #titulos-redes h1{
+    font-size: 23px;
+    line-height: 23px;
+    padding-top: 40px;
+    margin-bottom: 25px    
+  }
+
+  #login-usuario {
+    height: 207px!important;
+    padding: 80px 20px 6px 20px!important;
+    background-position: -62px 0;
+  } 
+  #login-usuario #titulos-redes h1{
+    font-size: 23px;
+    line-height: 23px;   
+  }
+  /*-------------*/
+  #busca-factura{
+    /* background-position: 23%; */
+    /* height: 207px!important;
+    padding: 70px 20px 0 20px; */
+  }
+  #busca-factura #titulos-redes h1{
+    font-size: 18px;
+    line-height: 25px;   
+  }
+  #busca-factura #titulos-redes h1 span{
+    font-size: 18px;
+    line-height: 25px;    
+  }
+  #entidades .ver_mas_rubros,
+  #entidades .ver_mas_rubros_2,
+  #entidades .ver_destacados_2,
+  #entidades .ver_destacados{
+    right: -15px;
+    z-index: 20
+  }
+  /*------------------*/
+  #novedades{
+    background-position: 24%;
+    height: 207px;
+    padding: 80px 20px 6px 20px!important;
+  }
+  #novedades #titulos-redes h1{
+    font-size: 23px;
+    line-height: 23px;
+  }
+  #novedades #titulos-redes h1 span{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  #novedades #titulos-redes h2{
+    font-size: 23px;
+    line-height: 25px;
+  }
+  #novedades #titulos-redes h2 span{
+    font-size: 23px;
+    line-height: 23px;
+  }  
+  #rotador-imagen-video{
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .padding{
+    padding: 0
+  }
+  /*--------------*/
+  #contacto{
+    height: 207px;
+    padding: 70px 20px 0 20px;
+  }
+  #contacto #titulos-redes h1{
+    font-size: 23px;
+    line-height: 23px;
+  }
+  #contacto #titulos-redes h1 span{
+    font-size: 23px;
+    line-height: 23px;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+    padding-top: 0
+  }
+  #formulario-contacto .padding-mobile{
+    padding: 0
+  }
+  .que-es-pago h2{
+    font-size: 18px;
+    font-weight: bold
+  }
+  .que-es-pago h1{
+    font-size: 30px;
+    margin-bottom: 10px
+  }
+  #envia-recibi{
+    background-position: 15%;
+    height: 320px!important;
+  }
+  #envia-recibi #titulos-redes h1{
+    font-size: 23px;
+    line-height: 23px;
+  }  
+  #envia-recibi #titulos-redes h1 span{
+    font-size: 23px;
+    line-height: 23px;
+  } 
+  #tarifas{
+    padding: 20px 0px 25px;
+  }
+  #tarifas .btn-consulta {
+    margin-top: 25px;
+    margin-bottom: 23px;
+  }
+  .error_calculo{
+    margin-top: 20px
+  }
+  /*-----------------*/
+  .ultimas-novedades{
+    padding: 25px 0
+  }
+  .ultimas-novedades .padding-mobile{
+    padding: 0
+  }
+  .ultimas-novedades .content-nov{
+    padding: 0 15px
+  }
+  .ultimas-novedades h1{
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .ultimas-novedades p{
+    font-size: 16px;
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail figure {
+    height: 254px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail{
+    height: 264px;
+  } 
+  .scheduler-col .titulos{
+    position: relative;
+    z-index: 50
+  } 
+  #barra-top #linea-telefonica a{
+    display: none;
+  }
+  .titulos-de-las-busquedas {
+    padding-left: 15px!important;
+  }
+  #box-padding-resultados #btn-resultados-busqueda{
+    height: 50px;
+  }
+  #box-padding-resultados #btn-resultados-busqueda {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 10px
+  } 
+  .btn-icono-compartir{
+    margin-top: 12px;
+    display: block;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 5px !important;
+    padding: 6px 5px !important;
+    margin-right: 4px !important;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-icono-no-fav .fa-star{
+    bottom: -12px;
+    left: 4px;    
+  }  
+/************************************************************************************/
+/**************************************HEADER****************************************/
+/***********************************************************************************/
+  .menu-principal{
+    float: left;
+    margin-top: 20px;
+  }
+
+  .navbar-default .menu-principal a {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+
+/************************************************************************************/
+/***************************INDEX BUSCADOR *****************************************/
+/***********************************************************************************/
+  .geo-icono{
+    border-right:none;
+    height: 44px;
+    width: 33px;
+  }
+  .geo-icono i {
+    position: absolute;
+    top: 17px;
+    right: 9px;
+    font-size: 24px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333333;
+  }
+  .input-group .form-control{
+    width: 60%;
+  }
+  .busqueda-icono.right{
+    display: none;
+  }
+  .main-text {
+    /* margin-top: -161px; */
+    width: 100%;
+  }
+  .main-text h2{
+    font-size: 30px;
+    margin-top: 15px
+  }
+
+  .main-text h1{
+    font-size: 23px;
+  }   
+/************************************************************************************/
+/***************************SECCION ENVIO DE DINERO*****************/
+/***********************************************************************************/
+  #cargo-envio i{
+    margin-top: 5px;
+  }
+  #box-padding{
+    padding: 15px 20px 15px 20px
+  }
+  #envio-dinero .slogan-envio h2{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 13px;
+    line-height: 22px;    
+  }
+  #envio-dinero .slogan-envio{
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    height: 100%;
+  }
+  .titulo-mobile{
+    color: #333;
+    font-family: 'Univers';
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0px;   
+  } 
+  #contenido_a_mostrar .mapa-busqueda-sucursales {
+    width: 100%;
+  }  
+  #contenido_a_mostrar{
+    height: 100%;
+  }
+  .resultados .btn-como-llegar{
+    font-size: 11px;
+  }
+  .resultados .metros{
+    margin-left: 4px;
+    font-size: 12px;    
+  }
+  .mas-servicios .btn-servicios{
+    margin-bottom: 15px;
+    margin-top: 26px;
+  }
+  .mas-servicios .btn-servicios a.btn-2, .btn-2{
+    margin-right: 0px;
+  }
+  #envio-dinero .slogan-envio .envios-nacionales a.btn, .btn {
+    margin-bottom: 13px;
+  }
+
+/************************************************************************************/
+/***************************INDEX EMPRESA Y LOCALES*********************************/
+/***********************************************************************************/
+  .locales p{
+    width: 100%;
+  }
+
+  .caja-local p{
+    width: 100%;
+  }
+  .caja-empresa p{
+    width: 100%;
+  }  
+/************************************************************************************/
+/***************************INDEX DESCARGA DE APP***********************************/
+/***********************************************************************************/
+  #descarga-app p{
+    width: 100%;
+  }
+  #descarga-app{
+    padding: 0;
+  }
+
+/************************************************************************************/
+/***************************INDEX NOVEDADES BENEFICIOS *****************************/
+/***********************************************************************************/
+
+  .imagen-destacada .img-1{
+    width: inherit;
+    height: 250px;
+  }
+  figure.snip1282 img{
+    height: 250px;
+    object-fit: cover;
+  }
+  figure.snip1281{
+    height: 100%;
+  }
+
+/************************************************************************************/
+/***************************INDEX ROTADOR PAGO DE SERVICIOS*************************/
+/***********************************************************************************/
+  #iconos-servicios .carousel .carousel-inner img {
+    width: 49%;
+    height: 150px;
+  }
+
+/************************************************************************************/
+/***************************FOOTER**************************************************/
+/***********************************************************************************/
+  footer .footer .links{
+    text-align: left;
+  } 
+  .qk-studio{
+    float: left;
+  } 
+
+/************************************************************************************/
+/***************************INDEX BUSQUEDA DE RESULTADO EN EL MAPA*****************/
+/***********************************************************************************/
+  .scroll-me{
+    padding: 0px ;
+  } 
+  .star-yellow > i, .btn-icono-fav > i{
+    bottom: -12px;
+    left: 4px;
+  }
+  #box-padding-resultados{
+    height: 420px;
+  }
+  #box-padding-resultados h3{
+    margin-top: 25px;
+    font-size: 23px;
+    text-align: left;
+  }
+  #box-padding-resultados h4{
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  #box-padding-resultados #btn-resultados-busqueda .btn-donde-pagar{
+    margin-top: 5px;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-donde-pagar a{
+    padding: 8px 28px; 
+  } 
+
+/************************************************************************************/
+/***************************SECCION LOCALES*****************************************/
+/***********************************************************************************/
+  .barra-top{
+    padding: 0;
+  }
+  #nuestra-red{
+    background-position: 31%;
+  }
+  #nuestra-red #titulos-redes h2{
+    font-size: 24px;
+  }
+  #nuestra-red #titulos-redes h3{
+    font-size: 24px;
+  }
+  .dropp-header__btn {
+      padding: 15px 0!important;
+  }
+  .toggle-fixed p{
+    margin-top: 21px;
+    font-size: 15px;
+  }
+  .toggle-fixed{
+    margin-left: 0px;
+    width: 100%;
+  }  
+
+  #impulsar-negocio{
+    margin-right: inherit;
+    border:none;
+    padding: 0px 0px 0px 0px;
+    margin-top: 30px
+  }
+  label{
+    margin-top: 7px;
+  }
+  .setup-content .prevBtn{
+    width: 100%;
+    text-align: center;
+  }
+  .setup-content .nextBtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px!important;
+  }  
+  #legales-btn{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .caja-parrafo{
+    width: 100%;
+  }
+  #impulsar-negocio .caja-parrafo p{
+    font-size: 23px;
+  }
+  .sin-padding-mobile{
+    padding: 0;
+  }  
+  .col-comunicate.columna-izq::before{
+    width: 130vw!important;
+    right: initial;
+  }
+  .col-comunicate .title-izq{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq .btn-aviso{
+    margin-top: 12px;
+  }  
+  .col-comunicate .title-der{
+    padding: 0px 15px 0px 0px;
+  }
+  .col-comunicate .title-izq h3{
+    line-height: 25px;
+  }
+  .col-comunicate .title-der h3{
+    line-height: 24px;
+    font-size: 16px;    
+  }
+  .col-comunicate{
+    padding: 25px 0;
+    height: 278px
+  }
+  .contenedor{
+    width: 100%;
+  }
+  .servicios-clientes{
+    height: 100%;
+    padding: 20px;
+  }
+  .servicios-clientes .col{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    height: 100%;
+  }
+  #padding-yt{
+  padding: 44px 0px 70px 0;
+  }
+  #canal-yt{
+    height: 100%;
+  }
+  #canal-yt #mas-informacion .btn-you-tube{
+    margin-top: 10px;
+    margin-bottom: 40px;    
+  }    
+
+/************************************************************************************/
+/***************************SECCION ENVIO DE DINERO*********************************/
+/***********************************************************************************/
+  #publicidad-envia-recibi h3{
+    width: 100%;
+  }
+  #publicidad-envia-recibi img {
+    position: relative;
+    top: 45px;
+    right: 0;
+  } 
+  #western-union .btn-dinero-exterior {
+    padding: 10px 12px;
+    margin-top: 30px;
+    font-size: 11px;
+  }  
+  #western-union .img-western {
+    position: initial!important;
+    top: 0!important;
+    right: 0!important;
+    margin-top: 35px!important;
+  } 
+  #paso-paso-envio {
+    padding: 50px 30px;
+  } 
+
+/************************************************************************************/
+/***************************SECCION ENTIDADES****************************************/
+/***********************************************************************************/
+  .scheduler-col-2.is-right::before{
+    height: 100%;
+  }
+  .contenido-entidades .clases-entidades-2 {
+    padding: 20px 0px;
+  }  
+  .contenido-entidades h3{
+    font-size: 20px;
+  } 
+  .contenido-entidades p{
+    font-size: 14px;
+  }  
+
+/************************************************************************************/
+/***************************SECCION ENVIA RECIBI DINERO*****************************/
+/***********************************************************************************/
+  #envia-recibi{
+   background-position: 15%; 
+   padding: 70px 20px 0 20px;
+  }
+  #envia-recibi #titulos-redes h2{
+    font-size: 30px;
+  }
+  #envia-recibi #titulos-redes h3{
+    font-size: 30px;
+  } 
+
+/************************************************************************************/
+/***************************SECCION ENTIDAD*******************************************/
+/***********************************************************************************/
+  #busca-factura{
+    background-position: 70%;
+  }
+  #busca-factura #titulos-redes h2{
+    font-size: 30px;
+  }
+  #busca-factura #titulos-redes h3{
+    font-size: 30px;
+  }
+  .contenido-entidades .clases-entidades-2 .modal-dialog input{
+    width: 100%;
+  } 
+
+/************************************************************************************/
+/***************************SECCION NOVEDADES***************************************/
+/***********************************************************************************/
+  #novedades{
+    background-position: 24%;
+  } 
+  #novedades #titulos-redes h3{
+    font-size: 30px
+  }
+  #rotador-imagen-video .carousel{
+    margin-bottom: 0;
+  }
+  .carousel .carousel-inner .row-fluid h4{
+    margin-bottom: 18px;
+  }
+  .ver-mas .btn-new{
+    padding: 10px 74px;
+  }
+
+/************************************************************************************/
+/***************************SECCION GENERICA****************************************/
+/***********************************************************************************/
+  .que-es{
+    border-right:none;
+    padding-right:15px;
+  }
+  .slogan h2{
+    font-size: 18px;
+    line-height: 23px;
+  }
+  #proceso-pago h2{
+    margin:0;
+    font-size: 22px;
+  }
+  #proceso-pago .caja-proceso i{
+    position: absolute;
+    right: 149px;
+    color: #ffd100;
+    border-radius: 50px;
+    background-color: #333;
+    width: 33px;
+    height: 33px;
+    bottom: -17px;
+  }
+  #proceso-pago .caja-proceso .fa-angle-down:before {
+    content: "\f107";
+    font-size: 25px;
+    left: 9px;
+    position: relative;
+    top: 6px;
+  } 
+  #generica{
+    background-position: 27%;
+  }
+  #generica #titulos-redes h2{
+    font-size: 29px;
+    padding-top: 100px;
+  }
+  #generica #titulos-redes h3{
+    font-size: 29px;
+  }  
+
+/************************************************************************************/
+/**************************SECCION CONTACTO*******************************************/
+/***********************************************************************************/
+  #contacto{
+    background-position: 15%;
+  }
+  #contacto #titulos-redes h2{
+    font-size: 29px;
+    padding-top: 80px;
+  }
+  #contacto #titulos-redes h3{
+    font-size: 29px;
+  }
+  #otro-motivos-consultas .caja-motivos{
+    padding-right: 0;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+  #formulario-contacto .boton-envio-formulario{
+    margin-top: 25px;
+  }
+  #formulario-contacto .boton-envio-formulario .btn-envio-contacto{
+    float: initial;
+    margin: auto;
+    display: block;
+    text-align: center;
+  }  
+  .likeFloating{
+    width: 100%;
+  }  
+
+
+  #nuestra-red #titulos-redes h2{
+    font-size: 30px;
+  } 
+  #suma_tu_empresa #titulos-redes h1{
+    font-size: 30px;
+    padding-top: 80px;
+  } 
+
+  #wrapper .col-comunicate.columna-izq::before{
+    width: 140vw!important;
+  }     
+  #wrapPagar{
+    box-shadow: none;
+  }
+  #wrapPagar p, #wrapPagar select, #wrapPagar input{
+   font-size: 0.9rem;
+  }
+  
+  #wrapPagar.show {
+    max-height: 545px;
+    height: 545px;
+    padding-top: 8%;
+  }
+  #wrapPagar h3 {
+    font-size:1.5rem ;
+  }    
+  #wrapPagar #cerrarSearch {
+
+    top: 10px;
+  }
+  .main-carousel .flickity-viewport {
+    min-height: 520px !important;
+    height: 520px !important;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .main-text h5 {
+    font-size: 1.2rem;
+  }
+  .rotador-generico #quote-carousel h3 {
+    font-size: 14px;
+  }
+  .resultados .compartir{
+    margin-top: 0px!important;
+  }
+  .socialfav .socialcustom {
+      position: absolute!important;
+      bottom: 41px!important;
+      right: 0px;
+      left: 45px;
+  }  
+  #btn-resultados-busqueda .jssocials {
+    bottom: -4px!important;
+    right: 0;
+    left: 0;
+  }  
+  #descarga-app h2{
+    margin-top: 20px;
+  }
+  .que-es-pago iframe{
+    width: 100%!important;
+  }
+  .que-es-pago img{
+    margin-right: 0!important;
+    width: 100%!important;
+    height: 100%!important
+   }
+  .navbar-ex1-collapse >.menu-mobile .btn-cuenta-mobile{
+    margin-bottom: 10px
+  }
+  .navbar-ex1-collapse >.menu-mobile .btn-cuenta-mobile a{
+    color: #fff!important;
+    padding: 8px 18px;
+  }
+  .star-yellow > i,.btn-icono-fav > i{
+    bottom: -12px;
+    left: 7px;
+  }
+  #cargo-envio_1 input, #cargo-envio_2 input{
+    /* height: 49px; */
+    width: 75%;
+    text-align: right;
+    font-size: 16px;
+  }
+  #wu-envios-nacionales .transferencia{
+    width: 100%;
+  }
+  #wu-envios-nacionales h4 {
+      color: #333;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 25px;
+  }
+  #wu-envios-nacionales .parrafo-envios p{
+      margin-top: 20px
+    }   
+  .rotador-generico .rotador-pago-facil img{
+    height: auto;
+    width: 100%
+  }
+  .rotador-generico .rotador-pago-facil{
+    height: 182px!important
+  }
+  .btn-icono-no-fav .fa-star {
+    bottom: -12px;
+    left: 7px;
+  }  
+  .error_calculo{
+    width: 100%;
+    line-height: 28px;
+  }  
+  .costo_envio{
+    width: 100%;
+    line-height: 28px;
+  }
+  .modal-body .form-horizontal input{
+    margin-top: 15px;
+  }
+  .carousel .carousel-inner .row-fluid a{
+    height: initial
+  }  
+  #impulsar-negocio .para-empresas .check-2{
+    height: 61px!important
+  }
+  #impulsar-negocio .para-clientes h4{
+    margin-bottom: 15px
+  }
+  #impulsar-negocio .para-empresas h4{
+    margin-bottom: 15px
+  }  
+  .setup-content h3{
+    margin-top: 0
+  }
+  #impulsar-negocio .iconos-redes{
+    margin-top: 0
+  } 
+  #menu-mobile-margin{
+    margin-top: 30px
+  }
+  .video-iframe iframe{
+    width: 100%!important
+  }
+  .resultados{
+    padding: 30px 15px 20px 15px;
+  }
+  /* .contenedor-buscador-interno{
+    display: none
+  } */
+  /*AGREGADOS*/
+  .imagen-destacada .beneficios-mobile figcaption span,
+  .imagen-destacada-medio .beneficios-mobile figcaption span,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption span{
+    margin-left: 6px
+  }
+  .imagen-destacada-medio .beneficios-mobile figcaption a,
+  .imagen-destacada .beneficios-mobile figcaption a,
+  .imagen-destacada-columna-3 .beneficios-mobile-columna-3 figcaption a{
+    left: 5px
+  }
+  #envio-dinero .slogan-envio .envios-nacionales a.btn, .btn{
+    margin-bottom: 13px;
+  }
+  #iconos-servicios{
+    padding: 30px 20px
+  }
+  .caja-local .btn-locales{
+    margin-top: 30px
+  }
+  .caja-local,
+  .caja-empresa{
+    height: initial
+  }
+  footer .footer .img-footer{
+    margin-top: 0
+  }
+  footer .footer{
+    padding: 40px 0px 60px 0px
+  }
+  .caja-local, .caja-empresa{
+    padding: 50px 15px!important;
+    width: 100%; 
+  }
+  #bg-color{
+    padding: 0px 20px 30px 20px 
+  }
+  /*---------------*/
+  #nuestra-red{
+    height: 130px;
+    padding: 35px 0px 0 10px;
+  }
+  #nuestra-red #titulos-redes h1{
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 0px;
+    margin-bottom: 30px  
+  }
+  .formulario-negocio-suma{
+    padding: 0;
+  }
+  #impulsar-negocio h4{
+    padding-bottom: 0
+  }
+  /*------------*/
+  #suma_tu_empresa{
+    height: 130px!important;
+    padding: 50px 20px 6px 20px!important;    
+  }
+  #suma_tu_empresa #titulos-redes h1{
+    font-size: 20px!important;
+    padding-top: 0px!important;
+  }
+  #tus-datos{
+    padding: 25px 0px;
+  }
+  #formulario-suma-tu-empresa{
+    padding: 0
+  }
+  /*-----------*/
+  #generica{
+    height: 130px!important;
+    padding: 50px 20px 0px 20px!important;
+  }
+  #cabecera-preguntas-frecuentes{
+    height: 130px;
+    padding: 36px 0 0 0;
+  }
+  #cabecera-preguntas-frecuentes h1,
+  #cabecera-preguntas-frecuentes h1 span{
+    font-size: 20px;
+    padding-top: 0px;
+    line-height: 23px;
+    margin-bottom: 30px    
+  }
+  #generica #titulos-redes h1{
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .que-es{
+    border-right:none;
+    /*padding: 0*/
+  }  
+  .blockquote{
+    /*padding: 0*/
+  }
+  .rotador-generico #quote-carousel .carousel-control.left{
+    left: 0
+  }
+  .rotador-generico #quote-carousel .carousel-control.right{
+    right: 0
+  }
+  #beneficios-todos{
+    padding: 20px 0
+  }
+  .rotador-generico #quote-carousel .height-alto{
+    height: initial
+  }
+  /*----------------*/
+  .consulta-no-aparece{
+    padding: 0
+  }
+  .main-preguntas{
+    padding: 0
+  }
+  .main-preguntas .consulta-no-aparece .thumbnail{
+    margin-bottom: 0;
+  }
+  /*---------------*/
+  .col-comunicate.columna-der::before{
+    left: 0
+  }
+  /*-------------*/
+  #canal-yt #mas-informacion h3{
+    margin-top: 0
+  }
+  #descarga-app p{
+    width: 100%;
+  }
+  /*---------------*/
+  .registro-de-cuenta{
+    padding: 0 
+  }
+  #registro-usuario{
+    height: 130px;
+    padding: 35px 0px 0 10px;
+  }
+  #registro-usuario #titulos-redes h1{
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 0px;
+    margin-bottom: 25px    
+  }
+  #login-usuario {
+    height: 130px!important;
+    padding: 50px 20px 6px 20px!important;
+    background-position: -62px 0;
+  } 
+  #login-usuario #titulos-redes h1{
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 35px     
+  }
+  /*-------------*/
+  #busca-factura{
+     background-position: 70%;
+    /*height: 130px;
+    padding: 50px 0; */
+  }
+  #imprimi-input-search {
+    width: 70%;
+  }
+  #busca-factura #titulos-redes h1{
+    font-size: 15px;
+    line-height: 23px;
+    padding-top: 0px;
+    margin-bottom: 35px     
+  }
+  #busca-factura #titulos-redes h1 span{
+    font-size: 15px;
+    line-height: 23px;    
+  }
+  .main-text {
+    margin-top: -161px;
+  }
+  .main-text h2{
+    font-size: 30px;
+    margin-top: 15px
+  }
+  .main-text h1{
+    font-size: 20px
+  }
+  #entidades .ver_mas_rubros,
+  #entidades .ver_mas_rubros_2,
+  #entidades .ver_destacados_2,
+  #entidades .ver_destacados{
+    right: -15px;
+    z-index: 10
+  }
+  #envia-recibi{
+    background-position: 15%;
+    height: 300px!important;
+    padding: 50px 20px 0px 20px!important;
+  }
+  #envia-recibi #titulos-redes h1{
+    font-size: 20px;
+    line-height: 25px;
+  }  
+  #envia-recibi #titulos-redes h1 span{
+    font-size: 20px;
+    line-height: 25px;
+  } 
+  #tarifas{
+    padding: 20px 0px 25px;
+  }
+  #tarifas .btn-consulta {
+    margin-top: 25px;
+    margin-bottom: 23px;
+  }
+  .error_calculo{
+    margin-top: 20px
+  }
+  /*------------------*/
+
+  #novedades{
+    background-position: 24%;
+    height: 130px;
+    padding: 35px 0 0 35px;
+  }
+  #novedades #titulos-redes h1{
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 0px;
+    padding-bottom: 33px;
+  }
+  #novedades #titulos-redes h1 span{
+    font-size: 20px;
+    line-height: 23px;
+  }
+  #novedades #titulos-redes h2{
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 0px;
+  }
+  #novedades #titulos-redes h2 span{
+    font-size: 20px;
+    line-height: 25px;
+  }  
+  #rotador-imagen-video{
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .padding{
+    padding: 0
+  }
+  /*-----------------*/
+  .ultimas-novedades{
+    padding: 25px 0
+  }
+  .ultimas-novedades .padding-mobile{
+    padding: 0
+  }
+  .ultimas-novedades .content-nov{
+    padding: 0 15px
+  }
+  .ultimas-novedades h1{
+    margin: 0;
+    font-size: 20px;
+    padding-bottom: 10px
+  }
+  .ultimas-novedades p{
+    font-size: 16px;
+  }
+  /*--------------*/
+  #contacto{
+    height: 130px;
+    padding: 35px 0;
+  }
+  #contacto #titulos-redes h1{
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 0px;
+  }
+  #contacto #titulos-redes h1 span{
+    font-size: 20px;
+    line-height: 23px;
+  }
+  #otro-motivos-consultas{
+    border-right:none;
+    height: initial;
+    margin-right:0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+  #formulario-contacto .padding-mobile{
+    padding: 0
+  }
+  .que-es-pago{
+    padding: 25px 0
+  }
+  .que-es-pago h2{
+    font-size: 18px;
+    font-weight: bold
+  }
+  .que-es-pago h1{
+    font-size: 30px;
+    margin-bottom: 10px
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail figure{
+    height: 193px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .scheduler-col .titulos{
+    position: relative;
+    z-index: 50
+  }
+  #box-padding {
+      padding: 20px 20px 20px 20px;
+  }
+  .titulos-de-las-busquedas{
+    padding-left: 15px!important
+  }
+  .menu-mobile {
+      margin-top: 9px;
+  }
+  .right .bg-geo{
+       width: auto!important
+  }
+  /*-------------------------*/
+  .loader {
+    width: 320px!important
+  }
+  .loader::after {
+    left: 140px
+  }
+  #loading_results{
+    width: 100%!important;
+  }
+  /*---------------------*/
+  .menu-mobile i{
+    display: none;
+  }
+  /* navbar-ex1-collapse >.menu-mobile li:last-child{
+    display: none
+  } */
+/************************************************************************************/
+/*********************INDEX BUSQUEDA DE SUCURSALES EN EL MAPA************************/
+/***********************************************************************************/
+  #contenido_a_mostrar .mapa-busqueda-sucursales {
+    width: 100%;
+  }
+  #contenido_a_mostrar{
+    height: 100%;
+  }
+  .resultados .btn-como-llegar{
+    font-size: 11px;
+  }
+  .resultados .metros{
+    margin-left: 4px;
+    font-size: 12px;    
+  }
+/************************************************************************************/
+/************************INDEX DE BENEFICIOS Y NOVEDADES**************************/
+/***********************************************************************************/
+  figure.snip1281{
+    height: 100%;
+  }
+  .imagen-destacada .img-1{
+    width: inherit;
+    height: 250px;
+  }
+  figure.snip1282 img{
+    height: 250px;
+    object-fit: cover;
+  }  
+/************************************************************************************/
+/************************INDEX SERVICIOS DE PAGOS***********************************/
+/***********************************************************************************/
+  #iconos-servicios .carousel .carousel-inner img {
+    width: 49%;
+    height: 150px;
+  }
+/************************************************************************************/
+/************************INDEX EMPRESAS Y LOCALES***********************************/
+/***********************************************************************************/
+
+  .caja-local h2{
+    width: 100%;
+  }
+  .caja-local p{
+    width: 100%;
+  }
+  .caja-empresa p{
+    width: 100%;
+  }
+/************************************************************************************/
+/************************INDEX DE DESCARGA DE APP************************************/
+/***********************************************************************************/
+  #descarga-app{
+    padding: 0;
+  }
+/************************************************************************************/
+/*************************************************FOOTER****************************/
+/***********************************************************************************/  
+  footer .footer .links{
+    text-align: left;
+  }
+  .qk-studio{
+    float: left;
+  }  
+
+/************************************************************************************/
+/************************RESULTADO DE BUSQUEDAS*************************************/
+/***********************************************************************************/
+  .scroll-me{
+    padding: 0px ;
+  }
+  #box-padding-resultados{
+    height: 410px;
+  }
+  #box-padding-resultados h3{
+    margin-top: 10px;
+    font-size: 23px;
+    text-align: left;
+  }
+  #box-padding-resultados h4{
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+  }
+  #box-padding-resultados #btn-resultados-busqueda {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 10px
+  } 
+  .btn-icono-compartir{
+    margin-top: 12px;
+    display: block;
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-imprimir-factura{
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+    font-size: 13px !important;
+    padding: 7px 4px !important;
+    width: 142px !important;
+  }
+  #box-padding-resultados #btn-resultados-busqueda .btn-donde-pagar a{
+    padding: 8px 28px; 
+  }
+
+/************************************************************************************/
+/************************SECCION SUMA LOCALES A NUESTRA RED************************/
+/***********************************************************************************/
+  .barra-top{
+    padding: 0;
+  }
+  #nuestra-red{
+    background-position: 31%;
+  }
+  #nuestra-red #titulos-redes h2{
+    font-size: 24px;
+  }
+  #nuestra-red #titulos-redes h3{
+    font-size: 24px;
+  }
+  .dropp-header__btn{
+    padding: 15px 12px 0px 0px;
+  }
+  .toggle-fixed p{
+    margin-top: 21px;
+    font-size: 15px;
+  }
+  .toggle-fixed{
+    margin-left: 0px;
+    width: 100%;
+  }  
+  .pad-left{
+    padding-left:0px!important;
+    padding-right: 0
+  }
+  #form_suma_tu_negocio .form-group{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 25px;
+  }
+  .pad-right{
+    padding-right:0px!important ;
+    padding-left: 0
+  }
+  #impulsar-negocio{
+    margin-right: inherit;
+    border:none;
+    padding: 0px 0px 0px 0px;
+    margin-top: 30px
+  }
+  label{
+    margin-top: 7px;
+  }
+  .setup-content .prevBtn{
+    width: 100%;
+    text-align: center;
+  }
+  .setup-content .nextBtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px!important;
+  }  
+  #legales-btn{
+    margin-top: 15px;
+  }
+  #impulsar-negocio .caja-parrafo{
+    width: 100%;
+  }
+  #impulsar-negocio .caja-parrafo p{
+    font-size: 23px;
+  }
+  .sin-padding-mobile{
+    padding: 0;
+  }  
+  .col-comunicate.columna-izq::before{
+    width: 124vw!important;
+    right: initial;
+  }
+  .col-comunicate .title-izq{
+    padding: 0px 20px 0px 20px;
+  }
+  .col-comunicate .title-izq .btn-aviso{
+    margin-top: 12px;
+  }  
+  .col-comunicate .title-der{
+    padding: 0px 10px 0px 0px;
+  }
+  .col-comunicate {
+    position: relative;
+    height: 315px;
+    padding: 43px 0px;
+  }  
+  .bloque-telefono{
+    padding: 0 13px;
+  }
+  .bloque-telefono a{
+    font-size: 19px
+  }
+  .col-comunicate .title-izq h3{
+    line-height: 25px;
+  }
+  .col-comunicate .title-der h3{
+    line-height: 24px;
+    font-size: 16px;    
+  }
+  .contenedor{
+    width: 100%;
+  }
+  .servicios-clientes{
+    height: 100%;
+    padding: 20px;
+  }
+  .servicios-clientes .col{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    height: 100%;
+  }
+  #padding-yt{
+    padding: 44px 0px 70px 0;
+  }
+  #canal-yt{
+    height: 100%;
+  }
+  #canal-yt #mas-informacion .btn-you-tube{
+    margin-top: 10px;
+    margin-bottom: 40px;    
+  }
+
+/************************************************************************************/
+/************************SECCION RECIBI Y ENVIA DINERO******************************/
+/***********************************************************************************/
+  #envia-recibi #titulos-redes h2{
+    font-size: 30px;
+  }
+  #envia-recibi #titulos-redes h3{
+    font-size: 30px;
+    padding-top: 8px;
+  }
+  #cargo-envio{
+    padding: 0 3px;
+    height: 49px;
+  }
+  #cargo-envio input{
+    width: 100%;
+    height: 48px;
+  }
+  #cargo-envio i{
+    margin-top: 3px;
+  }
+  #publicidad-envia-recibi h3{
+    width: 100%;
+  }
+  #publicidad-envia-recibi img {
+    position: relative;
+    top: 45px;
+    right: 0;
+  } 
+  #western-union .img-western {
+    position: initial!important;
+    top: 0!important;
+    right: 0!important;
+    margin-top: 35px!important;
+  }
+  #western-union #envios-exterior p{
+    width: 100%;
+  } 
+  #western-union .btn-dinero-exterior {
+    padding: 10px 12px;
+    margin-top: 30px;
+    font-size: 11px;
+  } 
+  #paso-paso-envio {
+    padding: 50px 30px;
+  }   
+/************************************************************************************/
+/************************SECCION ENTIDADES******************************************/
+/***********************************************************************************/
+  .scheduler-col-2.is-right::before{
+    height: 100%;
+  }
+  .contenido-entidades .clases-entidades-2 {
+    padding: 20px 0px;
+    position: relative;
+    z-index: 1;
+  } 
+  .contenido-entidades h3{
+    font-size: 20px;
+  } 
+  .contenido-entidades p{
+    font-size: 14px;
+  }
+/************************************************************************************/
+/***************************SECCION ENTIDAD**************************************/
+/***********************************************************************************/  
+  #busca-factura #titulos-redes h2{
+    font-size: 30px;
+  }
+  #busca-factura #titulos-redes h3{
+    font-size: 30px;
+  }
+  .contenido-entidades .clases-entidades-2 .modal-dialog input{
+    width: 100%;
+  }
+/************************************************************************************/
+/************************SECCION NOVEDADES******************************************/
+/***********************************************************************************/
+  #novedades #titulos-redes h3{
+    font-size: 30px
+  }
+  #rotador-imagen-video .carousel{
+    margin-bottom: 0;
+  }
+  .carousel .carousel-inner .row-fluid h4{
+    margin-bottom: 18px;
+  }
+  .ver-mas .btn-new{
+    padding: 10px 74px;
+  }
+  #content_novedad .videoEmbed iframe{
+    width: 100%;
+    margin-right: 0;
+  }
+  #content_novedad p img{
+    width: 100%!important;
+    height: 100%!important;
+    margin-right: 0!important;
+  }
+/************************************************************************************/
+/************************SECCION GENERICA*******************************************/
+/***********************************************************************************/
+  #generica{
+    background-position: 27%;
+  }
+  #generica #titulos-redes h2{
+    font-size: 29px;
+    padding-top: 100px;
+  }
+  #generica #titulos-redes h3{
+    font-size: 29px;
+  }
+  .slogan h2{
+    font-size: 18px;
+    line-height: 23px;
+  }
+  #proceso-pago h2{
+    margin:0;
+    font-size: 22px;
+  }
+  #proceso-pago .caja-proceso i{
+    position: absolute;
+    right: 128px;
+    color: #ffd100;
+    border-radius: 50px;
+    background-color: #333;
+    width: 33px;
+    height: 33px;
+    bottom: -17px;
+  }
+  #proceso-pago .caja-proceso .fa-angle-down:before {
+    content: "\f107";
+    font-size: 25px;
+    left: 9px;
+    position: relative;
+    top: 6px;
+  } 
+
+/************************************************************************************/
+/***************************SECCION CONTACTOS****************************************/
+/***********************************************************************************/
+  #contacto{
+    background-position: 15%;
+    padding: 40px 20px 6px 20px!important
+  }
+  #contacto #titulos-redes h2{
+    font-size: 29px;
+  }
+  #contacto #titulos-redes h3{
+    font-size: 29px;
+  }
+  #otro-motivos-consultas .caja-motivos{
+    padding-right: 0;
+  }
+  #formulario-contacto .boton-envio-formulario{
+    margin-top: 25px;
+  }
+  #formulario-contacto .boton-envio-formulario .btn-envio-contacto{
+    float: initial;
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+  .likeFloating{
+    width: 100%;
+  }
+  /*CSS AGREGADOS NOVIEMBRE*/
+  .ultimas-novedades .texto-compartir h6{
+    padding-top: 3px;
+    margin-left: 0;
+  }
+  .ultimas-novedades .mas-novedades h5{
+    margin-bottom: 15px;
+  }
+  #cabecera-preguntas-frecuentes h2{
+    font-size: 29px;
+  }
+  #cabecera-preguntas-frecuentes h3{
+    font-size: 29px;
+  }
+  .btn-general-dinero{
+    height: 109px;
+  }
+  .panel-title{
+    font-size: 13px;
+  }
+  .login-de-cuenta{
+    padding: 0;
+    width: 100%;
+  }
+  .contenido-entidades .clases-entidades-2 .thumbnail{
+    height: 200px;
+  }
+  #generica #titulos-redes h2{
+    font-size: 30px;
+    padding-top: 0;
+  }
+  #wrapper .col-comunicate.columna-izq::before{
+    width: 144vw!important;
+  }
+  #wrapPagar{
+    box-shadow: none;
+  }
+  #wrapPagar p, #wrapPagar select, #wrapPagar input{
+   font-size: 0.9rem;
+  }
+  
+  #wrapPagar.show {
+    max-height: 465px;
+    height: 465px;
+    padding-top: 8%;
+  }
+  #wrapPagar h3 {
+    font-size:1.5rem ;
+  }    
+  #wrapPagar #cerrarSearch {
+
+    top: 10px;
+  }
+  .main-carousel .flickity-viewport {
+    min-height: 440px !important;
+    height: 440px !important;
+  }
+
+ }
+
+@media screen and (max-width: 375px) {
+  .busqueda-icono.right{
+    display: none;
+  }
+
+  .toggle {
+    align-items: initial;
+  }
+  .toggle p.color-white {
+    
+    font-size: 12px;
+  }
+  #search-dmt {
+    width: auto !important;
+  }
+  .btn-pago-online {
+    padding: 8px 12px !important;
+  }
+  #wu-envios-nacionales .transferencia{
+    width: 100%;
+  }  
+  #wu-envios-nacionales h4 {
+    color: #333;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+  #wu-envios-nacionales .parrafo-envios p{
+      margin-top: 20px
+  }   
+  .rotador-generico {
+    margin-bottom: 50px
+  }
+  .rotador-generico .rotador-pago-facil img{
+    /* width: 40% !important; */
+    height: 80% !important;
+  }
+  .rotador-generico .rotador-pago-facil{
+    height: 220px
+  } 
+  #box-padding-resultados #btn-resultados-busqueda .btn-icono-compartir i {
+    bottom: 0px;
+    left: 0px;    
+  } 
+  #barra-top #linea-telefonica a {
+    display: none;
+  }
+  #registro-usuario #titulos-redes h2{
+    font-size: 30px;
+  }  
+  .login-de-cuenta{
+    padding: 0;
+    width: 100%;
+  }
+  #suma_tu_empresa #titulos-redes h1{
+    font-size: 30px;
+    padding-top: 80px;
+  }
+  .main-text h2{
+    line-height: 2rem;
+  }
+  
+  .logo {
+    width: 60px;
+    align-items: flex-start !important;
+  }
+  .principal-search {
+    font-size:14px;
+  }
+
+  #puedo h3, #donde h3 {
+    font-size: 1.5rem;
+  }
+  #custom-search-input input{
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-default .menu-principal > li > a{
+    font-size:.8rem;
+  }  
+}
+
+
+/******Mobile********/
+@media screen and (max-width: 767px){
+  #proceso-pago .caja-proceso i{
+    right: 47%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  #quote-carousel > ol{
+    display:block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #box-padding,
+  #scoll-search,
+  #entidades div.container,
+  #tarifas div.container,
+  #publicidad-envia-recibi div.container,
+  #rotador-imagen-video div.container,
+  section.ultimas-novedades div.container,
+  .container{
+    max-width:100%;
+  }
+  #btn-search button{
+    padding:0;
+  }
+  #buscador-redondeado button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin-right: 0;
+  }
+  #buscador-redondeado input {
+    margin-left: 0;
+    max-width:90%;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .toggle {
+    align-items: initial;
+  }
+  .btn-pago-online {
+    padding: 8px 12px !important;
+    font-size: 10px;
+  }
+  .menu-top ul {
+    margin-right: 0;
+  }
+  #btn-search button{
+    padding: 0;
+    padding-right: 10px;
+  }
+  footer .footer {
+    padding: 40px 0px 10px 0px;
+  }
+
+  .main-carousel .flickity-viewport{
+      min-height: 570px;
+      
+  }
+  .main-carousel .flickity-prev-next-button {
+   
+    z-index: 20;
+}
+  .main-text {
+    justify-content: center;
+  }
+   .main-text h2{
+    line-height: 2rem;
+  }
+}
+

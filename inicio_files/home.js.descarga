@@ -1,0 +1,548 @@
+//ESTILO DE COLOR AL MAPA DE GOOGLE MAP INDEX
+var map;
+var mapIsInitialized = false;
+var yo = null;
+var directionsService ;
+var directionsDisplay ;
+var $geo_switch = $(".win-switch,.win-switch-fixed");
+var $token = $('input[name="_token"]').val();
+var markers = [];
+var options_autocomplete = { types: ['geocode'], componentRestrictions: {country: "ar"} };
+var input_search ;
+var mobile_search;
+var autocomplete ;
+var autocomplete_mobile ;
+var input_search_fixed ;
+var input_search_fijo;
+var autocomplete_fixed ;
+var autocompleteListener;
+var autocomplete_fixed_Listener;
+var autocomplete_mobile_Listener;
+var isGoogleMapsLoaded = false;
+var isFullLoaded = false
+var loaderCssIsRemoved = false
+var autocompleteIsInitialized = false;
+
+$(window).on('load', function () {
+    isFullLoaded = true;
+    if(isGoogleMapsLoaded){
+        /* Habilito la geolocalizacion y input de busqueda */
+        $(".win-switch").attr("disabled", false);
+        $('.disabled-geo').removeClass('disabled-geo');
+        $(".disabled-cities-search").attr("disabled", false).removeClass('disabled-cities-search');
+        $('.disabled-link').removeClass('disabled-link');
+        $('#header-links-loader').addClass('d-none');
+        $('#style-loader-header').remove();
+        $('#style-loader-header-link').remove()
+        loaderCssIsRemoved = true
+    }
+    //console.log("LOADED")
+    //console.log(isGoogleMapsLoaded)
+});
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
+}
+var pos;
+// TOOLTIP DE COMPARTIR EN EL MAPA BUSQUEDAS DE SUCURSALES
+var url_split  = location.href.split('/');
+function initGoogle() {
+    if($("#map").length){
+        $(window).on('load', function () {
+            initMap();
+        })
+    }
+    if(!url_split[3].includes('with-que-pagar-single') && url_split[url_split.length-1]!=='' && url_split[url_split.length -1][0] !=='?' && url_split[url_split.length -1][0] !=='#'){
+        //initGoogleInternas();
+        isGoogleMapsLoaded = true;
+        $(".win-switch").attr("disabled", false);
+        $('.disabled-geo').removeClass('disabled-geo');
+        $(".disabled-cities-search").attr("disabled", false).removeClass('disabled-cities-search');
+        $('.disabled-link').removeClass('disabled-link');
+        $('#header-links-loader').addClass('d-none');
+        $('#style-loader-header').remove();
+        $('#style-loader-header-link').remove()
+    }
+    show_banner();
+
+}
+
+function initializeAutocomplete(){
+    $("#quepagar-list").html('');
+    $("#quepagar-list").parent().hide();
+
+    if(!autocompleteIsInitialized){
+        input_search = document.getElementById('principal-search');
+        autocomplete = new google.maps.places.Autocomplete(input_search, options_autocomplete);
+        autocompleteListener = google.maps.event.addListener(autocomplete, 'place_changed', fillInAddress);
+
+        input_search_fixed = document.getElementById('principal-search_fixed');
+        autocomplete_fixed = new google.maps.places.Autocomplete(input_search_fixed, options_autocomplete);
+        autocomplete_fixed_Listener = google.maps.event.addListener(autocomplete_fixed, 'place_changed', fillInAddress);
+        autocompleteIsInitialized = true;
+    }
+
+    isGoogleMapsLoaded = true;
+    if(isFullLoaded){
+        /* Habilito la geolocalizacion */
+        $(".win-switch").attr("disabled", false);
+        $('.disabled-geo').removeClass('disabled-geo');
+        $(".disabled-cities-search").attr("disabled", false).removeClass('disabled-cities-search');
+        $('.disabled-link').removeClass('disabled-link');
+        $('#header-links-loader').addClass('d-none');
+        $('#style-loader-header').remove();
+        $('#style-loader-header-link').remove()
+        loaderCssIsRemoved = true
+    }
+    //console.log(mobile_search);
+}
+
+
+
+function clearAutocomplete(){
+    input_search = document.getElementById('principal-search');
+    if(typeof input_search !=='undefined'){
+        google.maps.event.clearInstanceListeners(input_search);
+        google.maps.event.removeListener(autocompleteListener);
+
+
+    }
+    if(typeof input_search_fixed !=='undefined'){
+        google.maps.event.clearInstanceListeners(input_search_fixed);
+        google.maps.event.removeListener(autocomplete_fixed_Listener);
+
+    }
+    if(typeof mobile_search !=='undefined'){
+        google.maps.event.clearInstanceListeners(mobile_search);
+        google.maps.event.removeListener(autocomplete_mobile_Listener);
+    }
+}
+
+function initializeMap(){
+    if(!mapIsInitialized){
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8,
+            disableDefaultUI: true,
+            scaleControl: true,
+            zoomControl: true,
+            zoomControlOptions: {  style: google.maps.ZoomControlStyle.LARGE },
+            streetViewControl: false,
+            styles:[{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}]
+        });
+        //console.log("tiro error?")
+        map.addListener('zoom_changed', function() {
+            var icon = '';
+            var icon_persona = '';
+
+            if(map.getZoom() <= 12){
+                icon = APP_URL + '/images_estaticas/marcador-pf-small.png?'+Date.now();
+                icon_persona = APP_URL + '/images_estaticas/marcador-persona-small.png?'+Date.now();
+            }
+            else if(map.getZoom() > 12 && map.getZoom() < 15){
+                icon = APP_URL + '/images_estaticas/marcador-pf-medium.png?'+Date.now();
+                icon_persona = APP_URL + '/images_estaticas/marcador-persona-medium.png?'+Date.now();
+
+
+            }
+            else{
+                icon = APP_URL + '/images_estaticas/marcador-pf.png?'+Date.now();
+                icon_persona = APP_URL + '/images_estaticas/marcador-persona.png?'+Date.now();
+
+
+            }
+
+            for (var i = 0; i < markers.length; i++) {
+                markers[i].setIcon(icon + "?p=" + i);
+            }
+            if(yo !== null)
+                yo.setIcon(icon_persona);
+        });
+
+        // Try HTML5 geolocation.
+        map.setZoom(14);
+        mapIsInitialized = true;
+    }
+}
+
+function initMap() {
+    //console.log("entra a init")
+    if(typeof busqueda_interna !== 'undefined'){
+        $geo_switch.prop('checked', false);
+        //console.log(url_split[3].includes('with-que-pagar-single'))
+        /*if(!url_split[3].includes('with-que-pagar-single') && url_split[url_split.length-1]!=='' && url_split[url_split.length -1][0] !=='?' && url_split[url_split.length -1][0] !=='#') {
+            initializeAutocompleteInterna()
+        }else{
+            initializeAutocomplete();
+        }*/
+
+        $( ".win-switch-fixed").prop( "checked", $geo_switch.is(":checked") );
+
+        var creacion_mapa_geolocation_active_busqueda=0;
+        /*if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                pos = { lat: position.coords.latitude,  lng: position.coords.longitude  };
+                var myLatLng = {lat:  position.coords.latitude, lng: position.coords.longitude};
+                if (yo === null) {
+                    yo = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title: '',
+                        icon: APP_URL + '/images_estaticas/marcador-persona.png',
+                        zIndex: 999999
+                    });
+                }
+                map.setCenter(pos);
+                map.setZoom(14);
+
+                creacion_mapa_geolocation_active_busqueda=1;
+
+            }, function() { });
+        }*/
+
+        if(typeof busqueda_interna !== 'undefined'){
+
+            $("#principal-search").val(busqueda_interna.search_interna);
+            $("#mobile_search").val(busqueda_interna.search_interna);
+            pos = {}
+            if(busqueda_interna.geo_interna !== "true"){
+                pos.lat = busqueda_interna.lat_interna;
+                pos.lng = busqueda_interna.lng_interna;
+                /*yo = new google.maps.Marker({
+                    position: {lat: parseFloat(pos.lat), lng: parseFloat(pos.lng)},
+                    map: map,
+                    title: '',
+                    icon: APP_URL +'/images_estaticas/marcador-persona.png?'+Date.now(),
+                    zIndex: 999999
+                });*/
+            }
+            //$geo_switch.prop("checked",busqueda_interna.geo_interna === "true");
+            searchSucursales($("#principal-search"));
+            //geolocation_active_busqueda=1;
+        }
+    }
+    isGoogleMapsLoaded = true;
+    $(".win-switch").attr("disabled", false);
+    $('.disabled-geo').removeClass('disabled-geo');
+    $(".disabled-cities-search").attr("disabled", false).removeClass('disabled-cities-search');
+    $('.disabled-link').removeClass('disabled-link');
+    $('#header-links-loader').addClass('d-none');
+    $('#style-loader-header').remove();
+    $('#style-loader-header-link').remove()
+}
+
+
+
+
+// MENU SECUNDARIO CUANDO SCROLLEO DE TODAS LAS SECCIONES
+// $(window).bind('scroll', function() {
+//   if ($(this).scrollTop() > 360) {
+//     $("#on-scroll").css('top', '0');
+//   } else {
+//     $("#on-scroll").css('top', '-150px');
+//     $(".menu-scroll li.open").removeClass("open");
+//   }
+// }); 
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('nav').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('nav').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('nav').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+
+    lastScrollTop = st;
+}
+
+//FUNCION DE LOS HOVER DE LAS IMAGENES GRANDES DEL INDEX
+$(".hover").mouseleave(
+    function () {
+        $(this).removeClass("hover");
+    }
+);
+
+
+// FUNCION DE LA HAMBURGUESA MOBILE EN TODAS LAS SECCIONES
+$(document).ready(function(){
+    menu_init();
+    load_rubros();
+    $('#container-resultados-que-pagar').hide();
+    $('#resultado').hide();
+});
+
+function load_rubros(){
+    var html = '<option value="">Seleccionar rubro</option>';
+    $.ajax({
+        type: "GET",
+        url: site_url + "/pfws/get_rubros",
+        success: function (data) {
+            for (i = 0; i < data.results.length; i++) {
+                html += "<option value='" + data.results[i].id + "'>" + data.results[i].nombre + "</option>";
+            }
+            $("#rubro_busqueda_home").append(html);
+        }
+    });
+}
+
+function menu_init(){
+    $('.menu').click(function(event){
+        $('body').toggleClass('o');
+    })
+}
+
+// CAROUSEL ICONOS DE PAGOS DE SERVICIOS DEL INDEX
+$(document).ready(function() {
+    $('#Carousel').carousel({
+        interval: 5000
+    })
+});
+
+/*BOTON VER MAS NOVEDADES*/
+$(function(){
+    $('.btn-new').on('click', function(e){
+        e.preventDefault();
+        $('.new-oculto').show();
+        $('.ver-mas').hide();
+    })
+    //$('.read-less')
+})
+
+// SCRIPT POP UP DEL INDEX
+$(window).scroll( function(){
+    if($(this).scrollTop() > 200) { // Al scrollear cuantos px aparece
+        $(".likeFloating").fadeIn();
+        $(".likeFloating").delay(3600000).animate({opacity: "0", right:"-500px"}); // Despues de cuantos segundos desaparece
+    }
+    else{
+    }
+
+    // Cerrar ventana
+    $('.closeF').click(function(e) {
+        e.preventDefault();
+        $(".likeFloating").remove();
+    });
+});
+
+
+// BOTON DE MOSTRAR Y OCULTAR CONTENIDO DE BUSQUEDA EN EL INDEX (QUIZAS VUELE)
+function muestra_oculta(id){
+    if (document.getElementById){ //se obtiene el id
+        var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
+        //el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+        el.style.height=(el.style.height == 'auto')? '0':'auto'
+    }
+}
+
+// BOTON DE MOSTRAR Y OCULTAR CONTENIDO DE BUSQUEDA EN EL INDEX (QUIZAS VUELE)
+function muestra_oculta2(id){
+
+    if (document.getElementById){ //se obtiene el id
+        var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
+        //el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+        el.style.height=(el.style.height == 'auto')? '0':'auto'
+    }
+}
+
+// CHAT ONLINE PARA TODAS LAS SECCIONES
+$(function() {
+    $(".chat-open-dialog").click(function() {
+        $(this).toggleClass("active");
+        $('.chat-popup').toggleClass("active");
+        $('.chat-button-destroy').toggleClass("active");
+    });
+});
+
+$(function() {
+    $(".chat-button-start").click(function() {
+        $(this).toggleClass("active");
+        $('.chat-popup').toggleClass("chat-init");
+    });
+});
+
+$(function() {
+    $(".chat-button-destroy").click(function() {
+        $('.chat-popup').removeClass("active");
+        $('.chat-open-dialog').removeClass("active");
+        $(this).removeClass("active");
+    });
+});
+
+$(function() {
+
+    $(".allownumericwithdecimal").on("keypress keyup blur",function (event) {
+        //this.value = this.value.replace(/[^0-9\.]/g,'');
+        $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+        if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+    });
+
+    $(".caja-consulta > .btn-consulta").click(function(e){
+        $(".costo_envio").text("");
+        $(".costo_envio").hide();
+        $(".error_calculo").hide()
+        let montoVal = $("#monto").val().split('.').join("");
+        $.post(
+            APP_URL + '/ws_interno/calcularMonto',
+            {   '_token': $token,
+                //'monto': $("#monto").val()
+                'monto': montoVal
+            },
+            function (data) {
+                if(data.errores ==''){
+                    $("#monto_final").val(separador(data.monto_final));
+                    $(".costo_envio").html(" Para enviar <strong> $"+$("#monto").val()+" </strong> deberás pagar&nbsp;<strong>$"+$("#monto_final").val() + "*</strong> <br> <span>* Incluye monto a enviar + Cargo</span>");
+                    $(".costo_envio").show();
+
+                }
+                else{
+                    var error = "";
+                    if(typeof data.errores ==='string')
+                        error = data.errores;
+                    else
+                        error = data.errores.monto[0];
+                    $(".error_calculo").text(error).show();
+                }
+
+            }
+        )
+        e.preventDefault();
+        $(".error_calculo").text("");
+
+    });
+
+    function separador(valor) {
+        valor = new Intl.NumberFormat('de-DE', {
+            //style: 'currency',
+            //currency: 'ARS'
+        }).format(valor);
+        return valor
+    }
+
+});
+/*AGREGADO AHORA ULTIMO */
+$('.caja-beneficios').find('.img-1').hover(
+    function(){
+        $(this).closest('.caja-beneficios').find('figcaption').find('a').addClass('onImgHover'); },
+    function() { $(this).closest('.caja-beneficios').find('figcaption').find('a').removeClass('onImgHover'); } )
+
+$('.caja-beneficios').find('figcaption').find('a').hover( function(){
+        $(this).closest('.caja-beneficios').find('.img-1').addClass('onTituloHover'); },
+    function() { $(this).closest('.caja-beneficios').find('.img-1').removeClass('onTituloHover'); } )
+
+
+
+$('.caja-dos').find('.img-2').hover(
+    function(){
+        $(this).closest('.caja-dos').find('figcaption').find('a').addClass('onImgHover'); },
+    function() { $(this).closest('.caja-dos').find('figcaption').find('a').removeClass('onImgHover'); } )
+
+$('.caja-dos').find('figcaption').find('a').hover( function(){
+        $(this).closest('.caja-dos').find('.img-2').addClass('onTituloHover'); },
+    function() { $(this).closest('.caja-dos').find('.img-2').removeClass('onTituloHover'); } )
+
+
+$('.caja-tres').find('.img-2').hover(
+    function(){
+        $(this).closest('.caja-tres').find('figcaption').find('a').addClass('onImgHover'); },
+    function() { $(this).closest('.caja-tres').find('figcaption').find('a').removeClass('onImgHover'); } )
+
+$('.caja-tres').find('figcaption').find('a').hover( function(){
+        $(this).closest('.caja-tres').find('.img-2').addClass('onTituloHover'); },
+    function() { $(this).closest('.caja-tres').find('.img-2').removeClass('onTituloHover'); } )
+
+
+
+
+$('.caja-novedades-2').find('.img-3').hover(
+    function(){
+        $(this).closest('.caja-novedades-2').find('.posicion-caja').find('a').addClass('onImgHover'); },
+    function() { $(this).closest('.caja-novedades-2').find('.posicion-caja').find('a').removeClass('onImgHover'); } )
+
+$('.caja-novedades-2').find('.posicion-caja').find('a').hover( function(){
+        $(this).closest('.caja-novedades-2').find('.img-3').addClass('onTituloHover'); },
+    function() { $(this).closest('.caja-novedades-2').find('.img-3').removeClass('onTituloHover'); } )
+
+
+//VER. no anda
+function isGeolocation() {
+    return new Promise((resolve, reject) =>
+        navigator.permissions ?
+            navigator.permissions.query({
+                name: 'geolocation'
+            }).then(permission =>
+                permission.state === "granted"
+                    ? navigator.geolocation.getCurrentPosition(pos => resolve(pos.coords))
+                    : resolve(null)
+            ) :
+            reject(new Error("Permission API is not supported"))
+    )
+}
+
+function show_banner(){
+    navigator.permissions.query({ name: 'geolocation' })
+        .then(result => {
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    $.ajax({
+                        type: "POST",
+                        url: site_url + "/pfws/get_my_location_banner/" + position.coords.latitude + '/' + position.coords.longitude,
+                        dataType:'json',
+                        data: {
+                            'page': window.location.pathname
+                        },
+                        success: function (data) {
+                            // Si tipo == 2, el banner es full
+                            // Si tipo == 3, el banner va abajo a la derecha
+                            if(data.banner != null && data.type != null){
+                                let banner = data.banner
+                                if(data.type == 2){
+                                    $('#bannerFull_image_link').attr('href',banner.url)
+                                    $('#bannerFull_image_img').attr('src',banner.imagen)
+                                    $('#bannerFull_image_mobile_link').attr('href',banner.url)
+                                    $('#bannerFull_image_mobile_img').attr('src',banner.imagen_mobile)
+                                    $("#bannerFull").delay(1000).addClass('is-visible');
+                                }
+                                if(data.type == 3){
+                                    $('#right_side_banner_link').attr('href',banner.url)
+                                    $('#right_side_banner_image').attr('src',banner.imagen)
+                                    $('#right_side_banner').show()
+                                }
+                            }
+                        }
+                    });
+                });
+            }
+
+        })
+}

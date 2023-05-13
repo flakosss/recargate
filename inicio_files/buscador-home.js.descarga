@@ -1,0 +1,1318 @@
+﻿var quePagarTable;
+var busquedaQuePagar;
+var empresasAdheridas;
+var markers_boxes = [];
+
+$('#rubro_busqueda_home').on('change',function(){
+    empresasAdheridas = {}
+    var rubro_seleccionado = this.value;
+    $("#empresas_busqueda_home").empty()
+    var html = '<option value="">Seleccionar empresa</option>';
+    $.ajax({
+        type: "GET",
+        url: site_url + "/pfws/get_empresas_adheridas_rubro/" + rubro_seleccionado,
+        success: function (data) {
+            //console.log(data);
+            for (i = 0; i < data.data.length; i++) {
+                html += "<option value='" + data.data[i].id + "'>" + data.data[i].titulo + "</option>";
+                empresasAdheridas[data.data[i].id] = [data.data[i].titulo, data.data[i].link, data.data[i].icono]
+            }
+            $("#empresas_busqueda_home").append(html);
+        }
+    });
+});
+
+$('#empresas_busqueda_home').on('change', function (){
+    let empresaSeleccionada = this.value;
+    if(empresasAdheridas[empresaSeleccionada][1] != null && false){
+        $('#img-empresa-adherida').attr('src', empresasAdheridas[empresaSeleccionada][2])
+        $('#nombre-empresa-adherida').text(empresasAdheridas[empresaSeleccionada][0])
+        if(empresasAdheridas[empresaSeleccionada][1] == null){
+            $('#link-empresa-adherida').addClass('isDisabled');
+        }else{
+            $('#link-empresa-adherida').removeClass('isDisabled');
+            $('#link-empresa-adherida').attr('href', empresasAdheridas[empresaSeleccionada][1])
+        }
+        $("#contenido_a_mostrar").css("height","0");
+        $("#contenido_a_mostrar2").css("height","200");
+        $("#contenido_a_mostrar2").show();
+        $("html, body").animate({ scrollTop: $("#contenido_a_mostrar2").offset().top - 50 }, 1000);
+        $('#container-resultados-que-pagar').hide();
+        $('#que-pagar-table_wrapper').hide();
+        $('#resultado').show();
+    }
+})
+
+$(document).on('change',".win-switch,.win-switch-fixed",function(e){
+    e.stopPropagation();
+    var searched = false
+    $("#principal-search,#principal-search_fixed,#principal-search_fijo,#mobile_search").val('');
+    //console.log($(this).hasClass('win-switch'))
+    if($(this).hasClass('win-switch')){
+        th = $("#principal-search_fixed");
+        $( ".win-switch-fixed").prop( "checked",$(this).is(":checked") );
+    }
+    else{
+        th = $("#principal-search");
+        $( ".win-switch").prop( "checked", $(this).is(":checked") );
+    }
+
+    if($(this).is(":checked")){
+        $('#style-loader-header-link').remove()
+        $("#loading_results").show();
+        $("#texto_geo,#texto_geo2").html("Geolocalización activada");
+        // clearAutocomplete();
+        if(navigator.permissions != undefined){
+            navigator.permissions.query({ name: 'geolocation' })
+                .then(result => {
+                    if(result['state'] != 'granted' && result['state'] != 'prompt'){
+                        $("#loading_results").hide();
+                        $('#error_modal_txt').empty();
+                        $('#error_modal_txt').append('Debes habilitar tu localización.');
+                        $('#error_modal').modal('show');
+                        $geo_switch.prop('checked', false);
+                        $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                    }else{
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(function(position) {
+                                //console.log("ENTRA A getCurrentPosition")
+                                if(!searched){
+                                    searched = true
+                                    latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude); // New York, US
+                                    pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+                                    //console.log("Posicion obtenida")
+                                    //console.log(pos)
+                                    map.setCenter(pos);
+                                    var myLatLng = {lat: pos.lat, lng: pos.lng};
+                                    yo = new google.maps.Marker({
+                                        position: myLatLng,
+                                        map: map,
+                                        title: '',
+                                        icon: APP_URL +'/images_estaticas/marcador-persona.png?'+Date.now(),
+                                        zIndex: 999999
+                                    });
+                                    if(yo == null || yo == undefined){
+                                        yoError()
+                                        return;
+                                    }
+                                    yo.setPosition(pos);
+                                    //console.log("ENTRA POR ACA 2 ---")
+                                    //console.log("ENTRA A BUSCAR")
+                                    searchSucursales(th);
+                                }
+                            }, function (error) {
+                                if(error.message == 'User denied Geolocation' || error.message == 'User denied geolocation prompt'){
+                                    $("#loading_results").hide();
+                                    $('#error_modal_txt').empty();
+                                    $('#error_modal_txt').append('Debes habilitar tu localización.');
+                                    $('#error_modal').modal('show');
+                                    $geo_switch.prop('checked', false);
+                                    $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                                }
+
+                            });
+
+                            /*navigator.geolocation.watchPosition(function(position) {
+                                    console.log("ENTRA A watchPosition")
+                                    navigator.geolocation.getCurrentPosition(function(position) {
+                                        //console.log("ENTRA A getCurrentPosition")
+                                        if(!searched){
+                                            searched = true
+                                            pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+                                            map.setCenter(pos);
+                                            var myLatLng = {lat: pos.lat, lng: pos.lng};
+                                            yo.setPosition(pos);
+                                            //console.log("ENTRA POR ACA 2 ---")
+                                            //console.log("ENTRA A BUSCAR")
+                                            searchSucursales(th);
+                                        }
+                                    });
+                                },
+                                function(error) {
+                                    if (error.code == error.PERMISSION_DENIED) {
+                                        $("#loading_results").hide();
+                                        $('#error_modal_txt').empty();
+                                        $('#error_modal_txt').append('Debes habilitar tu localización.');
+                                        $('#error_modal').modal('show');
+                                        $geo_switch.prop('checked', false);
+                                        $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                                    }
+                                },{
+                                    enableHighAccuracy: true,
+                                    timeout: 5000
+                                });*/
+                        }else{
+
+                        }
+                    }
+                })
+        }else {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    //console.log("ENTRA A getCurrentPosition")
+                    if(!searched){
+                        searched = true
+                        pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+                        //console.log("Posicion obtenida")
+                        //console.log(pos)
+                        map.setCenter(pos);
+                        var myLatLng = {lat: pos.lat, lng: pos.lng};
+                        if(yo == null || yo == undefined){
+                            yoError()
+                            return;
+                        }
+                        yo.setPosition(pos);
+                        //console.log("ENTRA POR ACA 2 ---")
+                        //console.log("ENTRA A BUSCAR")
+                        searchSucursales(th);
+                    }
+                }, function (error) {
+                    if(error.message == 'User denied Geolocation'){
+                        $("#loading_results").hide();
+                        $('#error_modal_txt').empty();
+                        $('#error_modal_txt').append('Debes habilitar tu localización.');
+                        $('#error_modal').modal('show');
+                        $geo_switch.prop('checked', false);
+                        $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                    }
+
+                });
+
+                /*navigator.geolocation.watchPosition(function(position) {
+                        console.log("ENTRA A watchPosition")
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            //console.log("ENTRA A getCurrentPosition")
+                            if(!searched){
+                                searched = true
+                                pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+                                map.setCenter(pos);
+                                var myLatLng = {lat: pos.lat, lng: pos.lng};
+                                yo.setPosition(pos);
+                                //console.log("ENTRA POR ACA 2 ---")
+                                //console.log("ENTRA A BUSCAR")
+                                searchSucursales(th);
+                            }
+                        });
+                    },
+                    function(error) {
+                        if (error.code == error.PERMISSION_DENIED) {
+                            $("#loading_results").hide();
+                            $('#error_modal_txt').empty();
+                            $('#error_modal_txt').append('Debes habilitar tu localización.');
+                            $('#error_modal').modal('show');
+                            $geo_switch.prop('checked', false);
+                            $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                        }
+                    },{
+                        enableHighAccuracy: true,
+                        timeout: 5000
+                    });*/
+            }
+        }
+    }
+    else{
+        //console.log("pasa x aca!!");
+        $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+        initializeAutocomplete();
+    }
+});
+
+$("#principal-search,#principal-search_fixed,#principal-search_fijo,#mobile_search").keyup(function(e){
+    if(e.keyCode === 13){
+        //JOTA: no hay localidad seleccionada
+        var id_array = ["#principal-search","#principal-search_fixed","#principal-search_fijo","#mobile_search"];
+        var ingreso_text = false;
+        for(let i=0; i<id_array.length; i++){
+            var id = id_array[i];
+            if(($(id).val() != '')){
+                if(($(id).val() != undefined)) {
+                    ingreso_text = true;
+                    break;
+                }
+            }
+        }
+        if(!ingreso_text){
+            $('#error_modal_txt').empty();
+            $('#error_modal_txt').append('Seleccione una localidad');
+            $('#error_modal').modal('show');
+            return false;
+        }
+        return true;
+    } else {
+        //input_search = $(this);
+
+        th = $(this);
+        var tipo_busqueda;
+        tipo_busqueda =  $(".selected-value").attr("selected-option");
+        if($(this).attr("id") == "mobile_search"){
+            tipo_busqueda = $("#select-placeholder-mobile").attr("selected-option");
+        }
+
+    }
+});
+
+$('#perso-search, #principal-search_fixed').keyup(function (e){
+    if(e.keyCode === 13) {
+        let tipo_busqueda = $(".selected-value").attr("selected-option");
+        //if(tipo_busqueda === "2"){
+        let busqueda = this.value;
+        que_pagar_search(busqueda)
+
+        /*if($(this).val() !==''){
+            if($("#box-padding-resultados").attr('class') != undefined){
+                $("#box-padding-resultados").removeAttr('class')
+            }
+            if(!$("#resultados_sucursales").attr('class').split(" ").includes("d-none")){
+                $("#resultados_sucursales").addClass("d-none")
+            }
+            $.ajax({
+                type: "POST",
+                url: url_base + "/pfws/que_pagar/" + $(this).val(),
+                success: function(data){
+                    if(th.attr("id")==='principal-search'){
+                        $("#quepagar-suggesstion-box").show();
+                        $("#quepagar-suggesstion-box").html(data);
+                    }
+                    else if(th.attr("id")==='mobile_search'){
+                        $("#quepagar-suggesstion-box_mobile").show();
+                        $("#quepagar-suggesstion-box_mobile").html(data);
+                    }
+                    else{
+
+                        $("#quepagar-suggesstion-box_fixed").show();
+                        $("#quepagar-suggesstion-box_fixed").html(data);
+                    }
+
+                }
+            });
+        }
+        else{
+            $("#quepagar-suggesstion-box_fixed").hide();
+            $("#quepagar-suggesstion-box_fixed").html('');
+            $("#quepagar-suggesstion-box").hide();
+            $("#quepagar-suggesstion-box").html('');
+        }*/
+        //}
+    }
+})
+
+$('button#basic-addon3').on('click',function (){
+    let busqueda = $('#perso-search').val();
+    if(busqueda != ''){
+        que_pagar_search(busqueda)
+    }
+})
+
+
+function que_pagar_search(busqueda){
+    if(quePagarTable != undefined){
+        quePagarTable.destroy();
+    }
+    if(busqueda == ''){
+        return;
+    }
+    $('#search-text').text(busqueda)
+    $("#contenido_a_mostrar").css("height","0");
+    $("#contenido_a_mostrar2").css("height","auto");
+    $("#contenido_a_mostrar2").show();
+    $('#container-resultados-que-pagar').show();
+    $('#resultado').hide();
+    $('#que-pagar-table_wrapper').show();
+    $('#box-padding-resultados').removeClass('d-none')
+    $("html, body").animate({ scrollTop: $("#contenido_a_mostrar2").offset().top - 50 }, 1000);
+
+    quePagarTable = $('#que-pagar-table').DataTable({
+        "language" : {
+            'url': 'datatables/lang/Spanish.json'
+        },
+        "ajax": {
+            "type": "POST",
+            "dataType": 'json',
+            "url": "pfws/que_pagar/" + busqueda
+        },
+        "responsive": true,
+        "searching": false,
+        "columns": [
+            {
+                "data": "icono",
+                "orderable": false
+            },
+            {"data": "titulo"},
+            {
+                "data": "link",
+                "orderable": false
+            },
+        ],
+        "order": [[ 1, "asc" ]],
+        "columnDefs" : [
+            {
+                visible: true,
+                targets: 0,
+                className: 'text-center',
+                render: function (data, type, full, meta) {
+                    let html = '';
+                    if(data != null){
+                        html = '<img  src="'+data+'"/>'
+                    }
+                    return html;
+                }
+            },
+            {
+                visible: true,
+                targets: 2,
+                className: 'text-center',
+                render: function (data, type, full, meta) {
+                    let html = '';
+                    if(data != null){
+                        html = '<div class="col-12 col-sm-12 col-md-9 col-lg-9 botonera-de-home"> \n' +
+                            '<div class="botones-centrado-resultado-donde float-right">' +
+                            '<a class="btn-imprimir-factura" href="'+data+'" target="_blank">IMPRIMIR FACTURA</a>' +
+                            '</div>'
+                        '</div>'
+                    }
+                    return html
+                }
+            }
+        ]
+
+    }).columns.adjust()
+}
+
+$('#frm_principal-search').submit(function() {
+    return false;
+});
+
+$(document).on("click","#quepagar-suggesstion-box_fixed li",function(e){
+    e.stopPropagation();
+    $("#quepagar-suggesstion-box_fixed").hide();
+    $("#btn_shar_entidad").attr("id_entidad",$(this).attr("id_empresa"));
+    $("#btn_shar_entidad").attr("entidad",$(this).text());
+    $("#btn_fav_entidad").attr("id_entidad",$(this).attr("id_empresa"));
+    $("#btn_fav_entidad").removeClass("btn-icono-fav");
+    $("#btn_fav_entidad").removeClass("btn-icono-no-fav");
+
+    if($(this).attr("fav") ==='0'){
+        $("#btn_fav_entidad").addClass("btn-icono-no-fav");
+    }
+    else{
+        $("#btn_fav_entidad").addClass("btn-icono-fav");
+    }
+
+    $("#principal-search_fixed").val($(this).text());
+    if($(this).attr("img_empresa") !='')
+        $("#img_empresa").attr("src",$(this).attr("img_empresa"));
+    else
+        $("#img_empresa").attr("src",'images_estaticas/iconos-svg/factura.svg?'+Date.now());
+    $(".razon_social_empresa").text($(this).text());
+    //console.log($(this).attr("link_comprobante"));
+    if($(this).attr("link_comprobante") !=""){
+        $(".btn-imprimir-factura").attr("href",$(this).attr("link_comprobante"));
+        $(".btn-imprimir-factura").removeClass('disabled');
+    }
+    else{
+        $(".btn-imprimir-factura").addClass('disabled');
+    }
+    muestra_oculta2('contenido_a_mostrar');
+    $("#contenido_a_mostrar2").css("height","auto");
+    $("html, body").animate({ scrollTop: $("#contenido_a_mostrar2").offset().top - 150 }, 1000);
+
+});
+
+
+$(document).on("click","#quepagar-list li",function(){
+    if($(this).parent().parent().attr("id")!=="quepagar-suggesstion-box_mobile"){
+        $("#quepagar-suggesstion-box").hide();
+        $("#principal-search").val($(this).text());
+    }
+    else{
+        $("#contenido_a_mostrar").hide();
+
+        $("#quepagar-suggesstion-box_mobile").hide();
+        $("#mobile_search").val($(this).text());
+    }
+
+
+    $("#btn_shar_entidad").attr("id_entidad",$(this).attr("id_empresa"));
+    $("#btn_shar_entidad").attr("entidad",$(this).text());
+
+    $("#btn_fav_entidad").attr("id_entidad",$(this).attr("id_empresa"));
+    $("#btn_fav_entidad").removeClass("btn-icono-fav");
+    $("#btn_fav_entidad").removeClass("btn-icono-no-fav");
+
+    if($(this).attr("fav") ==='0'){
+        $("#btn_fav_entidad").addClass("btn-icono-no-fav");
+    }
+    else{
+        $("#btn_fav_entidad").addClass("btn-icono-fav");
+    }
+    if($(this).attr("img_empresa") !='')
+        $("#img_empresa").attr("src",$(this).attr("img_empresa"));
+    else
+        $("#img_empresa").attr("src",'images_estaticas/iconos-svg/factura.svg?'+Date.now());
+
+    $(".razon_social_empresa").text($(this).text());
+
+    if($(this).attr("link_comprobante") !==""){
+        $(".btn-imprimir-factura").attr("href",$(this).attr("link_comprobante"));
+        $(".btn-imprimir-factura").removeClass('disabled');
+    }
+    else{
+        $(".btn-imprimir-factura").addClass('disabled');
+    }
+
+
+
+
+
+    if($(this).parent().parent().attr("id")!=="quepagar-suggesstion-box_mobile"){
+        muestra_oculta2('contenido_a_mostrar');
+    }
+    else{
+        $('#contenido_a_mostrar2').show();
+    }
+
+    $("#contenido_a_mostrar2").css("height","auto");
+    $("html, body").animate({ scrollTop: $("#contenido_a_mostrar2").offset().top - 150 }, 1000);
+
+});
+
+
+
+function fillInAddress() {
+    var openSucursales = 1;
+    if(th.attr("id")==='principal-search'){
+        var place = autocomplete.getPlace();
+    }
+    else{
+        var place = autocomplete_fixed.getPlace();
+    }
+    if (typeof place.geometry !== 'undefined') {
+        pos = { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() };
+        var myLatLng = {lat:  place.geometry.location.lat(), lng: place.geometry.location.lng()};
+        if(typeof yo ==='undefined' || typeof yo === null || yo === null){
+            yo = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: '',
+                icon: APP_URL +'/images_estaticas/marcador-persona.png?'+Date.now(),
+                zIndex: 999999
+            });
+        }
+        else{
+            //console.log( yo);
+            if(yo == null || yo == undefined){
+                yoError()
+                return;
+            }
+            yo.setPosition(myLatLng);
+        }
+    } else {
+        //JOTA: no hay localidad seleccionada
+        //console.log("Error localidad - buscador home 2")
+        $('#error_modal_txt').empty();
+        $('#error_modal_txt').append('Seleccione una localidad');
+        $('#error_modal').modal('show');
+
+        openSucursales = 0;
+    }
+
+    clearMarkers();
+
+    if(openSucursales == 1){
+        $('#style-loader-header-link').remove()
+        //$("#loading_results").show();
+        $("#contenido_a_mostrar2").css("height","0");
+        searchSucursales(th);
+    }
+}
+
+
+
+$(document).on('click','.como_llegar',function(e){
+    e.preventDefault();
+    calculateAndDisplayRoute(markers[$(this).attr("indice")]);
+    $("html, body").animate({ scrollTop: $('#map').offset().top -150}, 500);
+});
+
+
+function calculateAndDisplayRoute(end) {
+    var p =end.icon;
+    //console.log(p);
+
+    p=p.split("?p=");
+    //console.log(p);
+
+    p = p[1];
+
+    //console.log(p);
+    //location.href = APP_URL + "#sucursal_21";
+
+    $(".scroll-me")[0].scrollTop = 232*(p)
+    directionsService.route({
+        origin: yo.getPosition(),
+        destination: end.getPosition(),
+        avoidTolls: true,
+        avoidHighways: false,
+        optimizeWaypoints: true,
+        travelMode: 'WALKING'
+    }, function(response, status) {
+        directionsDisplay.setMap(map);
+        if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+        }
+    });
+}
+// Sets the map on all markers in the array.
+function setMapOnAll(map) {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+    }
+}
+
+// Removes the markers from the map, but keeps them in the array.
+function clearMarkers() {
+    if(markers.length > 0){
+        setMapOnAll(null);
+        //directionsDisplay.setMap(null);
+        markers =[];
+    }
+}
+
+function searchSucursalById(id){
+    $.post(
+        APP_URL + '/pfws/getSucursalbyId/'+id,
+        {   '_token': $token,
+            'id_sucursal': id
+        },
+        function (data) {
+            data = JSON.parse(data);
+            $("#contenido_a_mostrar .scroll-me").html('');
+            var boxes = [];
+            data.results.forEach( function(valor, indice, array) {
+                $.ajax({
+                    type:'POST',
+                    url: APP_URL + "/pfws/get_view/box_sucursal/",
+                    async: true,
+                    data: {
+                        'sucursal': valor, "indice": indice
+                    },
+                    success: function (response) {
+                        boxes[indice] = response;
+                        if(boxes.length === data.results.length){
+                            for(i=0;i<boxes.length;i++){
+                                $("#contenido_a_mostrar .scroll-me").append(boxes[i]);
+                            }
+                            if (document.getElementById){ //se obtiene el id
+                                // muestra_oculta2('contenido_a_mostrar2');
+                                var el = document.getElementById('contenido_a_mostrar'); //se define la variable "el" igual a nuestro div
+                                el.style.height=(el.style.height == 'auto')? 'auto':'auto';
+                                // SCROLL DE BUSQUEDA DE SUCURSALES PARA PAGAR SERVICIOS EN EL MAPA
+                                jQuery('.scroll-me').slimScroll({
+                                    height: '522px',
+                                    color: "#fff",
+                                    //position:'left',
+                                    alwaysVisible: true,
+                                    wheelStep: 5,
+                                    size:13
+                                })
+                            }
+                        }
+                    }
+                });
+                var myLatLng = {lat: parseFloat(valor.latitud), lng: parseFloat(valor.longitud)};
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: valor.nombre,
+                    icon: APP_URL +'/images_estaticas/marcador-pf.png?'+Date.now()+'&p=' + markers.length
+                });
+                map.setCenter(marker.position);
+                marker.addListener('click', function() {
+                    calculateAndDisplayRoute(this);
+                });
+                markers.push( marker);
+            });
+            for(i=0;i<boxes.length;i++){
+                $("#contenido_a_mostrar .scroll-me").append(html[i]);
+
+            }
+            $("html, body").animate({ scrollTop: $('#map').offset().top -150}, 500);
+            jQuery('.scroll-me').slimScroll({
+                height: '522px',
+                color: "#fff",
+                alwaysVisible: true,
+                wheelStep: 5,
+                size:13
+            });
+        }
+    );
+}
+
+function SelectElementMobile(valueToSelect,option){
+    //console.log(valueToSelect);
+    //console.log(option);
+
+    $('#select-placeholder-mobile').html(valueToSelect);
+    $('#select-placeholder-mobile').attr("selected-option",option);
+    $("#mobile_search").val('');
+    if(option === 2){
+        clearAutocomplete();
+    }
+    else{
+        initializeAutocomplete();
+    }
+}
+
+
+function SelectElement2(valueToSelect,option)
+{
+    //console.log("Entra buscador home")
+    //console.log(valueToSelect);
+    //console.log(option);
+
+
+    // $('#select-'+i).val(valueToSelect);
+    $('#select-placeholder-'+1).html(valueToSelect);
+    $('#select-placeholder-'+1).attr("selected-option",option);
+    $('#select-placeholder-2').html(valueToSelect + '<span class="select-caret"></span>');
+    $('#select-placeholder-2').attr("selected-option",option);
+
+    /*  var select = document.getElementById('custom-select-'+1);
+     select.classList.toggle('active');
+     var nextElement = document.getElementById('select-'+i);
+     // nextElement.classList.toggle('')*/
+    i++;
+    $("#principal-search").val('');
+    $("#principal-search_fixed").val('');
+    //console.log(option);
+    if(option === 2){
+        clearAutocomplete();
+    }
+    else{
+        initializeAutocomplete();
+    }
+
+
+}
+$(document).on("click",".openModalSugerencias",function(){
+    $("#sucursal_sugerencia").val($(this).attr("id_sucursal"));
+})
+
+$(document).on("click","#send_sugerencias",function(e){
+    e.preventDefault();
+
+
+    $.ajax({
+        type: "POST",
+        url: url_base + "/pfws/sugerencias_local/",
+        data:         {
+            '_token': $token,
+            'id_sucursal': $("#sucursal_sugerencia").val(),
+            'sugerencias' : $("#sugerencias").val()
+        },
+        success: function(data){
+            if(data.errores !=''){
+                var error = '';
+                if(data.errores.id_sucursal)
+                    error = data.errores.id_sucursal;
+                else if(data.errores.sugerencias)
+                    error = data.errores.sugerencias;
+                else
+                    error = data.errores;
+                $("#error_sugerencia").html(error).removeClass("alert-hidden");
+            }
+            else{
+                $("#exito_sugerencia").html(data.msg).removeClass("alert-hidden");
+                $("#sugerencias").val('');
+                setTimeout(function(){$("#closeModalSugerencia").click(); $("#error_sugerencia").hide(); $("#exito_sugerencia").hide();},500)
+            }
+        }
+    });
+});
+function escapeRegExp(str) {
+    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+}
+function searchSucursales(th){
+    $('#style-loader-header-link').remove()
+    $("#loading_results").show();
+    if($("#box-padding-resultados").attr("class") == undefined){
+        $("#box-padding-resultados").addClass('d-none');
+    }
+    if($("#resultados_sucursales").attr('class').split(" ").includes("d-none")){
+        $("#resultados_sucursales").removeClass("d-none")
+    }
+    clearMarkers();
+    markers_boxes = [];
+    $("#contenido_a_mostrar .scroll-me").html('');
+    oldPosition = {lat: parseFloat(pos.lat), lng: parseFloat(pos.lng)}
+    if(pos.lat == null || pos.lng == null || pos.lat == undefined || pos.lng == undefined || pos.lat == '' || pos.lng == ''){
+        $('#error_modal_txt').empty();
+        $('#error_modal_txt').append("Hubo un error al obtener la ubicación. Por favor, intentelo de nuevo.");
+        $('#error_modal').modal('show');
+        $("#loading_results").hide();
+        $('#contenido_a_mostrar').css('height', 0);
+        $(".win-switch").prop("checked", false);
+        $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+        return;
+    }
+
+    var city = null
+
+    latlng = new google.maps.LatLng(pos.lat, pos.lng); // New York, US
+
+
+        $.post(
+            APP_URL + '/pfws/buscador/',
+            {   '_token': $token,
+                'search': th.val(),
+                'lat' : oldPosition.lat,
+                'lng' : oldPosition.lng,
+                'geo' : $geo_switch.is(":checked")
+            },
+            function (data) {
+                data = JSON.parse(data);
+
+
+                if(data.results.length){
+                    /* Si hay resultados, inicializo mapa y demas variables para mostrar la info */
+                    initializeMap()
+                    var myLatLng = {lat: parseFloat(pos.lat), lng: parseFloat(pos.lng)};
+                    map.setCenter(oldPosition);
+
+                    map.setZoom(14);
+                    if(yo == null || yo == undefined){
+                        yo = new google.maps.Marker({
+                            map: map,
+                            title: '',
+                            icon: APP_URL +'/images_estaticas/marcador-persona.png?'+Date.now(),
+                            zIndex: 999999
+                        });
+                    }
+                    if(yo){
+                        yo.setPosition(oldPosition);
+                        yo.setMap(map);
+                    }
+                    $("#contenido_a_mostrar .scroll-me").html('');
+                    var boxes = [];
+                    var text_to_share = "Pagá tus facturas en NOMBRE_DEL_LOCAL, DIRECCION, CIUDAD #PagoFácil";
+                    if($("form[name='frmLogout']").length)
+                        var fav_title='';
+                    else
+                        var fav_title ='Debes ingresar primero, para poder marcar locales como Favoritos';
+                    var box = '<div class="resultados" style="height: 175px!important;" id="sucursal___indice__">' +
+                        '       <div class="row mx-0">' +
+                        '           <div class="col-8 col-md-9 sin-padding">' +
+                        '               <h3>__nombre__</h3>' +
+                        '               <h4>__direccion__</h4>' +
+                        '           </div>__estado__<div class="clearfix"></div>' +
+                        '<div class="col-md-12 horarios sin-padding">' +
+                        '   <div class="col-izq-horario">' +
+                        '       <i class="fa fa-clock-o" aria-hidden="true"></i>' +
+                        '       <h5 >__hs_lav__</h5><h5>__hs_sabado__</h5>' +
+                        '   </div><div class="clearfix"></div>' +
+                        '<small>__servicios__</small><div></div></div>' +
+                        '<div class="clearfix"></div>' +
+                        '<div class="col-md-8"></div>' +
+                        /*'<div  class="col-md-4" >' +
+                        '   <div class="row">' +
+                        '       <div id="share__indice__" class="socialcustom" share="__indice__" style="width: 105px;padding-left: 8px;display:none;position:absolute;background-color: #fff;border-radius: 17px;bottom: 7px;">' +
+                        '       </div>' +
+                        '   </div>' +
+                        '</div>' +
+                        '<div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-9 sin-padding" >' +
+                        '   <a href="" class="btn-como-llegar como_llegar" indice="__indice__">CÓMO LLEGAR</a>' +
+                        '   <span class="metros">__formatedDistance__<i class="fa fa-map-marker" aria-hidden="true"></i>' +
+                        '   </span>' +
+                        '</div>' +*/
+                        '</div>' +
+                        '</div>';
+                    // NO VA HASTA QUE ESTE LA APPé
+                    var socialText = '<div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-3 sin-padding compartir">        ' +
+                        '   <a href="" style="padding:0px 5px" class="__fav__" data-toggle="tooltip" data-placement="top" title="'+fav_title+'" class="ttip maxi">' +
+                        '       <i class="fa fa-star   "  id_sucursal="__idsucursal__" aria-hidden="true"></i>' +
+                        '   </a>' +
+                        '   <a href="" style="padding:0px 5px">' +
+                        '       <i class="fa fa-share-alt sharesucursal  " txt_to_share="__SHARE__"  share="__indice__" id_sucursal="__idsucursal__" aria-hidden="true" style="margin-right: 10px"></i>' +
+                        '   </a>' +
+                        '   <a href="#contactModal" style="padding:0px 5px" role="button" data-toggle="modal" id_sucursal="__idsucursal__" class="openModalSugerencias">' +
+                        '       <i class="fa fa-commenting" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Dejanos tu sugerencia sobre este local"></i>' +
+                        '   </a>' +
+                        '</div>'
+                    var abierto ='<div class="col-4 col-md-3 sin-padding" id="btn-abierto"><span>ABIERTO</span></div>';
+                    var cerrado ='<div class="col-4 col-md-3 sin-padding" id="btn-cerrado"><span>CERRADO</span></div>';
+
+
+                    data.results.forEach( function(valor, indice, array) {
+                        //console.log(valor);
+                        var tmp_text = text_to_share;
+                        tmp_text = tmp_text.replace("NOMBRE_DEL_LOCAL",valor.nombre);
+                        tmp_text = tmp_text.replace("DIRECCION",valor.direccion);
+                        tmp_text = tmp_text.replace("CIUDAD",valor.localidad);
+
+                        /* NO VA HASTA QUE NO ESTE LA APP
+                        if(valor.fav){
+                            var starclass = " star-yellow ";
+                        }
+                        else{
+                            var starclass = " star-white ";
+
+                        }*/
+                        var tmp = box;
+                        tmp = replaceAll(tmp,"__nombre__",valor.nombre);
+                        // NO VA HASTA QUE NO ESTE LA APP tmp = replaceAll(tmp,"__fav__",starclass);
+                        tmp = tmp.replace("__SHARE__",tmp_text);
+                        tmp = replaceAll(tmp,"__direccion__",valor.direccion);
+                        if(valor.hs_lav !== null)
+                            tmp = replaceAll(tmp,"__hs_lav__",valor.hs_lav);
+                        else
+                            tmp = replaceAll(tmp,"__hs_lav__",'');
+                        tmp = replaceAll(tmp,"__servicios__",valor.servicios);
+                        if(valor.hs_sabado !== null)
+                            tmp = replaceAll(tmp,"__hs_sabado__",valor.hs_sabado);
+                        else
+                            tmp = replaceAll(tmp,"__hs_sabado__",'');
+
+                        tmp = replaceAll(tmp,"__formatedDistance__",valor.formatedDistance);
+                        tmp = replaceAll(tmp,"__idsucursal__",valor.idsucursal);
+                        tmp = replaceAll(tmp,"__indice__",indice);
+                        if(valor.open)
+                            tmp = tmp.replace("__estado__",abierto);
+                        else
+                            tmp = tmp.replace("__estado__",cerrado);
+                        boxes[indice] = tmp;
+                        if(boxes.length === data.results.length){
+                            for(i=0;i<boxes.length;i++){
+                                $("#contenido_a_mostrar .scroll-me").append(boxes[i]);
+                            }
+                            $("#loading_results").hide();
+                            if(!$("form[name='frmLogout']").length)
+                                $(".star-white").tooltip();
+                            var el = document.getElementById('contenido_a_mostrar'); //se define la variable "el" igual a nuestro div
+                            el.style.height=(el.style.height == 'auto')? 'auto':'auto';
+                            if(th.attr("id")==='mobile_search'){
+                                $("#contenido_a_mostrar").show();
+                                $("#contenido_a_mostrar").show();
+                            }
+                            // SCROLL DE BUSQUEDA DE SUCURSALES PARA PAGAR SERVICIOS EN EL MAPA
+                            jQuery('.scroll-me').slimScroll({
+                                height: '522px',
+                                color: "#fff",
+                                //  position:'left',
+                                alwaysVisible: true,
+                                wheelStep: 5,
+                                size:13
+                            })
+
+                        }
+                        var myLatLng = {lat: parseFloat(valor.latitud), lng: parseFloat(valor.longitud)};
+                        var marker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: valor.nombre,
+                            icon: APP_URL +'/images_estaticas/marcador-pf.png?'+Date.now()+'&p=' + markers.length
+                        });
+
+                        /*marker.addListener('click', function() {
+                            calculateAndDisplayRoute(this);
+                        });*/
+
+                        // Agrego informacion del local en el marker
+                        let informacion_local =' <div class="mx-0">' +
+                            '           <div class="col-8 col-md-9 sin-padding">' +
+                            '               <h5 style="margin-bottom: 0 !important;">__nombre__</h5>' +
+                            '               <p style="font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif; font-style: normal;">__direccion__</p>' +
+                            '           </div> ' +
+                            '<div class="col-md-12 horarios sin-padding">';
+
+                        if(valor.hs_lav !== null || valor.hs_sabado !== null){
+                            informacion_local = informacion_local + '   <div class="col-izq-horario">'
+                            if(valor.hs_lav !== null){
+                                informacion_local = informacion_local + '       <i class="fa fa-clock-o" aria-hidden="true"><span style="font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif; font-style: normal;"> __hs_lav__</span></i><br>';
+                            }
+                            if(valor.hs_sabado !== null){
+                                informacion_local = informacion_local + '       <i class="fa fa-clock-o" aria-hidden="true"><span style="font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif; font-style: normal;"> __hs_sabado__</span></i>';
+                            }
+                            informacion_local = informacion_local + '   </div><div class="clearfix"></div>'
+                        }
+
+                        informacion_local = informacion_local + '<small style="font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif; font-style: normal;">__servicios__</small><div></div></div>' +
+                            '<div class="clearfix"></div>' +
+                            '<div class="col-md-8"></div>' +
+                            '<div  class="col-md-4" >' +
+                            '   <div class="row">' +
+                            '       <div id="share__indice__" class="socialcustom" share="__indice__" style="width: 105px;padding-left: 8px;display:none;position:absolute;background-color: #fff;border-radius: 17px;bottom: 7px;">' +
+                            '       </div>' +
+                            '   </div>' +
+                            '</div>' +
+                            '</div>';
+
+                        let info_marker = informacion_local;
+                        info_marker = replaceAll(info_marker,"__nombre__",valor.nombre);
+                        info_marker = replaceAll(info_marker,"__direccion__",valor.direccion);
+                        if(valor.hs_lav !== null)
+                            info_marker = replaceAll(info_marker,"__hs_lav__",valor.hs_lav);
+                        else
+                            info_marker = replaceAll(info_marker,"__hs_lav__",'');
+                        info_marker = replaceAll(info_marker,"__servicios__",valor.servicios);
+                        if(valor.hs_sabado !== null)
+                            info_marker = replaceAll(info_marker,"__hs_sabado__",valor.hs_sabado);
+                        else
+                            info_marker = replaceAll(info_marker,"__hs_sabado__",'');
+
+                        info_marker = replaceAll(info_marker,"__formatedDistance__",valor.formatedDistance);
+                        info_marker = replaceAll(info_marker,"__idsucursal__",valor.idsucursal);
+                        info_marker = replaceAll(info_marker,"__indice__",indice);
+                        if(valor.open)
+                            info_marker = info_marker.replace("__estado__",abierto);
+                        else
+                            info_marker = info_marker.replace("__estado__",cerrado);
+
+                        let info_marker_box = new google.maps.InfoWindow({
+                            content: info_marker
+                        });
+                        markers_boxes.push(info_marker_box);
+                        marker.addListener('click', function() {
+                            markers_boxes.forEach(marker_info => {
+                                if(marker_info.getMap() != null){
+                                    marker_info.close()
+                                }
+                            })
+                            info_marker_box.open(map, marker);
+                        });
+                        markers.push( marker);
+                    });
+                    if(yo)
+                        yo.zIndex = data.results.length;
+                    //yo.setAnimation(google.maps.Animation.DROP);
+
+                    // for(i=0;i<boxes.length;i++){
+                    //     $("#contenido_a_mostrar .scroll-me").append(html[i]);
+                    //
+                    // }
+                    $('#contenido_a_mostrar').show()
+                    $("html, body").animate({ scrollTop: $('#map').offset().top -150}, 500);
+                    jQuery('.scroll-me').slimScroll({
+                        height: '522px',
+                        color: "#fff",
+                        alwaysVisible: true,
+                        wheelStep: 5,
+                        size:13
+                    });
+                }
+                else{
+                    new google.maps.Geocoder().geocode({'latLng' : latlng}, function(results, status) {
+                        var cityParts = results[results.length - 1].formatted_address.split(',')
+                        city = cityParts[0]
+                        city = city.split(' ')
+                        city.shift()
+                        city = city.join(' ')
+
+                        var fullCity = [city, cityParts[1], cityParts[2]];
+                        city = fullCity.join(',')
+                        $('#contenido_a_mostrar').css('height', 0);
+                        $("#loading_results").hide();
+                        $('#error_modal_txt').empty();
+                        $('#error_modal_txt').append('No se han encontrado sucursales en la localidad: ' + city);
+                        $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                        $( ".win-switch,.win-switch-fixed").prop( "checked", false );
+                        $('#error_modal').modal('show');
+                    })
+
+                    /*if (document.getElementById){ //se obtiene el id
+                        // muestra_oculta2('contenido_a_mostrar2');
+                        var el = document.getElementById('contenido_a_mostrar'); //se define la variable "el" igual a nuestro div
+                        el.style.height=(el.style.height == 'auto')? 'auto':'auto';
+                        // SCROLL DE BUSQUEDA DE SUCURSALES PARA PAGAR SERVICIOS EN EL MAPA
+                        jQuery('.scroll-me').slimScroll({
+                            height: '522px',
+                            color: "#fff",
+                           // position:'left',
+                            alwaysVisible: true,
+                            wheelStep: 5,
+                            size:13
+                        })
+                    }*/
+                }
+
+
+            }
+        );
+
+}
+
+$(document).on("click",".btn-donde-pagar",function(e){
+    e.preventDefault();
+    th = $("#principal-search_fixed");
+    $("#texto_geo,#texto_geo2").html("Geolocalización activada");
+    //console.log("habilita 1")
+    $( ".win-switch-fixed").prop( "checked",$(this).is(":checked") );
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+            //console.log('Posicion obtenida')
+            //console.log(pos)
+            map.setCenter(pos);
+            var myLatLng = {lat: pos.lat, lng: pos.lng};
+            if(yo == null || yo == undefined){
+                yoError()
+                return;
+            }
+            yo.setPosition(pos);
+            $('#style-loader-header-link').remove()
+            $("#loading_results").show();
+            //console.log("ENTRA ACA ---")
+            searchSucursales(th);
+        });
+    }else{
+        //console.log("ENTRA ERROR 1")
+    }
+
+
+});
+$(document).on("click","#principal-search,#principal-search_fixed,#principal-search_fijo,#mobile_search",function(e) {
+    $(this).val('');
+    $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+    $( ".win-switch,.win-switch-fixed").prop( "checked", false );
+});
+
+$(document).on("keydown","#custom-search-input input,#btn-search input",function(e){
+    var th = $(this);
+    // console.log($("#select-placeholder-1").attr("selected-option"));
+    if (e.keyCode === 13 && $("#select-placeholder-1").attr("selected-option") ==1 && $geo_switch.is(":checked")) {
+        e.preventDefault();
+        clearMarkers();
+        $('#style-loader-header-link').remove()
+        $("#loading_results").show();
+        searchSucursales(th);
+    }
+    else if(e.keyCode === 13 && $("#select-placeholder-1").attr("selected-option") ==1){
+        e.preventDefault();
+    }
+});
+
+
+$(window).on('load',function () {
+    let searchParams = new URLSearchParams(window.location.search)
+    if(searchParams.has('with-geo')){
+        if(searchParams.get('with-geo') == 'true'){
+            var uri = window.location.toString();
+            if (uri.indexOf("?") > 0) {
+                var clean_uri = uri.substring(0, uri.indexOf("?"));
+                window.history.replaceState({}, document.title, clean_uri);
+            }
+            //console.log("ENTRA")
+            var searched = false
+            $("#principal-search,#principal-search_fixed,#principal-search_fijo,#mobile_search").val('');
+            //console.log($(this).hasClass('win-switch'))
+            th = $("#principal-search_fixed");
+            $( ".win-switch-fixed").prop( "checked", true);
+            th = $("#principal-search");
+            $( ".win-switch").prop( "checked", true );
+            $("#texto_geo,#texto_geo2").html("Geolocalización activada");
+            //console.log("habilita 2")
+
+            // clearAutocomplete();
+            navigator.permissions.query({ name: 'geolocation' })
+                .then(result => {
+                    if(result['state'] != 'granted' && result['state'] != 'prompt'){
+                        //console.log("ENTRA");
+                        $("#loading_results").hide();
+                        $('#error_modal_txt').empty();
+                        $('#error_modal_txt').append('Debes habilitar tu localización.');
+                        $('#error_modal').modal('show');
+                        $geo_switch.prop('checked', false);
+                        $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                    }else{
+                        if (navigator.geolocation) {
+                            $('#style-loader-header-link').remove()
+                            $("#loading_results").show();
+                            navigator.geolocation.getCurrentPosition(function(position) {
+                                if(!searched){
+                                    searched = true
+                                    pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+                                    map.setCenter(pos);
+                                    var myLatLng = {lat: pos.lat, lng: pos.lng};
+                                    if(typeof yo ==='undefined' || typeof yo === null || yo === null){
+                                        yo = new google.maps.Marker({
+                                            position: myLatLng,
+                                            map: map,
+                                            title: '',
+                                            icon: APP_URL +'/images_estaticas/marcador-persona.png?'+Date.now(),
+                                            zIndex: 999999
+                                        });
+                                    }
+                                    if(yo == null || yo == undefined){
+                                        yoError()
+                                        return;
+                                    }
+                                    yo.setPosition(pos);
+                                    //console.log("ENTRA POR ACA 2 ---")
+                                    searchSucursales(th);
+                                }
+                            }, function (error) {
+                                if(error.message == 'User denied Geolocation' || error.message == 'User denied geolocation prompt'){
+                                    $("#loading_results").hide();
+                                    $('#error_modal_txt').empty();
+                                    $('#error_modal_txt').append('Debes habilitar tu localización.');
+                                    $('#error_modal').modal('show');
+                                    $geo_switch.prop('checked', false);
+                                    $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+                                }
+                            });
+                        }
+                    }
+                })
+
+
+
+        }
+    }
+    if(searchParams.has('with-que-pagar')){
+        let busqueda = searchParams.get('with-que-pagar');
+        var uri = window.location.toString();
+        if (uri.indexOf("?") > 0) {
+            var clean_uri = uri.substring(0, uri.indexOf("?"));
+            window.history.replaceState({}, document.title, clean_uri);
+        }
+        que_pagar_search(busqueda)
+    }
+    if(searchParams.has('with-que-pagar-single') && false){
+        let nombreEmpresa = searchParams.get('nombreEmp')
+        let imgEmpresa = searchParams.get('imgEmp')
+        let linkEmpresa = searchParams.get('linkEmp')
+        $('#img-empresa-adherida').attr('src', imgEmpresa)
+        $('#nombre-empresa-adherida').text(nombreEmpresa)
+        if(linkEmpresa == null || linkEmpresa == 'null'){
+            $('#link-empresa-adherida').addClass('isDisabled');
+        }else{
+            $('#link-empresa-adherida').removeClass('isDisabled');
+            $('#link-empresa-adherida').attr('href', linkEmpresa)
+        }
+        $("#contenido_a_mostrar").css("height","0");
+        $("#contenido_a_mostrar2").css("height","200");
+        $("html, body").animate({ scrollTop: $("#contenido_a_mostrar2").offset().top - 50 }, 1000);
+        $('#container-resultados-que-pagar').hide();
+        $('#que-pagar-table_wrapper').hide();
+        $('#resultado').show();
+        var uri = window.location.toString();
+        if (uri.indexOf("?") > 0) {
+            var clean_uri = uri.substring(0, uri.indexOf("?"));
+            window.history.replaceState({}, document.title, clean_uri);
+        }
+
+    }
+})
+
+$('#submit_search_button').click(function (){
+    let tipo_busqueda = $(".selected-value").attr("selected-option");
+    let busqueda = $('#principal-search').val();
+    if(tipo_busqueda === "2" && busqueda != '') {
+        que_pagar_search(busqueda)
+    }
+});
+
+$(document).ready(function(){
+    if($("#id_sucursal_single").length){
+        searchSucursalById($("#id_sucursal_single").val());
+    }
+});
+
+$(document).on("click",".star-white",function(e){
+    e.preventDefault();
+    var id_sucursal = $(this).find("i").attr("id_sucursal");
+    var star = $(this);
+    $.post(
+        APP_URL + '/pfws/add_local_fav',
+        {   '_token': $token,
+            'id_sucursal': id_sucursal
+        },
+        function (data) {
+            if(data.success){
+                star.removeClass("star-white");
+                star.addClass("star-yellow");
+            }
+        }
+    );
+});
+
+$(document).on("click",".btn-icono-no-fav",function(e){
+    e.preventDefault();
+    var id_entidad = $(this).attr("id_entidad");
+    //console.log("xx")
+    //console.log(busqueda_interna_entidad.id_empresa_interna);
+    if(busqueda_interna_entidad && busqueda_interna_entidad.id_empresa_interna){
+        id_entidad = busqueda_interna_entidad.id_empresa_interna;
+    }
+
+    var star = $(this);
+    $.post(
+        APP_URL + '/pfws/add_emp_fav',
+        {   '_token': $token,
+            'id_entidad': id_entidad
+        },
+        function (data) {
+            if(data.success){
+                star.removeClass("btn-icono-no-fav");
+                star.addClass("btn-icono-fav");
+            }
+        }
+    );
+});
+$(document).on("click",".btn-icono-fav",function(e){
+    e.preventDefault();
+    var star = $(this);
+    var id_entidad = $(this).attr("id_entidad");
+    //console.log("xx")
+    //console.log(busqueda_interna_entidad.id_empresa_interna);
+    if(busqueda_interna_entidad && busqueda_interna_entidad.id_empresa_interna){
+        id_entidad = busqueda_interna_entidad.id_empresa_interna;
+    }
+    $.post(
+        APP_URL + '/pfws/del_emp_fav',
+        {   '_token': $token,
+            'id_entidad': id_entidad
+        },
+        function (data) {
+            //console.log(data);
+
+            if(data.success){
+                star.removeClass("btn-icono-fav");
+                star.addClass("btn-icono-no-fav");
+            }
+
+        }
+    );
+});
+$(document).on("click",".star-yellow",function(e){
+    e.preventDefault();
+    var star = $(this);
+    var id_sucursal = $(this).find("i").attr("id_sucursal");
+
+    $.post(
+        APP_URL + '/pfws/del_local_fav',
+        {   '_token': $token,
+            'id_sucursal': id_sucursal
+        },
+        function (data) {
+            //console.log(data);
+
+            if(data.success){
+                star.removeClass("star-yellow");
+                star.addClass("star-white");
+            }
+
+        }
+    );
+});
+
+function yoError(){
+    $("#loading_results").hide();
+    $('#error_modal_txt').empty();
+    $('#error_modal_txt').append('Hubo un problema al obtener su ubicacion, por favor vuelva a intentarlo.');
+    $('#error_modal').modal('show');
+    $geo_switch.prop('checked', false);
+    $("#texto_geo,#texto_geo2").html("Geolocalización desactivada");
+}
