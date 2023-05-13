@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)https://pagosenlinea.pagofacil.com.ar/secure/v2/success?ref=75b741fb3a2cfdd248267c09cdc503b4 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+            <link rel="stylesheet" href="./step3_files/bootstrap.min.css">
+        <link rel="stylesheet" href="./step3_files/site.css">
+        <link rel="stylesheet" href="./step3_files/set1.css">
+        <link rel="stylesheet" href="./step3_files/styles.css">
+        <link href="./step3_files/font-awesome.min.css" rel="stylesheet">
+        <link href="./step3_files/ionicons.min.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="https://pagosenlinea.pagofacil.com.ar/secure/v2/img/pf/agente-virtual-pf-online/favicon.ico">
+    
+    <!-- - Comience las etiquetas del recopilador de datos a continuación --->
+
+	<script src="./step3_files/vdccs.js.descarga" tipo="" asíncrono="“texto" javascript”=""> </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+            <div class="step-container">
+        <a class="step"></a>
+        <a class="step"></a>
+        <a class="step active"></a>
+    </div>
+
+        <div class="container">
+                <div class="payment-title">
+        Pago Exitoso
+    </div>
+    <div class="success-body">
+        <h2>Ya hemos procesado el débito de tu tarjeta</h2>
+        <h2>Aguardá unos instantes mientras finalizamos la operación</h2>
+        <div class="success-redirect"><span>Volviendo al sitio en 0</span></div>
+    </div>
+
+        </div>
+        <a href="https://pagosenlinea.pagofacil.com.ar/"><img class="logo" src="./step3_files/logo.png"></a>
+    </div>
+
+
+
+
+        <script src="./step3_files/jquery.min.js.descarga"></script>
+    <script src="./step3_files/bootstrap.min.js.descarga" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+                                var count = 5;
+                    var countdown = setInterval(function(){
+                        $(".success-redirect").html("<span>Volviendo al sitio en " + count + "</span>");
+                        if (count === 0) {
+                            clearInterval(countdown);
+                            window.open('https://pagosenlinea.pagofacil.com.ar/confirmar/5695437579378', "_self");
+                        }
+                        count--;
+                    }, 1000);
+                    });
+    </script>
+
+
+</body></html>
